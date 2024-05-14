@@ -1,0 +1,54 @@
+.contact-form-wraper {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-bottom: 25px;
+}
+
+.contact-lable {
+    font-size: 25px;
+    font-family: 'e-Ukraine-Medium';
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.form-input div {
+    height: 100%;
+    border-bottom: 2px solid white;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-input div input {
+    height: 42px;
+    padding: 0 10px;
+    font-size: 18px;
+    font-family: 'e-Ukraine-Light';
+}
+
+.form-input div textarea {
+    height: 150px;
+    padding: 0 10px;
+    font-size: 18px;
+    font-family: 'e-Ukraine-Light';
+}
+
+.form-input div::after {
+    border-bottom: none;
+}
+
+.contact-form-btn {
+    margin-top: 25px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 25px;
+    font-family: 'e-Ukraine-Medium';
+}
+
+.contact-form-btn .btn-icon {
+    content: url('../../assets/arrow_right.svg');
+    margin-left: 30px;
+}

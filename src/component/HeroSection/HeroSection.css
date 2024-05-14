@@ -1,0 +1,49 @@
+.hero-wrapper {
+    background-image: url('/public/img/hero_img.jpg');
+}
+.bg-wrapper {
+    background-image: url('/public/img/bg-hero.png');
+}
+
+.title, .title-text {
+    color: white;
+    margin: 0;
+}
+
+.title-text {
+    font-size: 100px;
+    font-family:'e-Ukraine-Medium', sans-serif;
+}
+
+.second-title-text {
+    margin-right: 150px;
+}
+
+.title {
+    font-size: 34px;
+    font-family:'e-Ukraine-Light', sans-serif;
+}
+
+.title-text-bg {
+    background-image: url('/public/img/title_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:inherit;
+    position: absolute;
+    width: 1170px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -592px;
+}
+.second-title-text-bg {
+    background-image: url('/public/img/second_title_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:inherit;
+    position: absolute;
+    top: 405px;
+    bottom: -380px;
+    right: 0;
+    left: 0;
+}

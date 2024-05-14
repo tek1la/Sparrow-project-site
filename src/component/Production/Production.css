@@ -1,0 +1,16 @@
+.production-title {
+    font-size: 56.5px;
+    background-image: url('/public/img/production-bg.png');
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: center;
+    background-size:inherit;
+    margin-bottom: 100px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.production-title h3 {
+    margin: 0;
+    padding-bottom: 12px;
+}

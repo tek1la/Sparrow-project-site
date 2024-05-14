@@ -1,0 +1,55 @@
+.about-title, .about-first-text, .about-second-text {
+    color: white;
+    font-family: 'e-Ukraine-Medium';
+}
+
+.animated-text-wraper {
+    margin-bottom: 30px;
+    width: 1265px;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.about-img {
+    display: flex;
+}
+
+.about-img img {
+    height: 400px;
+    align-self: flex-end;
+}
+
+.about-title {
+    font-size: 60px;
+    background-image: url('/public/img/about-bg.png');
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size:inherit;
+    margin-bottom: 100px;
+}
+
+.about-title h3 {
+    margin: 0;
+    padding-bottom: 17px;
+}
+
+.about-text h4 {
+    font-size: 25px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'e-Ukraine-Light';
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

@@ -1,0 +1,25 @@
+.advantages-title {
+    font-size: 55.5px;
+    background-image: url('/public/img/advantage-bg.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-size:inherit;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+}
+
+.advantages-title h3 {
+    text-align: right;
+}
+
+.advantage-item {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'e-Ukraine-Medium';
+    text-transform: uppercase;
+    text-align: center;
+}
+

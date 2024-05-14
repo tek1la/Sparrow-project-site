@@ -1,0 +1,43 @@
+.price-list-title {
+    font-size: 55.5px;
+    background-image: url('/public/img/price-list-bg.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size:inherit;
+    text-transform: uppercase;
+    height: 120px;
+    line-height: 120px;
+    width: 840px;
+}
+
+.price-list-title h3 {
+    text-align: right;
+}
+
+.price-list-btn-icon {
+    background-image: url('/public/img/loading.svg');
+    height: 50px;
+    width: 50px;
+    margin-right: 30px;
+}
+
+.price-list-btn-wraper {
+    display: flex;
+    align-items: center;
+}
+
+.price-list-wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-list-btn {
+    color: white;
+    font-size: 25px;
+    font-family: 'e-Ukraine-Medium';
+}
+
+.price-list-bg-wraper {
+    background-color: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,109 @@
+.news-slider {
+    width: 100%;
+    height: 595px;
+}
+
+.news-slider .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: rgba(0,0,0,0);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+}
+
+.news-slider .news-list-item {
+    height: 100%;
+}
+
+.news-slider .swiper-slide div {
+    background: rgba(0,0,0,0);
+}
+
+.news-slider .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.news-slider .swiper-slide .btn-wrap img {
+    width: 70px;
+}
+
+.news-slider .swiper-button-next {
+    top: auto;
+    bottom: 0 !important;
+    right: 10% !important;
+    content: url('../../assets/arrow_right.svg');
+    width: 50px;
+    height: 50px;
+}
+
+.news-slider .swiper-button-prev {
+    top: auto;
+    bottom: 0 !important;
+    left: 80% !important;
+    content: url('../../assets/arrow_left.svg');
+    width: 50px;
+    height: 50px;
+}
+
+.news-wraper {
+    height: 510px;
+}
+
+.news-item-wraper {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 230px;
+}
+
+.news-img {
+    position: relative;
+}
+
+.news-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.news-item-wraper .news-item-title {
+    margin-bottom: 10px;
+    font-family: 'e-Ukraine-Medium';
+    font-size: 25px;
+    line-height: 31px;
+    text-transform: uppercase;
+}
+
+.news-item-wraper .news-description {
+    font-size: 18px;
+    font-family: 'e-Ukraine-Light';
+    line-height: 22px;
+}
+
+.news-slider .btn-wrap a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'e-Ukraine-Light';
+}
+
+.news-slider .btn-wrap a span {
+    margin-left: 20px;
+}
+
+.news-list-item:hover .news-img::before {
+    background-color: rgba(0, 0, 0, 0);
+}

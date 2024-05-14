@@ -1,0 +1,15 @@
+.partners-title {
+    font-size: 56.5px;
+    background-image: url('/public/img/partners-bg.png');
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: center;
+    background-size:inherit;
+    margin-bottom: 100px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.partners-title h3 {
+    margin: 0;
+}

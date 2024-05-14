@@ -1,0 +1,9 @@
+.menu-item, .menu-item-active {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'e-Ukraine-Medium';
+}
+.menu-item-active {
+    border-bottom: 2px solid white;
+}

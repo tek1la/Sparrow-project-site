@@ -1,0 +1,33 @@
+.partners-slider {
+    height: 290px;
+}
+
+.partners-slider .swiper-slide {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners-slider .swiper-slide-next {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.partners-slider .swiper-button-next {
+    top: auto;
+    bottom: 0 !important;
+    right: 10% !important;
+    content: url('../../assets/arrow_right.svg');
+    width: 50px;
+    height: 50px;
+}
+
+.partners-slider .swiper-button-prev {
+    top: auto;
+    bottom: 0 !important;
+    left: 80% !important;
+    content: url('../../assets/arrow_left.svg');
+    width: 50px;
+    height: 50px;
+}

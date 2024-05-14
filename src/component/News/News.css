@@ -1,0 +1,39 @@
+.news-title {
+    font-size: 55.5px;
+    background-image: url('/public/img/news-bg.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-size:inherit;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+}
+
+.news-title h3 {
+    text-align: right;
+}
+
+.news-item-title-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.news-item-title-wraper .news-line:first-child {
+    width: 15%;
+}
+
+.news-item-title-wraper .news-line:last-child {
+    width: 75%;
+}
+
+.news-item-title-wraper div h4 {
+    font-family: 'e-Ukraine-Medium';
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+.news-item-title-wraper .news-line {
+    border: 1px solid white;
+}
