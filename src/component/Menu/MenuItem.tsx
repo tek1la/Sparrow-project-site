@@ -1,18 +1,23 @@
 import { Button } from '@mui/material'
-
 import './MenuItem.css'
 
 type Props = {
     children: any
-    item: string
-    itemActive: string
+    onMouseEnter?: () => void
+    onMouseLeave?: () => void
 }
-const MenuItem = ({ children, item, itemActive }: Props) => {
-    let isActive: boolean = item === itemActive
-
+const MenuItem = ({ children, onMouseEnter, onMouseLeave }: Props) => {
     return (
         <>
-            <Button color="inherit" className={isActive ? itemActive : item}>
+            <Button
+                sx={{
+                    position: 'relative',
+                }}
+                color="inherit"
+                className="menu-item"
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+            >
                 {children}
             </Button>
         </>

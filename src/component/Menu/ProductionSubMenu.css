@@ -1,0 +1,14 @@
+.sub-menu-wraper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 45px;
+    width: max-content;
+    background-color: rgba(28,28,28,0.8);
+}
+
+.sub-menu-wraper button {
+    width: fit-content;
+    margin: auto;
+}

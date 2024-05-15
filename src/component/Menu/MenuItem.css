@@ -4,6 +4,7 @@
     font-size: 18px;
     font-family: 'e-Ukraine-Medium';
 }
-.menu-item-active {
+.menu-item:hover {
     border-bottom: 2px solid white;
+    border-radius: 0;
 }

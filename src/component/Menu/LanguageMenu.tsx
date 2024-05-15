@@ -7,12 +7,8 @@ type Props = {
 const LanguageMenu = ({ item, itemActive }: Props) => {
     return (
         <>
-            <LanguageMenuItem item={item} itemActive={itemActive}>
-                UA
-            </LanguageMenuItem>
-            <LanguageMenuItem item={item} itemActive={itemActive}>
-                EN
-            </LanguageMenuItem>
+            <LanguageMenuItem>UA</LanguageMenuItem>
+            <LanguageMenuItem>EN</LanguageMenuItem>
         </>
     )
 }

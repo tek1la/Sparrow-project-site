@@ -14,6 +14,14 @@
     margin: 0;
 }
 
+.contact-bg-wraper {
+    background-image: url('/public/img/contact-form-bg.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-size:inherit;
+}
+
 .contacts-items-wraper {
     margin-top: 100px;
 }
