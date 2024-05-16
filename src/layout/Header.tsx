@@ -27,14 +27,14 @@ function HideOnScroll(props: any) {
 const Header = (props: Props) => {
     const [scrolled, setScrolled] = useState(false)
 
-    const handleScroll = () => {
-        const isScrolled = window.scrollY > 200
-        if (isScrolled !== scrolled) {
-            setScrolled(isScrolled)
-        }
-    }
-
     useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 200
+            if (isScrolled !== scrolled) {
+                setScrolled(isScrolled)
+            }
+        }
+
         window.addEventListener('scroll', handleScroll)
         return () => {
             window.removeEventListener('scroll', handleScroll)
