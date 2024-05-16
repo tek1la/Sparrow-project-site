@@ -7,6 +7,7 @@ const About = (props: Props) => {
     return (
         <>
             <Container
+                id="ПРО НАС"
                 className="container"
                 sx={{
                     padding: '120px 0',

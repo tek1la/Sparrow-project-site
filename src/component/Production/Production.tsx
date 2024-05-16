@@ -7,6 +7,7 @@ const Production = (props: Props) => {
     return (
         <>
             <Container
+                id="ВИРОБНИЦТВО"
                 className="container"
                 sx={{
                     padding: '120px 0',

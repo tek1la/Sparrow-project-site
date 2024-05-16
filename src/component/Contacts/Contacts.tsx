@@ -8,6 +8,7 @@ const Contacts = (props: Props) => {
         <>
             <div className="contact-bg-wraper">
                 <Container
+                    id="КОНТАКТИ"
                     className="container"
                     sx={{
                         padding: '120px 0',

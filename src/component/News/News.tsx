@@ -9,6 +9,7 @@ const News = (props: Props) => {
     return (
         <>
             <Container
+                id="НОВИНИ"
                 className="container"
                 sx={{
                     padding: '120px 0',

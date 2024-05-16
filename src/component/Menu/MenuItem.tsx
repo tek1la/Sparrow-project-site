@@ -10,6 +10,7 @@ const MenuItem = ({ children, onMouseEnter, onMouseLeave }: Props) => {
     return (
         <>
             <Button
+                href={`#${children}`}
                 sx={{
                     position: 'relative',
                 }}
