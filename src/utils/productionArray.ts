@@ -16,7 +16,7 @@ export const productionArray: Productions[] = [
         secondTitle: "“1в бомбер”",
         description: "Призначений для виконання ударних операції вдень та вночi в простих метеорологічних умовах, в умовах активного використання противником засобів радіоелектронної боротьби. ",
         productionImg: 'img/udarnyy-BPLA.jpg',
-        path: 'Ударний_БпАК_1В_БОМБЕР'
+        path: 'bpak'
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ export const productionArray: Productions[] = [
         secondTitle: "“ГОРОБЕЦЬ 8-10”",
         description: 'Безпiлотні авiацiйний комплекс "2А-3А ГОРОБЕЦЬ" призначені для  виконання ударних операцій в різних метеорологічних умовах.',
         productionImg: "img/udarnyy-fpv.jpg",
-        path: 'ударні_fpv_дрони_ГОРОБЕЦЬ_8-10'
+        path: 'fpv'
     },
     {
         id: 3,
@@ -34,7 +34,7 @@ export const productionArray: Productions[] = [
         secondTitle: "“FPV Re-Link”",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         productionImg: 'img/udarnyy-BPLA.jpg',
-        path: 'станція_ретрансляції_FPV_Re-Link',
+        path: 'link',
     },
     {
         id: 4,
@@ -43,7 +43,7 @@ export const productionArray: Productions[] = [
         secondTitle: "збірки",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         productionImg: "img/udarnyy-fpv.jpg",
-        path: 'акумуляторні_збірки'
+        path: 'battery'
     },
     {
         id: 5,
@@ -52,6 +52,6 @@ export const productionArray: Productions[] = [
         secondTitle: "“SDS-mini”",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         productionImg: 'img/udarnyy-BPLA.jpg',
-        path: 'Системи_скидів_SDS-mini'
+        path: 'sds-mini'
     },
 ]
