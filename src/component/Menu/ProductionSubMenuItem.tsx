@@ -3,18 +3,20 @@ import './MenuItem.css'
 
 type Props = {
     children: any
+    path: string
     onMouseEnter?: () => void
     onMouseLeave?: () => void
 }
 const ProductionSubMenuItem = ({
     children,
+    path,
     onMouseEnter,
     onMouseLeave,
 }: Props) => {
     return (
         <>
             <Button
-                href={`${children}`}
+                href={`${path}`}
                 sx={{
                     position: 'relative',
                 }}

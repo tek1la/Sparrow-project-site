@@ -16,10 +16,10 @@ const App = (props: Props) => {
                 <Routes>
                     <Route path="//" element={<Home />} />
                     {productionArray.map(
-                        ({ id, title, firstTitle, secondTitle }) => (
+                        ({ id, title, firstTitle, secondTitle, path }) => (
                             <Route
                                 key={id}
-                                path={title}
+                                path={path}
                                 element={
                                     <Production
                                         title={title}

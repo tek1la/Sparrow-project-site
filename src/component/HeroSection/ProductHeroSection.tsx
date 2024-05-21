@@ -1,6 +1,7 @@
 import { Container, Grid } from '@mui/material'
 import SouthIcon from '@mui/icons-material/South'
 import './ProductHeroSection.css'
+import AnimatedBtn from './AnimatedBtn'
 
 type Props = {
     firstTitle: string
@@ -92,27 +93,7 @@ const ProductHeroSection = ({ firstTitle, secondTitle, bgImg }: Props) => {
                                 ></div>
                             </Grid>
                         </Grid>
-                        <Grid
-                            sx={{
-                                position: 'absolute',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                bottom: '30px',
-                                left: '0',
-                                right: '0',
-                            }}
-                        >
-                            <SouthIcon
-                                sx={{
-                                    border: '1px solid white',
-                                    padding: '3px',
-                                    borderRadius: '25px',
-                                    color: 'white',
-                                    height: '43px',
-                                    width: '43px',
-                                }}
-                            />
-                        </Grid>
+                        <AnimatedBtn />
                     </Container>
                 </div>
             </div>
