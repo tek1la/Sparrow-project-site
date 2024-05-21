@@ -1,5 +1,4 @@
 import { Container, Grid } from '@mui/material'
-import SouthIcon from '@mui/icons-material/South'
 import './ProductHeroSection.css'
 import AnimatedBtn from './AnimatedBtn'
 
