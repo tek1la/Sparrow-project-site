@@ -5,7 +5,7 @@ type Props = {}
 const AnimatedBtn = (props: Props) => {
     const scrollDown = () => {
         window.scrollBy({
-            top: 1024,
+            top: window.innerHeight,
             left: 0,
             behavior: 'smooth',
         })
