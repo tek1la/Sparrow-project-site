@@ -1,5 +1,6 @@
 import { Button } from '@mui/material'
 import './MenuItem.css'
+import { NavLink } from 'react-router-dom'
 
 type Props = {
     children: any
@@ -16,16 +17,24 @@ const ProductionSubMenuItem = ({
     return (
         <>
             <Button
-                href={`${path}`}
                 sx={{
                     position: 'relative',
+                    width: '100% !important',
+                    margin: '0 !important',
                 }}
                 color="inherit"
                 className="menu-item"
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                {children}
+                <NavLink
+                    to={path}
+                    style={{
+                        width: '100%',
+                    }}
+                >
+                    {children}
+                </NavLink>
             </Button>
         </>
     )
