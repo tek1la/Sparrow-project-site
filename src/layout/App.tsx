@@ -25,6 +25,7 @@ const App = (props: Props) => {
                                         title={title}
                                         firstTitle={firstTitle}
                                         secondTitle={secondTitle}
+                                        path={path}
                                     />
                                 }
                             />

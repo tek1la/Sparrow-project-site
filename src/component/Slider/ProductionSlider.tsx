@@ -18,13 +18,14 @@ const ProductionSlider = (props: Props) => {
                 className="mySwiper production-slider"
             >
                 {productionArray.map(
-                    ({ id, title, description, productionImg }) => (
+                    ({ id, title, description, productionImg, path }) => (
                         <SwiperSlide key={id}>
                             <ProductionListItem
                                 id={id}
                                 title={title}
                                 description={description}
                                 productionImg={productionImg}
+                                path={path}
                             />
                         </SwiperSlide>
                     )

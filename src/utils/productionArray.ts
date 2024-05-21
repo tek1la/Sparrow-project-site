@@ -32,8 +32,8 @@ export const productionArray: Productions[] = [
         title: "станція ретрансляції “FPV Re-Link”",
         firstTitle: "станція ретрансляції",
         secondTitle: "“FPV Re-Link”",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        productionImg: 'img/udarnyy-BPLA.jpg',
+        description: "Наземна станція призначена для посилення зв’язку здроном та забезпечення безпеки оператора БпЛА, під час виконання завдань з розвідки, ударних операцій і тд.",
+        productionImg: 'img/fpv-re-link.jpg',
         path: 'link',
     },
     {
@@ -41,8 +41,8 @@ export const productionArray: Productions[] = [
         title: "акумуляторні збірки",
         firstTitle: "акумуляторні",
         secondTitle: "збірки",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        productionImg: "img/udarnyy-fpv.jpg",
+        description: "Акумуляторні збірки на елементах molicel INR-21700-P42A виготовляються з високоякісних матеріалів та проходять ретельне тестування. Це забезпечує їхню високу міцність та надійність.",
+        productionImg: "img/battery.jpg",
         path: 'battery'
     },
     {
@@ -50,8 +50,8 @@ export const productionArray: Productions[] = [
         title: "Системи скидів “SDS-mini”",
         firstTitle: "Системи скидів",
         secondTitle: "“SDS-mini”",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        productionImg: 'img/udarnyy-BPLA.jpg',
-        path: 'sds-mini'
+        description: "Система скидання боєприпасів - це не лише модернізація дронів, а й оптимізація робочого процесу. Здатність квадрокоптера ефективно та безпечно скидати боєприпаси відкриває нові можливості для військових.",
+        productionImg: 'img/sds-mini.jpg',
+        path: 'sdsMini'
     },
 ]

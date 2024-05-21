@@ -6,12 +6,14 @@ type Props = {
     title: string
     description: string
     productionImg: string
+    path: string
 }
 const ProductionListItem = ({
     id,
     title,
     description,
     productionImg,
+    path,
 }: Props) => {
     return (
         <Card className="production-list-item" variant="outlined">
@@ -27,14 +29,14 @@ const ProductionListItem = ({
                     <div className="porduction-item-wraper">
                         <div>
                             <h2 className="production-item-title">
-                                <Link to={`/production/${id}`}>{title}</Link>
+                                <Link to={path}>{title}</Link>
                             </h2>
                             <p className="production-description">
                                 {description}
                             </p>
                         </div>
                         <div className="btn-wrap">
-                            <Link to={`/production/${id}`}>
+                            <Link to={path}>
                                 детальніше
                                 <span>
                                     <img

@@ -1,0 +1,12 @@
+.result-mision-title {
+    text-align: end;
+    font-size: 56.5px;
+    margin-bottom: 100px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.result-mision-title h3 {
+    margin: 0;
+}

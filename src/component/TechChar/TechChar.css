@@ -1,0 +1,25 @@
+.tech-char-title {
+    font-size: 56.5px;
+    background-image: url('/public/img/production/tech-char-bg.png');
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: center;
+    background-size:inherit;
+    margin-bottom: 100px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.tech-char-title h3 {
+    margin: 0;
+    line-height: 102px;
+}
+
+.descript-first-text .link-table .table-header {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.table-header td {
+    font-size: 25px;
+    font-family: 'e-Ukraine-Medium';
+}
