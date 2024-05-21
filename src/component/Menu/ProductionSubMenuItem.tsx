@@ -6,14 +6,15 @@ type Props = {
     onMouseEnter?: () => void
     onMouseLeave?: () => void
 }
-const MenuItem = ({ children, onMouseEnter, onMouseLeave }: Props) => {
-    // if (typeof children !== typeof '') {
-    //     children = 'ВИРОБНИЦТВО'
-    // }
+const ProductionSubMenuItem = ({
+    children,
+    onMouseEnter,
+    onMouseLeave,
+}: Props) => {
     return (
         <>
             <Button
-                href={`/#${children}`}
+                href={`${children}`}
                 sx={{
                     position: 'relative',
                 }}
@@ -27,4 +28,4 @@ const MenuItem = ({ children, onMouseEnter, onMouseLeave }: Props) => {
         </>
     )
 }
-export default MenuItem
+export default ProductionSubMenuItem

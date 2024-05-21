@@ -22,7 +22,7 @@ const PriceList = (props: Props) => {
                 </Grid>
                 <Grid>
                     <div className="price-list-title">
-                        <h3>прейскурант</h3>
+                        <h3>каталог</h3>
                     </div>
                 </Grid>
             </Container>

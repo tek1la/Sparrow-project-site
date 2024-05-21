@@ -1,0 +1,114 @@
+.descript-title, .descript-first-text, .descript-second-text {
+    color: white;
+    font-family: 'e-Ukraine-Medium';
+}
+     
+.descript-title {
+    font-size: 60px;
+    background-image: url('/public/img/production/DescriptTitle_bg.png');
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size:inherit;
+    margin-bottom: 100px;
+}
+
+.descript-title h3 {
+    text-transform: uppercase;
+}
+
+.descript-first-text p {
+    margin-bottom: 15px;
+    font-family: 'e-Ukraine-Light';
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.descript-second-text {
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+.descript-wraper {
+    gap: 30px;
+    flex-wrap: nowrap;
+    margin-bottom: 60px;
+}
+
+.descript-img img {
+    border-radius: 10px;
+}
+
+.descript-block-wraper {
+    gap: 30px;
+}
+
+.descript-block-item {
+    width: calc(33.3333% - 30px);
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 170px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.descript-block-item:last-child {
+    width: 33.3333%;
+}
+
+.descript-block-item div {
+    font-family: 'e-Ukraine-Medium';
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.descript-block-item div p:nth-child(2){
+    font-family: 'e-Ukraine-Light';
+    font-size: 18px;
+    text-transform: lowercase;
+}
+
+.descript-block-item span {
+    color: #3CC4E1;
+}
+
+
+.fpv-descript-img-wraper {
+    display: flex;
+    gap: 15px;
+}
+
+.fpv-descript-img-wraper div img{
+    border-radius: 10px;
+}
+
+.link-table {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.link-table tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.link-table td {
+    width: 105px;
+}
+
+.table-cell {
+    font-size: 18px;
+    font-family: 'e-Ukraine-Light';
+    color: white;
+    border-bottom: none;
+}
+
+.battery-descript-img {
+    display: flex;
+    gap: 15px;
+}
+
+.battery-descript-img img {
+    border-radius: 10px;
+}

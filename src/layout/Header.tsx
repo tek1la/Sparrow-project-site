@@ -26,13 +26,21 @@ function HideOnScroll(props: any) {
 
 const Header = (props: Props) => {
     const [scrolled, setScrolled] = useState(false)
+    const [headerHeight, setHeaderHeight] = useState('135px')
 
     useEffect(() => {
         const handleScroll = () => {
             const isScrolled = window.scrollY > 200
+            const isHeroSection = window.scrollY > 1024
             if (isScrolled !== scrolled) {
                 setScrolled(isScrolled)
             }
+            if (isHeroSection !== scrolled) {
+                setHeaderHeight('100px')
+            }
+            // else if (isHeroSection !== window.scrollY > 1024) {
+            //     setHeaderHeight('100px')
+            // }
         }
 
         window.addEventListener('scroll', handleScroll)
@@ -51,19 +59,25 @@ const Header = (props: Props) => {
                 position="fixed"
                 sx={{
                     backgroundColor: `rgba(28,28,28,${getAppBarOpacity()})`,
-                    height: '135px',
+                    height: `${headerHeight}`,
                     display: 'flex',
                     justifyContent: 'center',
                 }}
             >
-                <Container className="container">
+                <Container
+                    className="container"
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                    }}
+                >
+                    <Logo h={'55px'} w={'auto'} />
                     <Toolbar
                         className="container"
                         sx={{
-                            justifyContent: 'space-between',
+                            gap: '5vh',
                         }}
                     >
-                        <Logo h={'55px'} w={'auto'} />
                         <Box>
                             <Menu
                                 item={'menu-item'}

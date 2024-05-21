@@ -20,7 +20,7 @@ const About = (props: Props) => {
                         maxWidth: '100%',
                     }}
                 >
-                    <AnimatedText text="#Ударний БпАК “1В БОМБЕР”&emsp;&emsp;#Ударні FPV дрони “ГОРОБЕЦЬ”&emsp;&emsp;#Станція ретрансляції “FPV Re-Link”&emsp;&emsp;#Акумуляторні збірки" />
+                    <AnimatedText text="#Ударний БпАК “1В БОМБЕР”&nbsp;&emsp;&emsp;#Ударні FPV дрони “ГОРОБЕЦЬ”&nbsp;&emsp;&emsp;#Станція ретрансляції “FPV Re-Link”&nbsp;&emsp;&emsp;#Акумуляторні збірки" />
                 </Container>
                 <Grid container className="about-wraper">
                     <Grid xs={6} item className="about-img">

@@ -1,4 +1,4 @@
-import MenuItem from './MenuItem'
+import ProductionSubMenuItem from './ProductionSubMenuItem'
 import './ProductionSubMenu.css'
 import { productionArray } from 'utils/productionArray'
 
@@ -8,7 +8,9 @@ const ProductionSubMenu = (props: Props) => {
         <>
             <div className="sub-menu-wraper">
                 {productionArray.map(({ id, title }) => (
-                    <MenuItem key={id}>{title}</MenuItem>
+                    <ProductionSubMenuItem key={id}>
+                        {title}
+                    </ProductionSubMenuItem>
                 ))}
             </div>
         </>

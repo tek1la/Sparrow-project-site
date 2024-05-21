@@ -3,6 +3,7 @@
     text-decoration: none;
     font-size: 18px;
     font-family: 'e-Ukraine-Medium';
+    padding: 5px 15px;
 }
 .menu-item:hover {
     border-bottom: 2px solid white;

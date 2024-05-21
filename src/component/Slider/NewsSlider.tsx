@@ -19,12 +19,7 @@ const NewsSlider = ({ newsArray }: Props) => {
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
-                loop={true}
                 navigation={true}
-                autoplay={{
-                    delay: 3500,
-                    disableOnInteraction: false,
-                }}
                 modules={[Autoplay, Navigation]}
                 className="mySwiper news-slider"
             >

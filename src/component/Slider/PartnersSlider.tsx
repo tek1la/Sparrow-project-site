@@ -10,7 +10,6 @@ const PartnersSlider = (props: Props) => {
         <>
             <Swiper
                 slidesPerView={3}
-                loop={true}
                 navigation={true}
                 autoplay={{
                     delay: 3500,

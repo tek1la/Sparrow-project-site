@@ -1,6 +1,6 @@
 import { Container, Grid } from '@mui/material'
 import './HeroSection.css'
-import SouthIcon from '@mui/icons-material/South'
+import AnimatedBtn from './AnimatedBtn'
 
 type Props = {}
 const HeroSection = (props: Props) => {
@@ -11,14 +11,17 @@ const HeroSection = (props: Props) => {
                     <Container
                         className="container"
                         sx={{
-                            height: '1024px',
-                            paddingTop: '255px',
+                            height: '100vh',
+                            maxHeight: '1024px',
+                            padding: '20vh 0',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
                         }}
                     >
                         <Grid
                             container
                             sx={{
-                                display: 'flex',
                                 justifyContent: 'flex-end',
                             }}
                         >
@@ -39,40 +42,24 @@ const HeroSection = (props: Props) => {
                                     УКРАЇНСЬКИЙ ВИРОБНИК СУЧАСНИХ УДАРНИХ БПЛА
                                 </h1>
                             </Grid>
-                            <Grid
-                                item
-                                sx={{
-                                    height: '205px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    position: 'relative',
-                                }}
-                            >
-                                <p className="title-text second-title-text">
-                                    НАШІ ПРАВИЛА
-                                </p>
-                            </Grid>
                         </Grid>
                         <Grid
+                            item
                             sx={{
+                                height: '205px',
                                 display: 'flex',
-                                justifyContent: 'center',
-                                marginTop: '230px',
+                                justifyContent: 'flex-end',
+                                alignItems: 'center',
+                                position: 'relative',
                             }}
                         >
-                            <SouthIcon
-                                sx={{
-                                    border: '1px solid white',
-                                    padding: '3px',
-                                    borderRadius: '25px',
-                                    color: 'white',
-                                    height: '43px',
-                                    width: '43px',
-                                }}
-                            />
+                            <p className="title-text second-title-text">
+                                НАШІ ПРАВИЛА
+                            </p>
+                            <div className="second-title-text-bg"></div>
                         </Grid>
-                        <div className="second-title-text-bg"></div>
                     </Container>
+                    <AnimatedBtn />
                 </div>
             </div>
         </>
