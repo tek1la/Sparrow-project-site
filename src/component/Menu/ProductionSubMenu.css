@@ -2,13 +2,14 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    top: 45px;
+    justify-content:left;
+    left: 0;
+    top: 95px;
     width: max-content;
     background-color: rgba(28,28,28,0.8);
 }
 
 .sub-menu-wraper button {
-    width: fit-content;
-    margin: auto;
+    font-size: 12px;
+    font-family: 'e-Ukraine-Light';
 }

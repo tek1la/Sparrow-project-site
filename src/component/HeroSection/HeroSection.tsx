@@ -7,7 +7,7 @@ const HeroSection = (props: Props) => {
     return (
         <>
             <div className="hero-wrapper">
-                <div className="bg-wrapper">
+                <div>
                     <Container
                         className="container"
                         sx={{
@@ -27,6 +27,7 @@ const HeroSection = (props: Props) => {
                         >
                             <Grid
                                 item
+                                className="title-text-wraper"
                                 sx={{
                                     height: '205px',
                                     display: 'flex',

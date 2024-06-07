@@ -2,15 +2,15 @@
     background-image: url('/public/img/hero_img.jpg');
     background-size: cover;
 }
-.bg-wrapper {
-    background-image: url('/public/img/bg-hero.png');
-    position: relative;
-}
 
 .title, .title-text {
     color: white;
     margin: 0;
     text-transform: uppercase;
+}
+
+.title-text-wraper p {
+    margin-right: 150px;
 }
 
 .title-text {
@@ -37,7 +37,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    left: -592px;
+    left: -475px;
 }
 .second-title-text-bg {
     background-image: url('/public/img/second_title_bg.png');

@@ -20,7 +20,7 @@ const Menu = ({ item, itemActive }: Props) => {
                 {isSubMenuOpen && <ProductionSubMenu />}
             </MenuItem>
             <MenuItem>НОВИНИ</MenuItem>
-            <MenuItem>ПРЕЙСКУРАНТ</MenuItem>
+            <MenuItem>КАТАЛОГ</MenuItem>
             <MenuItem>КОНТАКТИ</MenuItem>
         </>
     )

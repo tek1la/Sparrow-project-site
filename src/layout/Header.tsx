@@ -1,65 +1,72 @@
-import {
-    AppBar,
-    Box,
-    Container,
-    Toolbar,
-    useScrollTrigger,
-    Slide,
-} from '@mui/material'
+import { AppBar, Box, Container, Toolbar, Slide } from '@mui/material'
 import Menu from '../component/Menu/Menu'
 import LanguageMenu from '../component/Menu/LanguageMenu'
 import Logo from '../component/Logo/Logo'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 type Props = {}
 
 function HideOnScroll(props: any) {
-    const { children } = props
-    const trigger = useScrollTrigger()
-
+    const { children, trigger } = props
     return (
-        <Slide appear={false} direction="down" in={!trigger}>
+        <Slide appear={false} direction="down" in={trigger}>
             {children}
         </Slide>
     )
 }
 
 const Header = (props: Props) => {
-    const [scrolled, setScrolled] = useState(false)
-    const [headerHeight, setHeaderHeight] = useState('135px')
+    const [showHeader, setShowHeader] = useState(true)
+    const [lastScrollY, setLastScrollY] = useState(0)
+    const [heroSection, setHeroSection] = useState(false)
+    const timeoutRef = useRef<number | null>(null)
 
     useEffect(() => {
         const handleScroll = () => {
-            const isScrolled = window.scrollY > 200
-            const isHeroSection = window.scrollY > 1024
-            if (isScrolled !== scrolled) {
-                setScrolled(isScrolled)
+            const currentScrollY = window.scrollY
+            const isHeroSection = window.scrollY > window.innerHeight
+            setHeroSection(isHeroSection)
+
+            if (currentScrollY < lastScrollY) {
+                // Scrolling up
+                setShowHeader(true)
+                if (timeoutRef.current !== null) {
+                    clearTimeout(timeoutRef.current)
+                }
+            } else if (currentScrollY > lastScrollY) {
+                // Scrolling down
+                if (timeoutRef.current !== null) {
+                    clearTimeout(timeoutRef.current)
+                    timeoutRef.current = window.setTimeout(() => {
+                        setShowHeader(false)
+                        console.log('hideHeader')
+                    }, 500)
+                }
+                timeoutRef.current = window.setTimeout(() => {
+                    setShowHeader(false)
+                    console.log('blablabla')
+                }, 500)
             }
-            if (isHeroSection !== scrolled) {
-                setHeaderHeight('100px')
-            }
-            // else if (isHeroSection !== window.scrollY > 1024) {
-            //     setHeaderHeight('100px')
-            // }
+
+            setLastScrollY(currentScrollY)
         }
 
         window.addEventListener('scroll', handleScroll)
         return () => {
             window.removeEventListener('scroll', handleScroll)
+            if (timeoutRef.current !== null) {
+                clearTimeout(timeoutRef.current)
+            }
         }
-    }, [scrolled])
-
-    const getAppBarOpacity = () => {
-        return scrolled ? 0.8 : 0.1
-    }
+    }, [lastScrollY])
 
     return (
-        <HideOnScroll>
+        <HideOnScroll trigger={showHeader}>
             <AppBar
                 position="fixed"
                 sx={{
-                    backgroundColor: `rgba(28,28,28,${getAppBarOpacity()})`,
-                    height: `${headerHeight}`,
+                    backgroundColor: `rgba(28,28,28,${heroSection ? 1 : 0.4})`,
+                    height: `95px`,
                     display: 'flex',
                     justifyContent: 'center',
                 }}
@@ -68,6 +75,8 @@ const Header = (props: Props) => {
                     className="container"
                     sx={{
                         display: 'flex',
+                        height: '100%',
+                        alignItems: 'center',
                         justifyContent: 'space-between',
                     }}
                 >
@@ -76,9 +85,16 @@ const Header = (props: Props) => {
                         className="container"
                         sx={{
                             gap: '5vh',
+                            height: '100%',
                         }}
                     >
-                        <Box>
+                        <Box
+                            sx={{
+                                height: '100%',
+                                display: 'flex',
+                                alignItems: 'center',
+                            }}
+                        >
                             <Menu
                                 item={'menu-item'}
                                 itemActive={'menu-item-active'}

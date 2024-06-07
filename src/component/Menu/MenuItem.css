@@ -5,7 +5,7 @@
     font-family: 'e-Ukraine-Medium';
     padding: 5px 15px;
 }
-.menu-item:hover {
+.menu-item:hover p {
     border-bottom: 2px solid white;
     border-radius: 0;
 }

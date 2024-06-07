@@ -7,22 +7,20 @@ type Props = {
     onMouseLeave?: () => void
 }
 const MenuItem = ({ children, onMouseEnter, onMouseLeave }: Props) => {
-    // if (typeof children !== typeof '') {
-    //     children = 'ВИРОБНИЦТВО'
-    // }
     return (
         <>
             <Button
                 href={`/#${children}`}
                 sx={{
                     position: 'relative',
+                    height: '100%',
                 }}
                 color="inherit"
                 className="menu-item"
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                {children}
+                <p>{children}</p>
             </Button>
         </>
     )
