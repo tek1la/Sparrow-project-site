@@ -10,6 +10,7 @@ const Footer = (props: Props) => {
     const footerRef = useRef(null)
 
     useEffect(() => {
+        const currentFooter = footerRef.current
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -22,13 +23,13 @@ const Footer = (props: Props) => {
             }
         )
 
-        if (footerRef.current) {
-            observer.observe(footerRef.current)
+        if (currentFooter) {
+            observer.observe(currentFooter)
         }
 
         return () => {
-            if (footerRef.current) {
-                observer.unobserve(footerRef.current)
+            if (currentFooter) {
+                observer.unobserve(currentFooter)
             }
         }
     }, [])
