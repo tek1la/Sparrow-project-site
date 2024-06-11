@@ -26,7 +26,6 @@ const Header = (props: Props) => {
             const currentScrollY = window.scrollY
             const isHeroSection = window.scrollY > window.innerHeight
             setHeroSection(isHeroSection)
-
             if (currentScrollY < lastScrollY) {
                 // Scrolling up
                 setShowHeader(true)
@@ -37,15 +36,15 @@ const Header = (props: Props) => {
                 // Scrolling down
                 if (timeoutRef.current !== null) {
                     clearTimeout(timeoutRef.current)
-                    timeoutRef.current = window.setTimeout(() => {
-                        setShowHeader(false)
-                        console.log('hideHeader')
-                    }, 500)
                 }
                 timeoutRef.current = window.setTimeout(() => {
                     setShowHeader(false)
-                    console.log('blablabla')
+                    console.log('hideHeader')
                 }, 500)
+                timeoutRef.current = window.setTimeout(() => {
+                    setShowHeader(false)
+                    console.log('blablabla')
+                }, 2000)
             }
 
             setLastScrollY(currentScrollY)
@@ -57,6 +56,15 @@ const Header = (props: Props) => {
             if (timeoutRef.current !== null) {
                 clearTimeout(timeoutRef.current)
             }
+        }
+    }, [lastScrollY])
+
+    useEffect(() => {
+        if (window.screenTop < 10) {
+            timeoutRef.current = window.setTimeout(() => {
+                setShowHeader(true)
+                console.log('blablabla')
+            }, 400)
         }
     }, [lastScrollY])
 

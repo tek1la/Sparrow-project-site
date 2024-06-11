@@ -23,8 +23,14 @@ const ProductionListItem = ({
                 }}
             >
                 <div className="production-wraper">
-                    <div className="production-img">
-                        <img className="img" src={productionImg} alt={title} />
+                    <div className="production-img-wraper">
+                        <div className="production-img">
+                            <img
+                                className="img"
+                                src={productionImg}
+                                alt={title}
+                            />
+                        </div>
                     </div>
                     <div className="porduction-item-wraper">
                         <div>
@@ -38,13 +44,11 @@ const ProductionListItem = ({
                         <div className="btn-wrap">
                             <Link to={path}>
                                 детальніше
-                                <span>
-                                    <img
-                                        src="img/arrow-more.svg"
-                                        alt=""
-                                        width="70px"
-                                    />
-                                </span>
+                                <div className="custom-arrow">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
                             </Link>
                         </div>
                     </div>

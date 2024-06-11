@@ -34,6 +34,17 @@
     width: fit-content;
 }
 
+.footer-title, .footer-title-wraper div {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.footer-title.show, .footer-title-wraper div.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .footer-title {
     color: white;
     font-size: 25px;

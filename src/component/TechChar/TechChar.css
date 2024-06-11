@@ -23,3 +23,46 @@
     font-size: 25px;
     font-family: 'e-Ukraine-Medium';
 }
+
+.battery-table-header th, .battery-table-header td {
+    font-size: 25px;
+    font-family: 'e-Ukraine-Medium';
+    background-color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+}
+
+.bpak-wraper-description {
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.bpak-item-description {
+    max-width: calc(50% - 15px);
+}
+
+.bpak-wraper-description div:last-child{
+    margin-top: 30px;
+}
+
+.bpak-item-description img{
+    width: 100%;
+}
+
+.bpak-item-description-title {
+    font-family: 'e-Ukraine-Medium';
+    font-size: 25px;
+}
+
+.bpak-item-description p {
+    font-family: 'e-Ukraine-Light';
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.bpak-item-description p:last-child {
+    margin-bottom: 0;
+}
+
+.battery-table-cell {
+    border-right: 1px solid white;
+}

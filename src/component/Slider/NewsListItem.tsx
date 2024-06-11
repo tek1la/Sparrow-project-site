@@ -29,13 +29,18 @@ const NewsSliderItem = ({ id, title, description, newsImg }: Props) => {
                         <div className="btn-wrap">
                             <Link to={`/news/${id}`}>
                                 детальніше
-                                <span>
+                                <div className="custom-arrow">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                {/* <span>
                                     <img
                                         src="img/arrow-more.svg"
                                         alt=""
                                         width="70px"
                                     />
-                                </span>
+                                </span> */}
                             </Link>
                         </div>
                     </div>

@@ -29,28 +29,42 @@ const Contacts = (props: Props) => {
                         <Grid item className="contacts-wraper">
                             <div className="contacts-item-wraper">
                                 <div>
-                                    <p className="contacts-item">
-                                        + 38 073 244 61 61
-                                        <br />
-                                        <span>
-                                            (відділ зв'язків з громадськістю)
-                                        </span>
-                                    </p>
-                                    <div className="contacts-item-phone-icon"></div>
+                                    <a
+                                        href="tel:+380732446161"
+                                        className="contacts-item"
+                                    >
+                                        <p>
+                                            + 38 073 244 61 61
+                                            <br />
+                                            <span>
+                                                (відділ зв'язків з
+                                                громадськістю)
+                                            </span>
+                                        </p>
+                                        <div className="contacts-item-phone-icon"></div>
+                                    </a>
                                 </div>
                                 <div>
-                                    <p className="contacts-item">
-                                        + 38 096 244 61 61
-                                        <br />
-                                        <span>(відділ продажів)</span>
-                                    </p>
-                                    <div className="contacts-item-phone-icon"></div>
+                                    <a
+                                        href="tel:+380962446161"
+                                        className="contacts-item"
+                                    >
+                                        <p>
+                                            + 38 096 244 61 61
+                                            <br />
+                                            <span>(відділ продажів)</span>
+                                        </p>
+                                        <div className="contacts-item-phone-icon"></div>
+                                    </a>
                                 </div>
                                 <div>
-                                    <p className="contacts-item">
+                                    <a
+                                        href="mailto:info@sparrow-avia.tech"
+                                        className="contacts-item"
+                                    >
                                         info@sparrow-avia.tech
-                                    </p>
-                                    <div className="contacts-item-mail-icon"></div>
+                                        <div className="contacts-item-mail-icon"></div>
+                                    </a>
                                 </div>
                             </div>
                             <div className="contacts-item-wraper">

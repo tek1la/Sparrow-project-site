@@ -19,16 +19,24 @@ const PartnersSlider = (props: Props) => {
                 className="mySwiper partners-slider"
             >
                 <SwiperSlide>
-                    <img src="img/partner-true-ukr.svg" alt="" />
+                    <img
+                        src="img/partner-true-ukr.svg"
+                        height="130px"
+                        alt="true-ukr"
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="img/partner-atn.svg" alt="" />
+                    <img
+                        src="img/partner-vexilum.svg"
+                        height="130px"
+                        alt="vexilum"
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="img/partner-vexilum.svg" alt="" />
+                    <img src="img/partner-atn.svg" height="130px" alt="atn" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="img/partner-taf.svg" alt="" />
+                    <img src="img/partner-taf.svg" height="130px" alt="taf" />
                 </SwiperSlide>
             </Swiper>
         </>

@@ -1,6 +1,8 @@
 import { Grid } from '@mui/material'
 import Accessories from 'component/Accessories/Accessories'
+import AdvantagesBattery from 'component/Advantages/AdvantagesBattery'
 import AdvantagesSdsMini from 'component/Advantages/AdvantagesSdsMini'
+import BaseEquipment from 'component/BaseEquipment/BaseEquipment'
 import BatteryDescription from 'component/Description/BatteryDescription'
 import BpakDescription from 'component/Description/BpakDescription'
 import FpvDescription from 'component/Description/FpvDescription'
@@ -30,6 +32,7 @@ const Production = ({ path, title, firstTitle, secondTitle }: Props) => {
                         <BpakDescription />
                         <ProductionResult />
                         <TechChar path={path} />
+                        <BaseEquipment />
                     </>
                 ) : null}
                 {title === 'ударні fpv дрони “ГОРОБЕЦЬ 8-10”' ? (
@@ -50,6 +53,7 @@ const Production = ({ path, title, firstTitle, secondTitle }: Props) => {
                         {' '}
                         <BatteryDescription />
                         <TechChar path={path} tableSize={10} size={2} />
+                        <AdvantagesBattery />
                     </>
                 ) : null}
                 {title === 'Системи скидів “SDS-mini”' ? (

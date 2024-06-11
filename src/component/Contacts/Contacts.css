@@ -33,6 +33,10 @@
     line-height: 22px;
 }
 
+.contacts-item:last-child {
+    display: contents;
+}
+
 .contacts-item span {
     font-size: 18px;
     font-family: 'e-Ukraine-Light';

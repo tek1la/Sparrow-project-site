@@ -3,6 +3,8 @@ export type Table = {
     rowName: string
     description: string
     secondDescription?: string
+    thirdDescription?: string
+    fourthDescription?: string
     header?: string
 }
 
@@ -286,10 +288,102 @@ export const link: Table[] = [
 ]
 export const battery: Table[] = [
     {
-    id: 15,
-    rowName: "Виносна станція керування",
-    description: "до 80 м",
-    }
+    id: 1,
+    rowName: "Тип збірки",
+    description: "4S2P",
+    secondDescription: "6S1P",
+    thirdDescription: "6S2P",
+    fourthDescription: "6S3P",
+    header: 'battery-table-header',
+    },
+    {
+    id: 2,
+    rowName: "Розміри",
+    description: "145x45x45 мм",
+    secondDescription: "75x65x45 мм",
+    thirdDescription: "145x65x45 мм",
+    fourthDescription: "215x65x45 мм"
+    },
+    {
+    id: 3,
+    rowName: "Вага",
+    description: "570 грам",
+    secondDescription: "470 грам",
+    thirdDescription: "850 грам",
+    fourthDescription: "1250 грам"
+    },
+    {
+    id: 4,
+    rowName: "Ємність акумулятора",
+    description: "8400 мА/год",
+    secondDescription: "4200 мА/год",
+    thirdDescription: "8400 мА/год",
+    fourthDescription: "12600 мА/год"
+    },
+    {
+    id: 5,
+    rowName: "Номінальна напруга",
+    description: "14,8 В",
+    secondDescription: "22,2 В",
+    thirdDescription: "22,2 В",
+    fourthDescription: "22,2 В"
+    },
+    {
+    id: 6,
+    rowName: "Мінімальна напруга",
+    description: "10 В",
+    secondDescription: "15 В",
+    thirdDescription: "15 В",
+    fourthDescription: "15 В"
+    },
+    {
+    id: 7,
+    rowName: "Максимальна напруга",
+    description: "16,8 В",
+    secondDescription: "25,2 В",
+    thirdDescription: "25,2 В",
+    fourthDescription: "25,2 В"
+    },
+    {
+    id: 8,
+    rowName: "Загальна ємність",
+    description: "124 Вт/год",
+    secondDescription: "93 Вт/год",
+    thirdDescription: "186 Вт/год",
+    fourthDescription: "280 Вт/год"
+    },
+    {
+    id: 9,
+    rowName: "Струм віддачі",
+    description: "90 А",
+    secondDescription: "45 А",
+    thirdDescription: "90 А",
+    fourthDescription: "135 А"
+    },
+    {
+    id: 10,
+    rowName: "Рекомендований струм зарядки",
+    description: "8 А",
+    secondDescription: "4 А",
+    thirdDescription: "8 А",
+    fourthDescription: "12 А"
+    },
+    {
+    id: 11,
+    rowName: "Температуриний діапазон розряду",
+    description: "-40С до +60С",
+    secondDescription: "-40С до +60С",
+    thirdDescription: "-40С до +60С",
+    fourthDescription: "-40С до +60С"
+    },
+    {
+    id: 12,
+    rowName: "Температуриний діапазон заряду",
+    description: "0С до +45С",
+    secondDescription: "0С до +45С",
+    thirdDescription: "0С до +45С",
+    fourthDescription: "0С до +45С"
+    },
 ]
 export const sdsMini: Table[] = [
     {

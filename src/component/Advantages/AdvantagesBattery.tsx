@@ -1,8 +1,8 @@
 import { Container, Grid } from '@mui/material'
-import './AdvantagesSdsMini.css'
+import './AdvantagesBattery.css'
 
 type Props = {}
-const AdvantagesSdsMini = (props: Props) => {
+const AdvantagesBattery = (props: Props) => {
     return (
         <>
             <Container
@@ -12,7 +12,7 @@ const AdvantagesSdsMini = (props: Props) => {
                     position: 'relative',
                 }}
             >
-                <div className="advantages-sds-mini-title">
+                <div className="advantages-battery-title">
                     <h3>переваги</h3>
                 </div>
                 <Grid
@@ -30,15 +30,12 @@ const AdvantagesSdsMini = (props: Props) => {
                                     marginBottom: '15px',
                                 }}
                             >
-                                <p>
-                                    Саме тому нашою командою був розроблений
-                                    скид, який на відміну від поширених на ринку
-                                    моделей скидів, розміщених повністю під
-                                    дроном, відрізняється принципово новою
-                                    компоновкою, а саме:
+                                <p className="battery-advantage-title">
+                                    З акумуляторними збірками на елементах
+                                    molicel INR-21700-P42A ви можете:
                                 </p>
                             </div>
-                            <div className="sds-descript-first-text">
+                            <div className="battery-descript-first-text">
                                 <ul
                                     style={{
                                         paddingLeft: '15px',
@@ -46,25 +43,29 @@ const AdvantagesSdsMini = (props: Props) => {
                                 >
                                     <li>
                                         <p>
-                                            Розміщення габаритних частин
-                                            механізму по боках рами;
+                                            Бути впевненими в часі польоту БпЛА;
                                         </p>
                                     </li>
                                     <li>
                                         <p>
-                                            Зменшення загальної висоти дрона
-                                            разом зі скидом - всього на 3 см
-                                            більше висоти рами дрона;
+                                            Не зважати на погодні умови, холод
+                                            до -40;
                                         </p>
-                                    </li>
-                                    <li>
-                                        <p>Зручніше транспортувати дрон;</p>
                                     </li>
                                     <li>
                                         <p>
-                                            Скид пристосований до кріплення на
-                                            fpv-дрони 10 дюймів.
+                                            Не турбуватися про те, що ваш БпЛА
+                                            залишиться без акумулятора в
+                                            потрібний момент;
                                         </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Заощадити на купівлі акумуляторів;
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>Підтримувати економіку України.</p>
                                     </li>
                                 </ul>
                             </div>
@@ -73,8 +74,8 @@ const AdvantagesSdsMini = (props: Props) => {
                     <Grid xs={6} item className="battery-descript-img">
                         <div>
                             <img
-                                src="./img/production/advantege-product-bg.jpg"
-                                alt="sds"
+                                src="./img/production/battery-advantages.jpg"
+                                alt="battery"
                             />
                         </div>
                     </Grid>
@@ -83,4 +84,4 @@ const AdvantagesSdsMini = (props: Props) => {
         </>
     )
 }
-export default AdvantagesSdsMini
+export default AdvantagesBattery

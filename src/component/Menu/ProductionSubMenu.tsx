@@ -7,9 +7,9 @@ const ProductionSubMenu = (props: Props) => {
     return (
         <>
             <div className="sub-menu-wraper">
-                {productionArray.map(({ id, title, path }) => (
+                {productionArray.map(({ id, subTitle, path }) => (
                     <ProductionSubMenuItem key={id} path={path}>
-                        {title}
+                        {subTitle}
                     </ProductionSubMenuItem>
                 ))}
             </div>

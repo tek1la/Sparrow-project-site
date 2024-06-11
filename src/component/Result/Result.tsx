@@ -18,36 +18,55 @@ const Result = (props: Props) => {
                     </div>
                 </Grid>
                 <Grid container gap={3.5} wrap="nowrap">
-                    <Grid item>
-                        <img
-                            className="result-img"
-                            src="img/result-img-1.jpg"
-                            alt=""
-                        />
+                    <Grid item className="result-card-wraper">
+                        <div
+                            style={{
+                                height: '250px',
+                            }}
+                        >
+                            <img
+                                className="result-img"
+                                src="img/result-img-1.jpg"
+                                alt=""
+                            />
+                        </div>
                         <p className="result-text">
                             Створили та розробили повноцінний ударний БпАК “1В
                             BOMBER”, який отримав кодифікацію НАТО та ефективно
                             виконує бойові завдання на лінії фронту. 
                         </p>
                     </Grid>
-                    <Grid item>
-                        <img
-                            className="result-img"
-                            src="img/result-img-2.jpg"
-                            alt=""
-                        />
+                    <Grid item className="result-card-wraper">
+                        <div
+                            style={{
+                                height: '250px',
+                            }}
+                        >
+                            <img
+                                className="result-img"
+                                src="img/result-img-2.jpg"
+                                alt=""
+                            />
+                        </div>
                         <p className="result-text">
                             Запустили виробництва акумуляторів, ретрансляторів.
                             Вже виготовили понад 10 тисяч АКБ та 120 станцій
                             ретрансляції.
                         </p>
                     </Grid>
-                    <Grid item>
-                        <img
-                            className="result-img"
-                            src="img/result-img-3.jpg"
-                            alt=""
-                        />
+                    <Grid item className="result-card-wraper">
+                        <div
+                            style={{
+                                height: '250px',
+                            }}
+                        >
+                            <img
+                                className="result-img"
+                                src="img/result-img-3.jpg"
+                                alt=""
+                            />
+                        </div>
+
                         <p className="result-text">
                             Успішно реалізували 4 проєкти поставок для ЗСУ –
                             понад 10 тисяч FPV. 

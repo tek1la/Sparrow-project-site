@@ -213,19 +213,28 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                         id,
                                                         rowName,
                                                         description,
+                                                        secondDescription,
+                                                        thirdDescription,
+                                                        fourthDescription,
+                                                        header,
                                                     }) => (
-                                                        <TableRow key={id}>
+                                                        <TableRow
+                                                            key={id}
+                                                            className={header}
+                                                        >
                                                             <TableCell
                                                                 sx={{
+                                                                    textAlign:
+                                                                        'end',
                                                                     padding:
                                                                         '10px',
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    width: '60%',
+                                                                    width: '36%',
                                                                 }}
                                                                 component="th"
                                                                 scope="row"
-                                                                className="table-cell"
+                                                                className="table-cell battery-table-cell"
                                                             >
                                                                 {rowName}
                                                             </TableCell>
@@ -235,11 +244,65 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                         '10px',
                                                                     lineHeight:
                                                                         '1.38',
+                                                                    textAlign:
+                                                                        'center',
+                                                                    width: '16%',
+                                                                }}
+                                                                className="table-cell battery-table-cell"
+                                                                align="left"
+                                                            >
+                                                                {description}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                sx={{
+                                                                    padding:
+                                                                        '10px',
+                                                                    lineHeight:
+                                                                        '1.38',
+                                                                    textAlign:
+                                                                        'center',
+                                                                    width: '16%',
+                                                                }}
+                                                                className="table-cell battery-table-cell"
+                                                                align="left"
+                                                            >
+                                                                {
+                                                                    secondDescription
+                                                                }
+                                                            </TableCell>
+                                                            <TableCell
+                                                                sx={{
+                                                                    padding:
+                                                                        '10px',
+                                                                    lineHeight:
+                                                                        '1.38',
+                                                                    textAlign:
+                                                                        'center',
+                                                                    width: '16%',
+                                                                }}
+                                                                className="table-cell battery-table-cell"
+                                                                align="left"
+                                                            >
+                                                                {
+                                                                    thirdDescription
+                                                                }
+                                                            </TableCell>
+                                                            <TableCell
+                                                                sx={{
+                                                                    padding:
+                                                                        '10px',
+                                                                    lineHeight:
+                                                                        '1.38',
+                                                                    textAlign:
+                                                                        'center',
+                                                                    width: '16%',
                                                                 }}
                                                                 className="table-cell"
                                                                 align="left"
                                                             >
-                                                                {description}
+                                                                {
+                                                                    fourthDescription
+                                                                }
                                                             </TableCell>
                                                         </TableRow>
                                                     )
@@ -340,13 +403,15 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                     </Grid>
                 </Grid>
                 {path === 'bpak' ? (
-                    <Grid container>
-                        <Grid item>
+                    <Grid container className="bpak-wraper-description">
+                        <Grid item className="bpak-item-description">
                             <img
                                 src="./img/production/tech-char-img-1.jpg"
-                                alt=""
+                                alt="cam"
                             />
-                            <p>тепловізійна камера "PHOENIX EYE"</p>
+                            <h5 className="bpak-item-description-title">
+                                тепловізійна камера "PHOENIX EYE"
+                            </h5>
                             <p>
                                 Вона легко інтегрується з різноманітними
                                 моделями БПЛА, працюючи як у день, так і вночі,
@@ -368,15 +433,15 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                 найскладніших умовах.
                             </p>
                         </Grid>
-                        <Grid item>
+                        <Grid item className="bpak-item-description">
                             <img
                                 src="./img/production/tech-char-img-2.jpg"
-                                alt=""
+                                alt="re-link"
                             />
-                            <p>
+                            <h5 className="bpak-item-description-title">
                                 Станція ретрансляції та керування “Sparrow Pro
                                 Link”
-                            </p>
+                            </h5>
                             <p>
                                 Універсальна та інтуітивна система керування
                                 безпілотними пристроями, ціль якої - підвищити
@@ -403,12 +468,14 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                 екіпажів БпАК.
                             </p>
                         </Grid>
-                        <Grid item>
+                        <Grid item className="bpak-item-description">
                             <img
                                 src="./img/production/tech-char-img-3.jpg"
                                 alt=""
                             />
-                            <p>УНІВЕРСАЛЬНА МОДУЛЬНА СИСТЕМА СКИДУ “SDS-1”</p>
+                            <h5 className="bpak-item-description-title">
+                                УНІВЕРСАЛЬНА МОДУЛЬНА СИСТЕМА СКИДУ “SDS-1”
+                            </h5>
                             <p>
                                 Швидкозмінна система скиду під 4 боєприпаси
                                 калібру 60 мм або 2 боєприпаси 82 мм.

@@ -4,39 +4,51 @@
 }
 
 .form-input {
-    background-color: rgba(255, 255, 255, 0.15);
-    margin-bottom: 25px;
-}
-
-.contact-lable {
-    font-size: 25px;
-    font-family: 'e-Ukraine-Medium';
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .form-input div {
-    height: 100%;
-    border-bottom: 2px solid white;
-    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.15);
+    height: 44px;
 }
 
-.form-input div input {
-    height: 42px;
-    padding: 0 10px;
-    font-size: 18px;
-    font-family: 'e-Ukraine-Light';
+.form-input-area > div {
+    height: 150px;
+}
+
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+    color: rgba(255, 255, 255, 0.5);
+    transform: translate(10px, 21px) scale(1);
+    font-family: 'e-Ukraine-Medium';
+    font-size: 23px;
+}
+
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'e-Ukraine-Medium';
+}
+
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'e-Ukraine-Medium';
+}
+
+/* .form-input .Mui-focused:first-child {
+    color: rgba(255, 255, 255, 1);
+    transform: translate(10px, -10px) scale(1);
+} */
+
+.css-uhyr2s-MuiInputBase-root-MuiInput-root::after {
+    border-bottom: 2px solid white;
 }
 
 .form-input div textarea {
-    height: 150px;
-    padding: 0 10px;
-    font-size: 18px;
-    font-family: 'e-Ukraine-Light';
+    color: white;
+    padding-left: 10px;
 }
 
-.form-input div::after {
-    border-bottom: none;
+.form-input .Mui-focused:last-child {
+    color: white;
 }
 
 .contact-form-btn {

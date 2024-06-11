@@ -31,6 +31,7 @@ const AnimatedBtn = (props: Props) => {
                     color: 'white',
                     height: '43px',
                     width: '43px',
+                    cursor: 'pointer',
                 }}
             />
         </Grid>

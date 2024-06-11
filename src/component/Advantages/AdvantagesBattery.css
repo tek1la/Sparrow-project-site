@@ -1,4 +1,4 @@
-.advantages-sds-mini-title {
+.advantages-battery-title {
     font-size: 60px;
     background-image: url('/public/img/production/advantages-sds-mini-bg.png');
     background-repeat: no-repeat;
@@ -10,16 +10,19 @@
     text-transform: uppercase;
 }
 
-.advantages-sds-mini-title h3 {
-    margin: 0;
-}
-
-.sds-descript-first-text {
+.battery-descript-first-text {
     color: white;
 }
 
-.sds-descript-first-text p {
+.battery-descript-first-text p {
     font-family: 'e-Ukraine-Light';
     font-size: 18px;
     line-height: 22px;
+}
+
+.descript-first-text .battery-advantage-title {
+    font-size: 25px;
+    line-height: 30px;
+    font-family: 'e-Ukraine-Medium';
+    text-transform: uppercase;
 }

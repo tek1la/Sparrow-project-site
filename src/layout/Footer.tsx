@@ -2,9 +2,37 @@ import { Container, Grid, Link } from '@mui/material'
 import Logo from 'component/Logo/Logo'
 import './Footer.css'
 import EastIcon from '@mui/icons-material/East'
+import { useEffect, useRef, useState } from 'react'
 
 type Props = {}
 const Footer = (props: Props) => {
+    const [isAnimated, setIsAnimated] = useState(false)
+    const footerRef = useRef(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsAnimated(true)
+                    observer.disconnect()
+                }
+            },
+            {
+                threshold: 0.5,
+            }
+        )
+
+        if (footerRef.current) {
+            observer.observe(footerRef.current)
+        }
+
+        return () => {
+            if (footerRef.current) {
+                observer.unobserve(footerRef.current)
+            }
+        }
+    }, [])
+
     return (
         <>
             <div className="footer-wraper">
@@ -13,7 +41,7 @@ const Footer = (props: Props) => {
                         <Grid item xs={4} className="footer-item">
                             <Logo h={'100px'} w={'auto'} />
                         </Grid>
-                        <Grid item xs={4} className="footer-item">
+                        {/* <Grid item xs={4} className="footer-item">
                             <div className="footer-title-wraper">
                                 <p className="footer-title">Наше небо</p>
                                 <div
@@ -23,21 +51,55 @@ const Footer = (props: Props) => {
                                 ></div>
                                 <p className="footer-title">наші правила</p>
                             </div>
+                        </Grid> */}
+                        {/* <div ref={footerRef}> */}
+                        <Grid item xs={4} className={`footer-item`}>
+                            <div ref={footerRef}>
+                                <div className="footer-title-wraper">
+                                    <p
+                                        className={`footer-title ${isAnimated ? 'show' : ''}`}
+                                    >
+                                        Наше небо
+                                    </p>
+                                    <div
+                                        className={`animated-element ${isAnimated ? 'show' : ''}`}
+                                        style={{
+                                            border: '1px solid white',
+                                        }}
+                                    ></div>
+                                    <p
+                                        className={`footer-title ${isAnimated ? 'show' : ''}`}
+                                    >
+                                        наші правила
+                                    </p>
+                                </div>
+                            </div>
                         </Grid>
+                        {/* </div> */}
+
                         <Grid item xs={4} className="footer-item">
-                            <p className="footer-contact">
+                            <a
+                                href="tel:+380732446161"
+                                className="footer-contact"
+                            >
                                 + 38 073 244 61 61
                                 <br />
                                 <span>(відділ зв'язків з громадськістю)</span>
-                            </p>
-                            <p className="footer-contact">
+                            </a>
+                            <a
+                                href="tel:+380962446161"
+                                className="footer-contact"
+                            >
                                 + 38 096 244 61 61
                                 <br />
                                 <span>(відділ продажів)</span>
-                            </p>
-                            <p className="footer-contact">
+                            </a>
+                            <a
+                                href="mailto:info@sparrow-avia.tech"
+                                className="footer-contact"
+                            >
                                 info@sparrow-avia.tech
-                            </p>
+                            </a>
                         </Grid>
                         <Grid item xs={4} className="footer-item">
                             <Grid
@@ -46,7 +108,10 @@ const Footer = (props: Props) => {
                                 className="social-link-wraper"
                             >
                                 <Grid item xs={6}>
-                                    <Link href="" className="social-link">
+                                    <Link
+                                        href="https://www.youtube.com/channel/UC5gx0EUmtjz66XpfCAfr5aA"
+                                        className="social-link"
+                                    >
                                         <EastIcon
                                             sx={{
                                                 marginRight: '10px',
@@ -56,7 +121,10 @@ const Footer = (props: Props) => {
                                     </Link>
                                 </Grid>
                                 <Grid item xs={6}>
-                                    <Link href="" className="social-link">
+                                    <Link
+                                        href="https://www.instagram.com/sparrow_avia"
+                                        className="social-link"
+                                    >
                                         <EastIcon
                                             sx={{
                                                 marginRight: '10px',
@@ -67,7 +135,10 @@ const Footer = (props: Props) => {
                                 </Grid>
 
                                 <Grid item xs={6}>
-                                    <Link href="" className="social-link">
+                                    <Link
+                                        href="https://www.linkedin.com/company/sparrow-avia"
+                                        className="social-link"
+                                    >
                                         <EastIcon
                                             sx={{
                                                 marginRight: '10px',
@@ -78,7 +149,10 @@ const Footer = (props: Props) => {
                                 </Grid>
 
                                 <Grid item xs={6}>
-                                    <Link href="" className="social-link">
+                                    <Link
+                                        href="https://www.facebook.com/sparrowavia"
+                                        className="social-link"
+                                    >
                                         <EastIcon
                                             sx={{
                                                 marginRight: '10px',
@@ -89,7 +163,10 @@ const Footer = (props: Props) => {
                                 </Grid>
 
                                 <Grid item xs={6}>
-                                    <Link href="" className="social-link">
+                                    <Link
+                                        href="https://www.tiktok.com/@sparrow.avia"
+                                        className="social-link"
+                                    >
                                         <EastIcon
                                             sx={{
                                                 marginRight: '10px',
@@ -100,7 +177,10 @@ const Footer = (props: Props) => {
                                 </Grid>
 
                                 <Grid item xs={6}>
-                                    <Link href="" className="social-link">
+                                    <Link
+                                        href="https://twitter.com/Sparrow_Avia"
+                                        className="social-link"
+                                    >
                                         <EastIcon
                                             sx={{
                                                 marginRight: '10px',

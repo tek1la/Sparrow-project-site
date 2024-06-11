@@ -22,7 +22,12 @@ const About = (props: Props) => {
                 >
                     <AnimatedText text="#Ударний БпАК “1В БОМБЕР”&nbsp;&emsp;&emsp;#Ударні FPV дрони “ГОРОБЕЦЬ”&nbsp;&emsp;&emsp;#Станція ретрансляції “FPV Re-Link”&nbsp;&emsp;&emsp;#Акумуляторні збірки" />
                 </Container>
-                <Grid container className="about-wraper">
+                <Grid
+                    container
+                    gap={2.5}
+                    wrap="nowrap"
+                    className="about-wraper"
+                >
                     <Grid xs={6} item className="about-img">
                         <img src="./img/player-img.png" alt="" />
                     </Grid>
