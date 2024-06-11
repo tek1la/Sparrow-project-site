@@ -6,7 +6,7 @@ const PriceList = (props: Props) => {
     return (
         <div className="price-list-bg-wraper">
             <Container
-                id="ПРЕЙСКУРАНТ"
+                id="КАТАЛОГ"
                 className="container price-list-wraper"
                 sx={{
                     padding: '120px 0',

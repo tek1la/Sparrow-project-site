@@ -15,6 +15,7 @@ const ContactForm = (props: Props) => {
                     maxRows={1}
                     variant="standard"
                     className="form-input"
+                    inputProps={{ type: 'name' }}
                 />
                 <TextField
                     id="standard-multiline-flexible"
@@ -23,6 +24,7 @@ const ContactForm = (props: Props) => {
                     maxRows={1}
                     variant="standard"
                     className="form-input"
+                    inputProps={{ type: 'email' }}
                 />
                 <TextField
                     id="standard-multiline-flexible"
@@ -31,6 +33,7 @@ const ContactForm = (props: Props) => {
                     maxRows={1}
                     variant="standard"
                     className="form-input"
+                    inputProps={{ type: 'tel' }}
                 />
                 <TextField
                     id="standard-multiline-flexible"

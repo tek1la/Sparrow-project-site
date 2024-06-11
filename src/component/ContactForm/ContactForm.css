@@ -16,35 +16,35 @@
     height: 150px;
 }
 
-.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+.form-input label {
     color: rgba(255, 255, 255, 0.5);
-    transform: translate(10px, 21px) scale(1);
     font-family: 'e-Ukraine-Medium';
+    transform: translate(10px, 21px);
     font-size: 23px;
 }
 
-.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+.form-input label.Mui-focused {
     color: rgba(255, 255, 255, 0.5);
-    font-family: 'e-Ukraine-Medium';
-}
-
-.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root {
-    color: rgba(255, 255, 255, 0.5);
-    font-family: 'e-Ukraine-Medium';
-}
-
-/* .form-input .Mui-focused:first-child {
-    color: rgba(255, 255, 255, 1);
-    transform: translate(10px, -10px) scale(1);
-} */
-
-.css-uhyr2s-MuiInputBase-root-MuiInput-root::after {
-    border-bottom: 2px solid white;
+    transform: translate(5px, -5px);
+    font-size: 16px;
 }
 
 .form-input div textarea {
-    color: white;
     padding-left: 10px;
+    color: white;
+}
+
+.form-input div::after {
+    border-bottom: 1px solid white;
+}
+
+.form-input div.Mui-focused::after {
+    border-bottom: 1px solid white;
+}
+
+.form-input .MuiFormLabel-filled {
+    transform: translate(0, -5px);
+    font-size: 16px;
 }
 
 .form-input .Mui-focused:last-child {

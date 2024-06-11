@@ -14,6 +14,9 @@ const ProductionSubMenuItem = ({
     onMouseEnter,
     onMouseLeave,
 }: Props) => {
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
     return (
         <>
             <Button
@@ -26,6 +29,7 @@ const ProductionSubMenuItem = ({
                 className="menu-item"
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
+                onClick={handleScrollToTop}
             >
                 <NavLink
                     to={path}
