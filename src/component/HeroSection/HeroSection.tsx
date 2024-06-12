@@ -49,7 +49,7 @@ const HeroSection = (props: Props) => {
                             sx={{
                                 height: '205px',
                                 display: 'flex',
-                                justifyContent: 'flex-end',
+                                justifyContent: 'center',
                                 alignItems: 'center',
                                 position: 'relative',
                             }}

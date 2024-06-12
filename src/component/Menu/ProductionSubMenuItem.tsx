@@ -33,6 +33,7 @@ const ProductionSubMenuItem = ({
             >
                 <NavLink
                     to={path}
+                    className="sub-menu-text"
                     style={{
                         width: '100%',
                     }}

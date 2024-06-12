@@ -2,11 +2,8 @@ import { useState } from 'react'
 import MenuItem from './MenuItem'
 import ProductionSubMenu from './ProductionSubMenu'
 
-type Props = {
-    item: string
-    itemActive: string
-}
-const Menu = ({ item, itemActive }: Props) => {
+type Props = {}
+const Menu = (props: Props) => {
     const [isSubMenuOpen, setIsSubMenuOpen] = useState(false)
 
     return (

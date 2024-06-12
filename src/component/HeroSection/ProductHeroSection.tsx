@@ -56,7 +56,7 @@ const ProductHeroSection = ({ firstTitle, secondTitle, bgImg }: Props) => {
                                         backgroundSize: 'inherit',
                                         position: 'absolute',
                                         height: '204px',
-                                        width: '100%',
+                                        width: '100vw',
                                     }}
                                 ></div>
                             </Grid>

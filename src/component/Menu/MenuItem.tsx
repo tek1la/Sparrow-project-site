@@ -7,10 +7,12 @@ type Props = {
     onMouseLeave?: () => void
 }
 const MenuItem = ({ children, onMouseEnter, onMouseLeave }: Props) => {
+    const childrenContent = Array.isArray(children) ? 'ВИРОБНИЦТВО' : children
+    console.log(childrenContent)
     return (
         <>
             <Button
-                href={`/#${children}`}
+                href={`/#${childrenContent}`}
                 sx={{
                     position: 'relative',
                     height: '100%',

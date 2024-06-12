@@ -13,11 +13,11 @@
 }
 
 .title-text-wraper p {
-    margin-right: 150px;
+    margin-right: 200px;
 }
 
 .title-text {
-    font-size: 100px;
+    font-size: 90px;
     font-family:'e-Ukraine-Medium', sans-serif;
 }
 
@@ -40,7 +40,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    left: -475px;
+    left: -445px;
 }
 .second-title-text-bg {
     background-image: url('/public/img/second_title_bg.png');

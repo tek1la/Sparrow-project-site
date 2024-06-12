@@ -23,7 +23,7 @@ export const productionArray: Productions[] = [
     {
         id: 2,
         title: "ударні fpv дрони “ГОРОБЕЦЬ 8-10”",
-        subTitle: "FPV “2А-3А Горобець”",
+        subTitle: "FPV “Горобець 8” та “Горобець 10”",
         firstTitle: "ударні fpv дрони",
         secondTitle: "“ГОРОБЕЦЬ 8-10”",
         description: 'Безпiлотні авiацiйний комплекс "2А-3А ГОРОБЕЦЬ" призначені для  виконання ударних операцій в різних метеорологічних умовах.',

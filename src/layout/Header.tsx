@@ -103,10 +103,7 @@ const Header = (props: Props) => {
                                 alignItems: 'center',
                             }}
                         >
-                            <Menu
-                                item={'menu-item'}
-                                itemActive={'menu-item-active'}
-                            />
+                            <Menu />
                         </Box>
                         <Box>
                             <LanguageMenu

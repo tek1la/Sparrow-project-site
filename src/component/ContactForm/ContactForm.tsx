@@ -5,9 +5,14 @@ import './ContactForm.css'
 
 type Props = {}
 const ContactForm = (props: Props) => {
+    const handleFormSubmit = (event: React.FormEvent) => {
+        event.preventDefault()
+        // Додаткові дії при відправленні форми
+    }
+
     return (
         <Box sx={{ width: 407 }}>
-            <form className="contact-form-wraper">
+            <form className="contact-form-wraper" onSubmit={handleFormSubmit}>
                 <TextField
                     id="standard-multiline-flexible"
                     label="ПІБ"
