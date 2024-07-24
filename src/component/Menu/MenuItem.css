@@ -1,11 +1,57 @@
-.menu-item, .menu-item-active {
-    color: white;
+.menu-item {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 11px 16px;
     text-decoration: none;
-    font-size: 18px;
-    font-family: 'e-Ukraine-Medium';
-    padding: 5px 15px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0);
 }
-.menu-item:hover p {
-    border-bottom: 2px solid white;
-    border-radius: 0;
+
+.menu-item p, .menu-item a {
+    color: #F2F4F7;
+}
+
+.menu-item:hover {
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.menu-arrow::after {
+    content: url('/src/assets/text-arrow.svg');
+    margin-left: 10px;
+}
+
+.menu-arrow:hover::after {
+    content: url('/src/assets/text-arrow.svg');
+    rotate: 180deg;
+}
+
+.header-contact {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 17px 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.header-contact:hover {
+    color: #1818ED;
+}
+
+.menu-item.active {
+    border: 1px solid #1818ED;
+    color: #1818ED;
+    border-radius: 50px;
+}
+
+.menu-item.active p{
+    color: #1818ED;
+}
+
+.menu-arrow.active::after {
+    content: url('/src/assets/text-arrow-active.svg');
+}
+
+.menu-arrow.active:hover::after {
+    content: url('/src/assets/text-arrow-active.svg');
 }

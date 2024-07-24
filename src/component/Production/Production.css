@@ -1,16 +1,22 @@
+.production {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
+}
+
+.prodaction-array-wraper {
+    border: 1px solid #141A29;
+}
+
 .production-title {
-    font-size: 56.5px;
-    background-image: url('/public/img/production-bg.png');
-    background-repeat: no-repeat;
-    background-position-x: 10px;
-    background-position-y: center;
-    background-size:inherit;
-    margin-bottom: 100px;
-    color: white;
-    text-transform: uppercase;
+    border-left: 1px solid #141A29;
 }
 
 .production-title h3 {
-    margin: 0;
-    padding-bottom: 12px;
+    font-family: 'Gerhaus';
+    margin: 15px;
+    font-size: 60px;
+    font-weight: 400;
+    color: #141A29;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
 }

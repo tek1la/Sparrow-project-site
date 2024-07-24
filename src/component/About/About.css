@@ -1,79 +1,104 @@
-.about-title, .about-first-text, .about-second-text {
-    color: white;
-    font-family: 'e-Ukraine-Medium';
-}
-
-.animated-text-wraper {
+.about {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
     margin-bottom: 30px;
-    width: 1265px;
-    overflow: hidden;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
-.about-wraper {
-    align-items: end;
+.about-title {
+    border-left: 1px solid #141A29;
+    line-height: 46.5px;
 }
 
-.about-wraper .about-img {
-    position: relative;
+.about-title h3 {
+    font-family: 'Gerhaus';
+    margin: 15px;
+    font-size: 60px;
+    font-weight: 400;
+    color: #141A29;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+}
+
+.about-img-wraper {
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+    margin-bottom: 30px;
+}
+
+.about-img-wraper div {
+	position: relative;
 	z-index: 1;
+	display: inline-block;
 	overflow: hidden;
 	cursor: pointer;
-    height: min-content;
-    border-radius: 10px;
-    bottom: 0;
 }
 
-.about-img {
-    display: flex;
-}
-
-.about-img img {
-    height: 400px;
-    align-self: flex-end;
-    border-radius: 10px;
-    opacity: 0.7;
+.about-img-wraper div img {
+    width: 100%;
+    position: relative;
     transition: opacity 0.35s, transform 0.35s;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.about-wraper:hover .about-img img {
+.about-wraper:hover div img {
     transform: scale(1);
     opacity: 1;
 }
 
-.about-title {
-    font-size: 60px;
-    background-image: url('/public/img/about-bg.png');
-    background-repeat: no-repeat;
-    background-position:left;
-    background-size:inherit;
-    margin-bottom: 100px;
+.about-wraper {
+    padding: 15px;
+    line-height: 20px;
 }
 
-.about-title h3 {
-    margin: 0;
-    padding-bottom: 17px;
+.about-wraper p {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    color: #141A29;
+    letter-spacing: normal;
 }
 
-.about-text h4 {
-    font-size: 25px;
-    margin: 0;
-    margin-bottom: 15px;
-    text-transform: uppercase;
+.about-wraper .about-bold {
+    font-weight: bold;
 }
 
-.about-text p {
-    margin: 0;
-    font-size: 18px;
-    font-family: 'e-Ukraine-Light';
+.about-wraper .about-mini-text {
+    font-size: 12px;
+    color: #656C7D;
 }
 
-.about-text {
+.about-text-end {
+    text-align: end;
+}
+
+.about-item-wraper {
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: space-between;
+}
+
+.about-item-title {
+    line-height: 30px;
+}
+
+.about-item-wraper .production-item-title a {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.about-icon {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 15px;
+}
+
+.about-img {
+    position: relative;
+}
+
+.about-video {
+    margin-top: 30px;
 }

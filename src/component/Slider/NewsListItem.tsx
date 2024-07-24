@@ -1,52 +1,42 @@
-import { Card, CardContent } from '@mui/material'
+import { Grid } from '@mui/material'
 import { Link } from 'react-router-dom'
+import './NewsListItem.css'
 
 type Props = {
     id: number
     title: string
     description: string
+    date: string
+    source: string
     newsImg: string
 }
-const NewsSliderItem = ({ id, title, description, newsImg }: Props) => {
+const NewsSliderItem = ({
+    id,
+    title,
+    description,
+    date,
+    source,
+    newsImg,
+}: Props) => {
     return (
-        <Card className="news-list-item" variant="outlined">
-            <CardContent
-                sx={{
-                    padding: '0',
-                }}
-            >
-                <div className="news-wraper">
+        <Grid className="news-list-item">
+            <div className="news-wraper">
+                <div className="news-img-wraper">
                     <div className="news-img">
                         <img className="img" src={newsImg} alt={title} />
                     </div>
-                    <div className="news-item-wraper">
-                        <div>
-                            <h2 className="news-item-title">
-                                <Link to={`/news/${id}`}>{title}</Link>
-                            </h2>
-                            <p className="news-description">{description}</p>
-                        </div>
-                        <div className="btn-wrap">
-                            <Link to={`/news/${id}`}>
-                                детальніше
-                                <div className="custom-arrow">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                {/* <span>
-                                    <img
-                                        src="img/arrow-more.svg"
-                                        alt=""
-                                        width="70px"
-                                    />
-                                </span> */}
-                            </Link>
-                        </div>
-                    </div>
                 </div>
-            </CardContent>
-        </Card>
+                <div className="news-item-wraper">
+                    <div className="news-item-text">
+                        <p className="news-date">{date}</p>
+                        <p className="news-source">{source}</p>
+                    </div>
+                    <h2 className="news-item-title">
+                        <Link to={`/news/${id}`}>{title}</Link>
+                    </h2>
+                </div>
+            </div>
+        </Grid>
     )
 }
 export default NewsSliderItem

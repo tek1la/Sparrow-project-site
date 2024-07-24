@@ -1,8 +1,17 @@
-import { AppBar, Box, Container, Toolbar, Slide } from '@mui/material'
+import {
+    AppBar,
+    Box,
+    Container,
+    Toolbar,
+    Slide,
+    Grid,
+    Button,
+} from '@mui/material'
 import Menu from '../component/Menu/Menu'
 import LanguageMenu from '../component/Menu/LanguageMenu'
 import Logo from '../component/Logo/Logo'
 import { useEffect, useRef, useState } from 'react'
+import HeaderMenu from 'component/Menu/HeaderMenu'
 
 type Props = {}
 
@@ -19,6 +28,7 @@ const Header = (props: Props) => {
     const [showHeader, setShowHeader] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
     const [heroSection, setHeroSection] = useState(false)
+    const [menuHeaderHeight, setMenuHeaderHeight] = useState('0px')
     const timeoutRef = useRef<number | null>(null)
 
     useEffect(() => {
@@ -29,6 +39,7 @@ const Header = (props: Props) => {
             if (currentScrollY < lastScrollY) {
                 // Scrolling up
                 setShowHeader(true)
+                setMenuHeaderHeight('0px')
                 if (timeoutRef.current !== null) {
                     clearTimeout(timeoutRef.current)
                 }
@@ -39,11 +50,11 @@ const Header = (props: Props) => {
                 }
                 timeoutRef.current = window.setTimeout(() => {
                     setShowHeader(false)
-                    console.log('hideHeader')
+                    setMenuHeaderHeight('-60px')
                 }, 500)
                 timeoutRef.current = window.setTimeout(() => {
                     setShowHeader(false)
-                    console.log('blablabla')
+                    setMenuHeaderHeight('-60px')
                 }, 2000)
             }
 
@@ -60,61 +71,83 @@ const Header = (props: Props) => {
     }, [lastScrollY])
 
     useEffect(() => {
-        if (window.screenTop < 10) {
+        if (window.screenTop < 100) {
             timeoutRef.current = window.setTimeout(() => {
                 setShowHeader(true)
-                console.log('blablabla')
+                setMenuHeaderHeight('0px')
             }, 400)
         }
     }, [lastScrollY])
 
     return (
-        <HideOnScroll trigger={showHeader}>
-            <AppBar
-                position="fixed"
-                sx={{
-                    backgroundColor: `rgba(28,28,28,${heroSection ? 1 : 0.4})`,
-                    height: `95px`,
-                    display: 'flex',
-                    justifyContent: 'center',
-                }}
-            >
-                <Container
-                    className="container"
+        <AppBar
+            position="fixed"
+            sx={{
+                backgroundColor: `rgba(28,28,28,${heroSection ? 1 : 0.4})`,
+                transform: `translateY(${menuHeaderHeight})`,
+                transition: 'all 0.15s linear',
+                display: 'flex',
+                justifyContent: 'center',
+            }}
+        >
+            <HideOnScroll trigger={showHeader}>
+                <Grid
                     sx={{
+                        // backgroundColor: 'rgb(28 28 28 / 70%)',
                         display: 'flex',
-                        height: '100%',
+                        marginTop: '20px',
+                        height: '54px',
                         alignItems: 'center',
                         justifyContent: 'space-between',
+                        maxWidth: '100%',
                     }}
                 >
-                    <Logo h={'55px'} w={'auto'} />
-                    <Toolbar
-                        className="container"
+                    <Container className="container">
+                        <HeaderMenu />
+                    </Container>
+                </Grid>
+            </HideOnScroll>
+            <Container
+                className="container"
+                sx={{
+                    display: 'flex',
+                    height: '90px',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                }}
+            >
+                <Logo h={'50px'} w={'auto'} />
+                <Toolbar
+                    className="container"
+                    sx={{
+                        gap: '5vh',
+                        height: '100%',
+                    }}
+                >
+                    <Box
                         sx={{
-                            gap: '5vh',
                             height: '100%',
+                            display: 'flex',
+                            alignItems: 'center',
                         }}
                     >
-                        <Box
+                        <Menu />
+                    </Box>
+                    <Box>
+                        <LanguageMenu />
+                    </Box>
+                    <Box>
+                        <Button
                             sx={{
-                                height: '100%',
-                                display: 'flex',
-                                alignItems: 'center',
+                                minWidth: '40px',
                             }}
                         >
-                            <Menu />
-                        </Box>
-                        <Box>
-                            <LanguageMenu
-                                item={'menu-item'}
-                                itemActive={'menu-item-active'}
-                            />
-                        </Box>
-                    </Toolbar>
-                </Container>
-            </AppBar>
-        </HideOnScroll>
+                            <img src="img/light-theme_icon.svg" alt="" />
+                        </Button>
+                    </Box>
+                </Toolbar>
+            </Container>
+        </AppBar>
     )
 }
 export default Header

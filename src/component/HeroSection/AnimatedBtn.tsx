@@ -22,18 +22,14 @@ const AnimatedBtn = (props: Props) => {
                 right: '0',
             }}
         >
-            <SouthIcon
+            <Grid
                 onClick={scrollDown}
                 sx={{
-                    border: '1px solid white',
-                    padding: '3px',
-                    borderRadius: '25px',
-                    color: 'white',
-                    height: '43px',
-                    width: '43px',
                     cursor: 'pointer',
                 }}
-            />
+            >
+                <img src="img/arrow_bottom.svg" alt="" />
+            </Grid>
         </Grid>
     )
 }

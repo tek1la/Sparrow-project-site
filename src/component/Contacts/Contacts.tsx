@@ -11,72 +11,98 @@ const Contacts = (props: Props) => {
                     id="КОНТАКТИ"
                     className="container"
                     sx={{
-                        padding: '120px 0',
+                        padding: '120px 0 80px',
                         position: 'relative',
                     }}
                 >
-                    <Grid>
-                        <div className="contacts-title">
+                    <Grid container className="contacts-wraper">
+                        <Grid item sm={4} className="contacts-title">
                             <h3>контакти</h3>
-                        </div>
-                    </Grid>
-                    <Grid
-                        container
-                        gap={3.5}
-                        wrap="nowrap"
-                        className="contacts-items-wraper"
-                    >
-                        <Grid item className="contacts-wraper">
-                            <div className="contacts-item-wraper">
-                                <div>
+                        </Grid>
+                        <Grid item sm={8}>
+                            <Grid container className="contacts-cell">
+                                <Grid
+                                    item
+                                    sm={0.75}
+                                    className="contacts-item-icon"
+                                >
+                                    <div className="contacts-item-phone-icon">
+                                        <a
+                                            href="tel:+380732446161"
+                                            className="contacts"
+                                        >
+                                            <img src="img/phone.svg" alt="" />
+                                        </a>
+                                    </div>
+                                </Grid>
+                                <Grid item sm={5.625} className="contacts-item">
                                     <a
                                         href="tel:+380732446161"
-                                        className="contacts-item"
+                                        className="contacts"
                                     >
                                         <p>
-                                            + 38 073 244 61 61
+                                            <span className="contact-tel">
+                                                {' '}
+                                                + 38 073 244 61 61
+                                            </span>
+
                                             <br />
-                                            <span>
+                                            <span className="contact-text">
                                                 (відділ зв'язків з
                                                 громадськістю)
                                             </span>
                                         </p>
-                                        <div className="contacts-item-phone-icon"></div>
                                     </a>
-                                </div>
-                                <div>
+                                </Grid>
+                                <Grid item sm={5.625} className="contacts-item">
                                     <a
                                         href="tel:+380962446161"
-                                        className="contacts-item"
+                                        className="contacts"
                                     >
                                         <p>
-                                            + 38 096 244 61 61
+                                            <span className="contact-tel">
+                                                + 38 096 244 61 61
+                                            </span>
                                             <br />
-                                            <span>(відділ продажів)</span>
+                                            <span className="contact-text">
+                                                (відділ продажів)
+                                            </span>
                                         </p>
-                                        <div className="contacts-item-phone-icon"></div>
                                     </a>
-                                </div>
-                                <div>
+                                </Grid>
+                            </Grid>
+                            <Grid container className="contacts-cell">
+                                <Grid
+                                    item
+                                    sm={0.75}
+                                    className="contacts-item-icon"
+                                >
+                                    <div className="contacts-item-mail-icon">
+                                        <a
+                                            href="mailto:info@sparrow-avia.tech"
+                                            className="contacts"
+                                        >
+                                            <img src="img/e-mail.svg" alt="" />
+                                        </a>
+                                    </div>
+                                </Grid>
+                                <Grid item sm={11.25} className="contacts-item">
                                     <a
                                         href="mailto:info@sparrow-avia.tech"
-                                        className="contacts-item"
+                                        className="contacts"
                                     >
-                                        info@sparrow-avia.tech
-                                        <div className="contacts-item-mail-icon"></div>
+                                        <p>
+                                            <span className="contact-mail">
+                                                info@sparrow-avia.tech
+                                            </span>
+                                            <br />
+                                            <span className="contact-text">
+                                                (офіційний канал зв'язку)
+                                            </span>
+                                        </p>
                                     </a>
-                                </div>
-                            </div>
-                            <div className="contacts-item-wraper">
-                                <img
-                                    className="contact-img"
-                                    src="img/contact-item-bg.png"
-                                    alt="cat"
-                                />
-                            </div>
-                        </Grid>
-                        <Grid item>
-                            <ContactForm />
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Container>

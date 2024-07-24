@@ -2,23 +2,30 @@ import { Button } from '@mui/material'
 import './MenuItem.css'
 
 type Props = {
+    onClick?: () => void
     children: any
+    className?: string
     onMouseEnter?: () => void
     onMouseLeave?: () => void
 }
-const MenuItem = ({ children, onMouseEnter, onMouseLeave }: Props) => {
+const MenuItem = ({
+    onClick,
+    children,
+    className,
+    onMouseEnter,
+    onMouseLeave,
+}: Props) => {
     const childrenContent = Array.isArray(children) ? 'ВИРОБНИЦТВО' : children
-    console.log(childrenContent)
     return (
         <>
             <Button
+                onClick={onClick}
                 href={`/#${childrenContent}`}
                 sx={{
                     position: 'relative',
-                    height: '100%',
                 }}
                 color="inherit"
-                className="menu-item"
+                className={className}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >

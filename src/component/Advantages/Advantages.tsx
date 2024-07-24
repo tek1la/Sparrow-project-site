@@ -8,28 +8,48 @@ const Advantages = (props: Props) => {
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0',
+                    padding: '120px 0 80px',
                 }}
             >
-                <Grid>
-                    <div className="advantages-title">
-                        <h3>основні переваги</h3>
-                    </div>
+                <Grid container className="advantages-wraper">
+                    <Grid item sm={4}></Grid>
+                    <Grid item sm={8} className="advantages-title">
+                        <h3>переваги</h3>
+                    </Grid>
                 </Grid>
-                <Grid
-                    container
-                    gap={3.5}
-                    wrap="nowrap"
-                    className="advantages-items-wraper"
-                >
+                <Grid container className="advantages-items-wraper">
                     <Grid item sm={4} className="advantage-item">
-                        <p>Максимальна точність ударів</p>
+                        <div className="advantages-img">
+                            <img
+                                className="img"
+                                src="img/advantages-img-1.jpg"
+                                alt="advantages"
+                            />
+                            <div className="advantages-icon-1"></div>
+                        </div>
+                        <p>Великий обсяг замовлень</p>
                     </Grid>
                     <Grid item sm={4} className="advantage-item">
-                        <p>Надійність та стабільність</p>
+                        <div className="advantages-img">
+                            <img
+                                className="img"
+                                src="img/advantages-img-2.jpg"
+                                alt="advantages"
+                            />
+                            <div className="advantages-icon-2"></div>
+                        </div>
+                        <p>Швидка та надійна доставка</p>
                     </Grid>
                     <Grid item sm={4} className="advantage-item">
-                        <p>Гнучкість та мобільність</p>
+                        <div className="advantages-img">
+                            <img
+                                className="img"
+                                src="img/advantages-img-3.jpg"
+                                alt="advantages"
+                            />
+                            <div className="advantages-icon-3"></div>
+                        </div>
+                        <p>Тільки найкращі компоненти</p>
                     </Grid>
                 </Grid>
             </Container>

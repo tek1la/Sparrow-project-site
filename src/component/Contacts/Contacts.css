@@ -1,71 +1,58 @@
 .contacts-title {
-    font-size: 56.5px;
-    background-image: url('/public/img/contact-bg.png');
-    background-repeat: no-repeat;
-    background-position-x: 10px;
-    background-position-y: center;
-    background-size:inherit;
-    margin-bottom: 100px;
-    color: white;
-    text-transform: uppercase;
-}
-
-.contacts-title h3 {
-    margin: 0;
-}
-
-.contact-bg-wraper {
-    background-image: url('/public/img/contact-form-bg.png');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: center;
-    background-size:inherit;
-}
-
-.contacts-items-wraper {
-    margin-top: 100px;
-}
-
-.contacts-item {
-    text-align: right;
-    font-size: 25px;
-    font-family: 'e-Ukraine-Medium';
-    line-height: 22px;
-}
-
-.contacts-item:last-child {
-    display: contents;
-}
-
-.contacts-item span {
-    font-size: 18px;
-    font-family: 'e-Ukraine-Light';
-}
-
-.contacts-wraper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.contacts-item-wraper > div {
-    margin-bottom: 25px;
+    border-right: 1px solid #141A29;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding: 15px;
 }
 
-.contacts-item-phone-icon, .contacts-item-mail-icon {
-    height: 50px;
-    width: 50px;
-    margin-left: 30px;
+.contacts-wraper {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
 }
 
-.contacts-item-phone-icon {
-    background-image: url('/public/img/phone.svg');
+.contacts-cell:first-child {
+    border-bottom: 1px solid #141A29;
 }
 
-.contacts-item-mail-icon {
-    background-image: url('/public/img/e-mail.svg');
+.contacts-item {
+    display: flex;
+    border-right: 1px solid #141A29;
+    padding: 15px;
+    line-height: 24px;
+}
+
+.contacts-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #141A29;
+}
+
+.contacts-title h3 {
+    font-family: "Gerhaus";
+    font-size: 60px;
+    font-weight: 400;
+    color: #141A29;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+}
+
+.contacts-item p {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+
+.contacts-item .contact-text {
+    font-size: 16px;
+}
+
+.contact-tel:hover, .contact-mail:hover {
+    color: #1818ED;
+}
+
+.contacts-item-phone-icon img, .contacts-item-mail-icon img {
+    height: 24px;
+    width: 24px;
 }

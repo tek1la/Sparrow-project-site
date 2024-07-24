@@ -1,10 +1,7 @@
-import LanguageMenuItem from './MenuItem'
+import LanguageMenuItem from './LanguageMenuItem'
 
-type Props = {
-    item: string
-    itemActive: string
-}
-const LanguageMenu = ({ item, itemActive }: Props) => {
+type Props = {}
+const LanguageMenu = (props: Props) => {
     return (
         <>
             <LanguageMenuItem>UA</LanguageMenuItem>

@@ -16,7 +16,7 @@ type Props = {
 const NewsSlider = ({ newsArray }: Props) => {
     return (
         <>
-            <Swiper
+            {/* <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
                 navigation={true}
@@ -33,7 +33,7 @@ const NewsSlider = ({ newsArray }: Props) => {
                         />
                     </SwiperSlide>
                 ))}
-            </Swiper>
+            </Swiper> */}
         </>
     )
 }

@@ -1,4 +1,4 @@
-import { Container, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import About from 'component/About/About'
 import HeroSection from 'component/HeroSection/HeroSection'
 import './Home.css'
@@ -8,31 +8,25 @@ import Result from 'component/Result/Result'
 import Partners from 'component/Partners/Partners'
 import News from 'component/News/News'
 import Contacts from 'component/Contacts/Contacts'
-import AnimatedText from 'component/AnimatedText/AnimatedText'
-import PriceList from 'component/PriceList/PriceList'
+import CallBack from 'component/CallBack/CallBack'
+import Developments from 'component/Developments/Developments'
 
 type Props = {}
 const Home = (props: Props) => {
     return (
         <>
-            <HeroSection />
             <Grid className="body-wraper">
-                <About />
+                <HeroSection />
                 <Production />
+                <CallBack />
                 <Advantages />
                 <Result />
-                <PriceList />
-                <Partners />
                 <News />
-                <Container
-                    className="animated-text-wraper"
-                    sx={{
-                        maxWidth: '100%',
-                    }}
-                >
-                    <AnimatedText text="#Ударний БпАК “1В БОМБЕР”&emsp;&emsp;#Ударні FPV дрони “ГОРОБЕЦЬ”&emsp;&emsp;#Станція ретрансляції “FPV Re-Link”&emsp;&emsp;#Акумуляторні збірки" />
-                </Container>
+                <About />
+                <Developments />
+                <Partners />
                 <Contacts />
+                <CallBack />
             </Grid>
         </>
     )

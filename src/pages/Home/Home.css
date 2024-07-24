@@ -1,53 +1,29 @@
 @font-face {
-    font-family: 'e-Ukraine-UltraLight';
-    src: url('../../assets/fonts/e-Ukraine-UltraLight.otf') format('opentype');
+    font-family: 'Gerhaus';
+    src: url('../../assets/fonts/Gerhaus.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'e-Ukraine-Light';
-    src: url('../../assets/fonts/e-Ukraine-Light.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'e-Ukraine-Medium';
-    src: url('../../assets/fonts/e-Ukraine-Medium.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'e-Ukraine-Bold';
-    src: url('../../assets/fonts/e-Ukraine-Bold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'e-Ukraine-Thin';
-    src: url('../../assets/fonts/e-Ukraine-Thin.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'e-Ukraine-Regular';
-    src: url('../../assets/fonts/e-Ukraine-Regular.otf') format('opentype');
-    font-weight: normal;
+    font-family: 'Gerhaus';
+    src: url('../../assets/fonts/Gerhaus.ttf') format('opentype');
+    font-weight: bold;
     font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
     margin: 0;
     text-decoration: none;
-    color: white;
-    font-family: "e-Ukraine-Medium";
+    color: #141A29;
+    font-family: "Montserrat", sans-serif;
 }
 
 .container {
-    max-width: 1265px;
+    max-width: 1360px;
     padding-left: 0;
     padding-right: 0;
 }
 
 .body-wraper {
-    background-color: #1C1C1C;
+    background-color: #F2F4F7;
 }

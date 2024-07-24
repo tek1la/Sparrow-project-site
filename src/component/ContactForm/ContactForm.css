@@ -1,66 +1,27 @@
-.contact-form-wraper {
-    display: flex;
-    flex-direction: column;
-}
-
 .form-input {
-    margin-bottom: 30px;
+    width: 100%;
 }
 
-.form-input div {
-    background-color: rgba(255, 255, 255, 0.15);
-    height: 44px;
-}
-
-.form-input-area > div {
-    height: 150px;
-}
-
-.form-input label {
-    color: rgba(255, 255, 255, 0.5);
-    font-family: 'e-Ukraine-Medium';
-    transform: translate(10px, 21px);
-    font-size: 23px;
-}
-
-.form-input label.Mui-focused {
-    color: rgba(255, 255, 255, 0.5);
-    transform: translate(5px, -5px);
-    font-size: 16px;
-}
-
-.form-input div textarea {
-    padding-left: 10px;
-    color: white;
-}
-
-.form-input div::after {
-    border-bottom: 1px solid white;
-}
-
-.form-input div.Mui-focused::after {
-    border-bottom: 1px solid white;
-}
-
-.form-input .MuiFormLabel-filled {
-    transform: translate(0, -5px);
-    font-size: 16px;
-}
-
-.form-input .Mui-focused:last-child {
-    color: white;
+.second-input {
+    margin-top: 15px;
 }
 
 .contact-form-btn {
-    margin-top: 25px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
+    padding: 27.5px 30px;
     font-size: 25px;
-    font-family: 'e-Ukraine-Medium';
+    font-weight: 500;
+    font-family: 'Montserrat';
+    color: #141A29;
+    border: 1px solid #141A29;
+    border-radius: 500px;
+    max-width: 216px;
+    height: 100%;
+    line-height: 29px;
+    margin-top: 0;
+    margin-left: 15px;
 }
 
-.contact-form-btn .btn-icon {
-    content: url('../../assets/arrow_right.svg');
-    margin-left: 30px;
+.contact-form-btn:hover {
+    color: #1818ED;
+    border-color: #1818ED;
 }

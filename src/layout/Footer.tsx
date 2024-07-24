@@ -1,211 +1,157 @@
 import { Container, Grid, Link } from '@mui/material'
 import Logo from 'component/Logo/Logo'
 import './Footer.css'
-import EastIcon from '@mui/icons-material/East'
-import { useEffect, useRef, useState } from 'react'
+import FooterMenu from 'component/Menu/FooterMenu'
+import LanguageMenu from '../component/Menu/LanguageMenu'
+import ProductionSubMenuItem from 'component/Menu/ProductionSubMenuItem'
+import { productionArray } from 'utils/productionArray'
 
 type Props = {}
 const Footer = (props: Props) => {
-    const [isAnimated, setIsAnimated] = useState(false)
-    const footerRef = useRef(null)
-
-    useEffect(() => {
-        const currentFooter = footerRef.current
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsAnimated(true)
-                    observer.disconnect()
-                }
-            },
-            {
-                threshold: 0.5,
-            }
-        )
-
-        if (currentFooter) {
-            observer.observe(currentFooter)
-        }
-
-        return () => {
-            if (currentFooter) {
-                observer.unobserve(currentFooter)
-            }
-        }
-    }, [])
-
     return (
         <>
             <div className="footer-wraper">
                 <Container className="container">
                     <Grid container className="footer-item-wraper">
-                        <Grid item xs={4} className="footer-item">
-                            <Logo h={'100px'} w={'auto'} />
-                        </Grid>
-                        {/* <Grid item xs={4} className="footer-item">
-                            <div className="footer-title-wraper">
-                                <p className="footer-title">Наше небо</p>
-                                <div
-                                    style={{
-                                        border: '1px solid white',
-                                    }}
-                                ></div>
-                                <p className="footer-title">наші правила</p>
-                            </div>
-                        </Grid> */}
-                        {/* <div ref={footerRef}> */}
-                        <Grid item xs={4} className={`footer-item`}>
-                            <div ref={footerRef}>
-                                <div className="footer-title-wraper">
-                                    <p
-                                        className={`footer-title ${isAnimated ? 'show' : ''}`}
-                                    >
-                                        Наше небо
-                                    </p>
-                                    <div
-                                        className={`animated-element ${isAnimated ? 'show' : ''}`}
-                                        style={{
-                                            border: '1px solid white',
-                                        }}
-                                    ></div>
-                                    <p
-                                        className={`footer-title ${isAnimated ? 'show' : ''}`}
-                                    >
-                                        наші правила
-                                    </p>
-                                </div>
-                            </div>
-                        </Grid>
-                        {/* </div> */}
-
-                        <Grid item xs={4} className="footer-item">
-                            <a
-                                href="tel:+380732446161"
-                                className="footer-contact"
-                            >
-                                + 38 073 244 61 61
-                                <br />
-                                <span>(відділ зв'язків з громадськістю)</span>
-                            </a>
-                            <a
-                                href="tel:+380962446161"
-                                className="footer-contact"
-                            >
-                                + 38 096 244 61 61
-                                <br />
-                                <span>(відділ продажів)</span>
-                            </a>
-                            <a
-                                href="mailto:info@sparrow-avia.tech"
-                                className="footer-contact"
-                            >
-                                info@sparrow-avia.tech
-                            </a>
-                        </Grid>
-                        <Grid item xs={4} className="footer-item">
-                            <Grid
-                                container
-                                spacing={2}
-                                className="social-link-wraper"
-                            >
-                                <Grid item xs={6}>
-                                    <Link
-                                        href="https://www.youtube.com/channel/UC5gx0EUmtjz66XpfCAfr5aA"
-                                        className="social-link"
-                                    >
-                                        <EastIcon
-                                            sx={{
-                                                marginRight: '10px',
-                                            }}
-                                        />
-                                        YouTube
-                                    </Link>
+                        <Grid item sm={4} className="footer-item">
+                            <Grid container>
+                                <Grid item sm={6}>
+                                    <FooterMenu />
+                                    <LanguageMenu />
                                 </Grid>
-                                <Grid item xs={6}>
-                                    <Link
-                                        href="https://www.instagram.com/sparrow_avia"
-                                        className="social-link"
-                                    >
-                                        <EastIcon
-                                            sx={{
-                                                marginRight: '10px',
-                                            }}
-                                        />
-                                        Instagram
-                                    </Link>
-                                </Grid>
-
-                                <Grid item xs={6}>
-                                    <Link
-                                        href="https://www.linkedin.com/company/sparrow-avia"
-                                        className="social-link"
-                                    >
-                                        <EastIcon
-                                            sx={{
-                                                marginRight: '10px',
-                                            }}
-                                        />
-                                        LinkedIn
-                                    </Link>
-                                </Grid>
-
-                                <Grid item xs={6}>
-                                    <Link
-                                        href="https://www.facebook.com/sparrowavia"
-                                        className="social-link"
-                                    >
-                                        <EastIcon
-                                            sx={{
-                                                marginRight: '10px',
-                                            }}
-                                        />
-                                        Facebook
-                                    </Link>
-                                </Grid>
-
-                                <Grid item xs={6}>
-                                    <Link
-                                        href="https://www.tiktok.com/@sparrow.avia"
-                                        className="social-link"
-                                    >
-                                        <EastIcon
-                                            sx={{
-                                                marginRight: '10px',
-                                            }}
-                                        />
-                                        TikTok
-                                    </Link>
-                                </Grid>
-
-                                <Grid item xs={6}>
-                                    <Link
-                                        href="https://twitter.com/Sparrow_Avia"
-                                        className="social-link"
-                                    >
-                                        <EastIcon
-                                            sx={{
-                                                marginRight: '10px',
-                                            }}
-                                        />
-                                        Twitter
-                                    </Link>
+                                <Grid item sm={6} className="footer-info">
+                                    <Grid container>
+                                        <Grid item sm={6}>
+                                            <Link
+                                                href="https://www.instagram.com/sparrow_avia"
+                                                className="social-link"
+                                            >
+                                                <img
+                                                    src="img/social_networks_instagram.svg"
+                                                    alt="instagram"
+                                                />
+                                            </Link>
+                                        </Grid>
+                                        <Grid item sm={6}>
+                                            <Link
+                                                href="https://www.youtube.com/channel/UC5gx0EUmtjz66XpfCAfr5aA"
+                                                className="social-link"
+                                            >
+                                                <img
+                                                    src="img/social_networks_youtube.svg"
+                                                    alt="youtube"
+                                                />
+                                            </Link>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid container>
+                                        <Grid item sm={6}>
+                                            <Link
+                                                href="https://www.linkedin.com/company/sparrow-avia/"
+                                                className="social-link"
+                                            >
+                                                <img
+                                                    src="img/social_networks_linkedin.svg"
+                                                    alt="linkedin"
+                                                />
+                                            </Link>
+                                        </Grid>
+                                        <Grid item sm={6}>
+                                            <Link
+                                                href="https://twitter.com/Sparrow_Avia"
+                                                className="social-link"
+                                            >
+                                                <img
+                                                    src="img/social_networks_twitter.svg"
+                                                    alt="twitter"
+                                                />
+                                            </Link>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid container>
+                                        <Grid item sm={6}>
+                                            <Link
+                                                href="https://www.facebook.com/sparrowavia"
+                                                className="social-link"
+                                            >
+                                                <img
+                                                    src="img/social_networks_facebook.svg"
+                                                    alt="facebook"
+                                                />
+                                            </Link>
+                                        </Grid>
+                                        <Grid item sm={6}>
+                                            <Link
+                                                href="https://www.tiktok.com/@sparrow.avia"
+                                                className="social-link"
+                                            >
+                                                <img
+                                                    src="img/social_networks_tiktok.svg"
+                                                    alt="tiktok"
+                                                />
+                                            </Link>
+                                        </Grid>
+                                    </Grid>
                                 </Grid>
                             </Grid>
                         </Grid>
-                        <Grid item xs={4} className="footer-item">
-                            <div className="footer-doc-wraper">
-                                <p>Політика конфіденційності</p>
-                                <p>Установчі документи</p>
-                                <p>Публічний договір</p>
+                        <Grid item sm={4} className="footer-item">
+                            <div>
+                                <p className="footer-title">Виробництво:</p>
+                                <div className="footer-menu-item-submenu">
+                                    {productionArray.map(
+                                        ({ id, subTitle, path }) => (
+                                            <ProductionSubMenuItem
+                                                key={id}
+                                                path={path}
+                                            >
+                                                {subTitle}
+                                            </ProductionSubMenuItem>
+                                        )
+                                    )}
+                                </div>
                             </div>
                         </Grid>
-                        <Grid item xs={4} className="footer-item">
-                            <div className="footer-info-wraper">
-                                <p>
-                                    <span>© 2024</span> ТОВ "СПАРРОУ АВІА"
-                                </p>
+                        <Grid
+                            item
+                            sm={4}
+                            className="footer-item footer-item-contact"
+                        >
+                            <p className="footer-title">Контакти:</p>
+                            <div>
+                                <a
+                                    href="tel:+380732446161"
+                                    className="footer-contact"
+                                >
+                                    + 38 073 244 61 61
+                                    <br />
+                                    <span>
+                                        (відділ зв'язків з громадськістю)
+                                    </span>
+                                </a>
+                                <a
+                                    href="tel:+380962446161"
+                                    className="footer-contact"
+                                >
+                                    + 38 096 244 61 61
+                                    <br />
+                                    <span>(відділ продажів)</span>
+                                </a>
+                                <a
+                                    href="mailto:info@sparrow-avia.tech"
+                                    className="footer-contact"
+                                >
+                                    info@sparrow-avia.tech
+                                </a>
                             </div>
                         </Grid>
+                    </Grid>
+                    <Grid container className={`footer-info-wraper`}>
+                        <Logo h={'50px'} w={'auto'} />
+                        <p>
+                            © 2024 Товариство з обмеженою відповідальністю
+                            "СПАРРОУ АВІА"
+                        </p>
                     </Grid>
                 </Container>
             </div>

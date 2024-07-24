@@ -1,39 +1,41 @@
+.news {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
+}
+
+.news-array-wraper {
+    border: 1px solid #141A29;
+}
+
 .news-title {
-    font-size: 55.5px;
-    background-image: url('/public/img/news-bg.png');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: center;
-    background-size:inherit;
-    margin-bottom: 100px;
-    text-transform: uppercase;
+    border-left: 1px solid #141A29;
 }
 
 .news-title h3 {
-    text-align: right;
+    font-family: 'Gerhaus';
+    margin: 15px;
+    font-size: 60px;
+    font-weight: 400;
+    color: #141A29;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
 }
 
-.news-item-title-wraper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 45px;
+.news-array-btn {
+    border: 1px solid #141A29;
+    width: 100%;
+    border-radius: 500px;
 }
 
-.news-item-title-wraper .news-line:first-child {
-    width: 15%;
+.news-array-btn p {
+    line-height: 30px;
 }
 
-.news-item-title-wraper .news-line:last-child {
-    width: 75%;
-}
-
-.news-item-title-wraper div h4 {
-    font-family: 'e-Ukraine-Medium';
+.news-btn {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat';
     font-size: 25px;
-    margin: 0 10px;
-}
-
-.news-item-title-wraper .news-line {
-    border: 1px solid white;
+    color: #141A29;
+    font-weight: 500;
 }

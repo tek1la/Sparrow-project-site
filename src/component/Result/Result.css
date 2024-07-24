@@ -1,42 +1,65 @@
-.result-title {
-    font-size: 56.5px;
-    background-image: url('/public/img/result-bg.png');
-    background-repeat: no-repeat;
-    background-position-x: 10px;
-    background-position-y: center;
-    background-size:inherit;
-    margin-bottom: 100px;
-    color: white;
-    text-transform: uppercase;
+.result-item {
+    border: 1px solid #141A29;
+    padding: 15px;
+}
+
+.result-item:first-child {
+    border-left: none;
+    border-right: none;
+}
+
+.result-item:nth-child(3) {
+    border-left: none;
+    border-right: none;
+}
+
+.result-item:nth-child(4) {
+    border-left: none;
+    border-right: none;
+}
+
+.result-item:last-child {
+    border-left: none;
+    border-right: none;
 }
 
 .result-title h3 {
-    margin: 0;
+    text-align: end;
+    font-family: "Gerhaus";
+    margin: 15px;
+    font-size: 60px;
+    font-weight: 400;
+    color: #141A29;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
 }
 
 .result-text {
-    margin-top: 30px;
-    font-family: 'e-Ukraine-Light';
-    font-size: 18px;
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    line-height: 20px;
 }
 
-.result-card-wraper div {
+.result-item div {
     position: relative;
+    height: 190px;
+    width: 100%;
 	z-index: 1;
+	display: inline-block;
 	overflow: hidden;
+	text-align: center;
 	cursor: pointer;
-    height: min-content;
-    border-radius: 10px;
 }
 
-.result-img {
-    border-radius: 10px;
-    opacity: 0.7;
-    transition: opacity 0.35s, transform 0.35s;
+.result-img .img{
+    width: 100%;
+    position: relative;
+    transition: transform 0.35s;
     transform: scale(1.1);
 }
 
-.result-card-wraper:hover div img {
+.result-item:hover div img {
     transform: scale(1);
-    opacity: 1;
 }

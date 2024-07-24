@@ -8,68 +8,56 @@ const Result = (props: Props) => {
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0',
+                    padding: '120px 0 80px',
                     position: 'relative',
                 }}
             >
-                <Grid>
-                    <div className="result-title">
+                <Grid container>
+                    <Grid item sm={4} className="result-title result-item">
                         <h3>Наш результат</h3>
-                    </div>
-                </Grid>
-                <Grid container gap={3.5} wrap="nowrap">
-                    <Grid item className="result-card-wraper">
-                        <div
-                            style={{
-                                height: '250px',
-                            }}
-                        >
+                    </Grid>
+                    <Grid item sm={4} className="result-item">
+                        <div className="result-img">
                             <img
-                                className="result-img"
+                                className="img"
                                 src="img/result-img-1.jpg"
-                                alt=""
+                                alt="Result-img"
                             />
                         </div>
                         <p className="result-text">
-                            Створили та розробили повноцінний ударний БпАК “1В
-                            BOMBER”, який отримав кодифікацію НАТО та ефективно
-                            виконує бойові завдання на лінії фронту. 
+                            Запустили виробництво акумуляторних батарей.
+                            Виготовили понад 10 тисяч АКБ, які забезпечують
+                            надійне живлення для дронів.
                         </p>
                     </Grid>
-                    <Grid item className="result-card-wraper">
-                        <div
-                            style={{
-                                height: '250px',
-                            }}
-                        >
+                    <Grid item sm={4} className="result-item"></Grid>
+                    <Grid item sm={4} className="result-item"></Grid>
+                    <Grid item sm={4} className="result-item">
+                        <div className="result-img">
                             <img
-                                className="result-img"
+                                className="img"
                                 src="img/result-img-2.jpg"
-                                alt=""
+                                alt="Result-img"
                             />
                         </div>
                         <p className="result-text">
-                            Запустили виробництва акумуляторів, ретрансляторів.
-                            Вже виготовили понад 10 тисяч АКБ та 120 станцій
-                            ретрансляції.
+                            Створили ударний БпАК “1В BOMBER”, який отримав
+                            кодифікацію НАТО та ефективно виконує бойові
+                            завдання на лінії фронту.
                         </p>
                     </Grid>
-                    <Grid item className="result-card-wraper">
-                        <div
-                            style={{
-                                height: '250px',
-                            }}
-                        >
+                    <Grid item sm={4} className="result-item">
+                        <div className="result-img">
                             <img
-                                className="result-img"
+                                className="img"
                                 src="img/result-img-3.jpg"
-                                alt=""
+                                alt="Result-img"
                             />
                         </div>
-
                         <p className="result-text">
-                            Успішно реалізували 4 проєкти поставок для ЗСУ –
-                            понад 10 тисяч FPV. 
+                            Успішно реалізували 4 проєкти поставок для ЗСУ,
+                            надавши понад 10 тисяч FPV-дронів для розвідки та
+                            бойових завдань.
                         </p>
                     </Grid>
                 </Grid>

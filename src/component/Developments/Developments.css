@@ -1,0 +1,67 @@
+.developments-title {
+    border-left: 1px solid #141A29;
+    line-height: 69px;
+}
+
+.developments-wraper {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
+}
+
+.developments-item {
+    border-bottom: 1px solid #141A29;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.developments-item-hover:hover {
+    background-color: #2B3857;
+}
+
+.developments-item-hover:hover p {
+    color: #F2F4F7;
+}
+
+.developments-item img {
+    position: absolute;
+    display: none; /* Сховати картинку за замовчуванням */
+    pointer-events: none; /* Щоб картинка не заважала навігації */
+    z-index: 10; /* Переконуємось, що картинка відображається поверх інших елементів */
+}
+
+.developments-item:hover img {
+    display: block;
+}
+
+.developments-title h3 {
+    font-family: "Gerhaus";
+    margin: 15px;
+    font-size: 60px;
+    font-weight: 400;
+    color: #141A29;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+}
+
+.developments-item p {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    line-height: 20px;
+}
+
+.developments-item-cell {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.developments-item .developments-item-cell:nth-child(2) {
+    border-right: 1px solid #141A29;
+    border-left: 1px solid #141A29;
+}
+
+.developments-item .development-bold {
+    font-weight: bold;
+    margin-top: 15px;
+}

@@ -1,52 +1,74 @@
-import { Container, Grid } from '@mui/material'
+import { Button, Container, Grid } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 import './News.css'
-import NewsSlider from 'component/Slider/NewsSlider'
-import { ukraineNewsArray } from 'utils/ukraineNewsArray'
-import { internationalNewsArray } from 'utils/internationalNewsArray'
+import { NewsArray } from 'utils/NewsArray'
+import NewsListItem from 'component/Slider/NewsListItem'
 
 type Props = {}
+type News = {
+    id: number
+    title: string
+    description: string
+    date: string
+    source: string
+    newsImg: string
+}
+
+// Переворота масиву та обмеження до 5 об'єктів
+const modifiedNewsArray: News[] = [...NewsArray]
+    .reverse() // Перевертає масив
+    .slice(0, 5) // Обрізає до 5 об'єктів
+
 const News = (props: Props) => {
+    const navigate = useNavigate()
+
+    // Функція для переходу на сторінку з усіма новинами
+    const handleViewAll = () => {
+        navigate('/all-news') // Шлях до сторінки з усіма новинами
+    }
     return (
         <>
             <Container
-                id="НОВИНИ"
+                id="Блог"
                 className="container"
                 sx={{
-                    padding: '120px 0',
+                    padding: '120px 0 80px',
                 }}
             >
-                <Grid>
-                    <div className="news-title">
-                        <h3>Новини</h3>
-                    </div>
-                </Grid>
-                <Grid className="news-items-wraper">
-                    <Grid className="news-item-title-wraper">
-                        <div className="news-line"></div>
-                        <div>
-                            <h4>Українські</h4>
-                        </div>
-                        <div className="news-line"></div>
-                    </Grid>
-                    <Grid>
-                        <NewsSlider newsArray={ukraineNewsArray} />
+                <Grid container className="news">
+                    <Grid item sm={4}></Grid>
+                    <Grid item sm={8} className="news-title">
+                        <h3>Блог</h3>
                     </Grid>
                 </Grid>
-                <Grid
-                    className="news-items-wraper"
-                    sx={{
-                        marginTop: '60px',
-                    }}
-                >
-                    <Grid className="news-item-title-wraper">
-                        <div className="news-line"></div>
-                        <div>
-                            <h4>Міжнародні</h4>
-                        </div>
-                        <div className="news-line"></div>
-                    </Grid>
-                    <Grid>
-                        <NewsSlider newsArray={internationalNewsArray} />
+                <Grid container>
+                    {modifiedNewsArray.map(
+                        ({ id, title, description, date, source, newsImg }) => (
+                            <Grid
+                                item
+                                sm={4}
+                                key={id}
+                                className="news-array-wraper"
+                            >
+                                <NewsListItem
+                                    id={id}
+                                    title={title}
+                                    description={description}
+                                    date={date}
+                                    source={source}
+                                    newsImg={newsImg}
+                                />
+                            </Grid>
+                        )
+                    )}
+                    <Grid item sm={4} className="news-array-btn">
+                        <Button className="news-btn" onClick={handleViewAll}>
+                            <p>
+                                переглянути
+                                <br />
+                                всі публікації
+                            </p>
+                        </Button>
                     </Grid>
                 </Grid>
             </Container>

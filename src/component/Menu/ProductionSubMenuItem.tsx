@@ -36,6 +36,7 @@ const ProductionSubMenuItem = ({
                     className="sub-menu-text"
                     style={{
                         width: '100%',
+                        textAlign: 'left',
                     }}
                 >
                     {children}

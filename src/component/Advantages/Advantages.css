@@ -1,25 +1,69 @@
 .advantages-title {
-    font-size: 55.5px;
-    background-image: url('/public/img/advantage-bg.png');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: center;
-    background-size:inherit;
-    margin-bottom: 100px;
-    text-transform: uppercase;
+    border-left: 1px solid #141A29;
 }
 
-.advantages-title h3 {
-    text-align: right;
+.advantages-wraper {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
 }
 
 .advantage-item {
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 20px;
-    font-size: 25px;
-    font-family: 'e-Ukraine-Medium';
-    text-transform: uppercase;
-    text-align: center;
+    border: 1px solid #141A29;
+    padding: 15px;
 }
 
+.advantages-title h3 {
+    font-family: "Gerhaus";
+    margin: 15px;
+    font-size: 60px;
+    font-weight: 400;
+    color: #141A29;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+}
+
+.advantage-item p {
+    margin: 15px 0;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+
+.advantages-img {
+    position: relative;
+    height: 189px;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	text-align: center;
+	cursor: pointer;
+}
+
+.advantages-img .img {
+    width: 100%;
+    position: relative;
+    transition: transform 0.35s;
+    transform: scale(1.1);
+}
+
+.advantage-item:hover .advantages-img img {
+    transform: scale(1);
+}
+
+.advantages-icon-1, .advantages-icon-2, .advantages-icon-3 {
+    position: absolute;
+    top: calc(50% - 25px);
+}
+
+.advantages-icon-1 {
+    content: url('/public/img/advantages_icon1.svg');
+    left: calc(50% - 27px);
+}
+.advantages-icon-2 {
+    content: url('/public/img/advantages_icon2.svg');
+    left: calc(50% - 23.5px);
+}
+.advantages-icon-3 {
+    content: url('/public/img/advantages_icon3.svg');
+    left: calc(50% - 18.5px);
+}
