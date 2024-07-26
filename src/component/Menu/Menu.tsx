@@ -30,6 +30,29 @@ const Menu = (props: Props) => {
         }, 500) // Затримка перед закриттям підменю (500 мс)
         setTimer(newTimer)
         setIsMouseOverMenu(false)
+        setIsMouseOverSubMenu(false)
+    }
+
+    const handleMouseEnterSubMenu = () => {
+        if (timer) {
+            clearTimeout(timer)
+        }
+        setIsSubMenuOpen(true)
+        setIsMouseOverSubMenu(true)
+    }
+
+    const handleMouseLeaveSubMenu = () => {
+        if (timer) {
+            clearTimeout(timer)
+        }
+        const newTimer = setTimeout(() => {
+            if (isMouseOverMenu) {
+                setIsSubMenuOpen(false)
+            }
+        }, 500)
+        setTimer(newTimer)
+        setIsMouseOverSubMenu(false)
+        setIsMouseOverMenu(false)
     }
 
     const handleClick = (item: string) => {
@@ -45,7 +68,12 @@ const Menu = (props: Props) => {
                 className={`menu-item menu-arrow ${activeItem === 'production' ? 'active' : ''}`}
             >
                 ВИРОБНИЦТВО
-                {isSubMenuOpen && <ProductionSubMenu />}
+                {isSubMenuOpen && (
+                    <ProductionSubMenu
+                        onMouseEnter={handleMouseEnterSubMenu}
+                        onMouseLeave={handleMouseLeaveSubMenu}
+                    />
+                )}
             </MenuItem>
             <MenuItem
                 onClick={() => handleClick('contacts')}

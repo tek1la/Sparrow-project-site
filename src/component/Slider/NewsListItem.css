@@ -2,6 +2,10 @@
     background-color: #2B3857;
 }
 
+.news-list-item {
+    height: 100%;
+}
+
 .news-list-item:hover .news-item-title a, .news-list-item:hover .news-item-text p {
     color: #F2F4F7;
 }

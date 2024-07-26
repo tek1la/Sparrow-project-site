@@ -18,8 +18,8 @@ const Home = (props: Props) => {
             <Grid className="body-wraper">
                 <HeroSection />
                 <Production />
-                <CallBack />
                 <Advantages />
+                <CallBack />
                 <Result />
                 <News />
                 <About />

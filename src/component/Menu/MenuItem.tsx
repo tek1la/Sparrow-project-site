@@ -20,7 +20,7 @@ const MenuItem = ({
         <>
             <Button
                 onClick={onClick}
-                href={`/#${childrenContent}`}
+                // href={`/#${childrenContent}`}
                 sx={{
                     position: 'relative',
                 }}

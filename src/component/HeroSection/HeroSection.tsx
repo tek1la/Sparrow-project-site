@@ -7,13 +7,17 @@ const HeroSection = (props: Props) => {
     return (
         <>
             <div className="hero-wrapper">
+                <video className="hero-video" autoPlay muted loop>
+                    <source src="/video/4.mp4" type="video/mp4" />
+                    Ваш браузер не підтримує відео тег.
+                </video>
                 <div>
                     <Container
                         className="container"
                         sx={{
                             height: '100vh',
                             maxHeight: '1024px',
-                            padding: '20vh 0',
+                            padding: '25vh 0',
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',
@@ -49,7 +53,6 @@ const HeroSection = (props: Props) => {
                                 </h1>
                             </Grid>
                         </Grid>
-
                         <Grid
                             item
                             sx={{
@@ -61,12 +64,7 @@ const HeroSection = (props: Props) => {
                         >
                             <p className="title-text">НЕБО-НАШІ</p>
                         </Grid>
-                        <Grid
-                            container
-                            // sx={{
-                            //     flexWrap: 'nowrap',
-                            // }}
-                        >
+                        <Grid container>
                             <Grid
                                 item
                                 sm={3.5}

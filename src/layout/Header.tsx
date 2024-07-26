@@ -93,7 +93,6 @@ const Header = (props: Props) => {
             <HideOnScroll trigger={showHeader}>
                 <Grid
                     sx={{
-                        // backgroundColor: 'rgb(28 28 28 / 70%)',
                         display: 'flex',
                         marginTop: '20px',
                         height: '54px',

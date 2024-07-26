@@ -5,6 +5,7 @@ const HeaderMenu = (props: Props) => {
     return (
         <>
             <Grid
+                className="header-menu-info"
                 sx={{
                     display: 'flex',
                     justifyContent: 'flex-end',

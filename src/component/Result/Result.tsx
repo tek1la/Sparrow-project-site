@@ -12,10 +12,13 @@ const Result = (props: Props) => {
                     position: 'relative',
                 }}
             >
-                <Grid container>
-                    <Grid item sm={4} className="result-title result-item">
+                <Grid container className="result-wraper">
+                    <Grid item sm={4}></Grid>
+                    <Grid item sm={8} className="result-title">
                         <h3>Наш результат</h3>
                     </Grid>
+                </Grid>
+                <Grid container className="advantages-items-wraper">
                     <Grid item sm={4} className="result-item">
                         <div className="result-img">
                             <img
@@ -30,8 +33,6 @@ const Result = (props: Props) => {
                             надійне живлення для дронів.
                         </p>
                     </Grid>
-                    <Grid item sm={4} className="result-item"></Grid>
-                    <Grid item sm={4} className="result-item"></Grid>
                     <Grid item sm={4} className="result-item">
                         <div className="result-img">
                             <img

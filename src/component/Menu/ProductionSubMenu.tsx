@@ -2,11 +2,18 @@ import ProductionSubMenuItem from './ProductionSubMenuItem'
 import './ProductionSubMenu.css'
 import { productionArray } from 'utils/productionArray'
 
-type Props = {}
-const ProductionSubMenu = (props: Props) => {
+type Props = {
+    onMouseEnter?: () => void
+    onMouseLeave?: () => void
+}
+const ProductionSubMenu = ({ onMouseEnter, onMouseLeave }: Props) => {
     return (
         <>
-            <div className="sub-menu-wraper">
+            <div
+                className="sub-menu-wraper"
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+            >
                 {productionArray.map(({ id, subTitle, path }) => (
                     <ProductionSubMenuItem key={id} path={path}>
                         {subTitle}

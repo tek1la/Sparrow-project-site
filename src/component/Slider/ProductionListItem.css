@@ -1,6 +1,9 @@
 .production-list-item:hover {
     background-color: #2B3857;
 }
+.production-list-item {
+    width: 100%;
+}
 
 .production-list-item:hover .production-item-title a {
     color: #F2F4F7;

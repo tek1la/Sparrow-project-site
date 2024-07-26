@@ -6,30 +6,65 @@ import ProductionListItem from './ProductionListItem'
 import { productionArray } from 'utils/productionArray'
 import 'swiper/css/navigation'
 
+type Prod = {
+    id: number
+    title: string
+    firstTitle: string
+    secondTitle: string
+    productionImg: string
+    path: string
+}
+
+const modifiedProductionArray: Prod[] = [...productionArray]
+
 type Props = {}
 const ProductionSlider = (props: Props) => {
     return (
         <>
             <Swiper
-                slidesPerView={2}
-                spaceBetween={30}
+                slidesPerView={3}
                 navigation={true}
+                autoplay={{
+                    delay: 3500,
+                    disableOnInteraction: false,
+                }}
                 modules={[Autoplay, Navigation]}
                 className="mySwiper production-slider"
             >
-                {productionArray.map(
+                {modifiedProductionArray.map(
+                    ({
+                        id,
+                        title,
+                        firstTitle,
+                        secondTitle,
+                        productionImg,
+                        path,
+                    }) => (
+                        <SwiperSlide key={id}>
+                            <ProductionListItem
+                                id={id}
+                                title={title}
+                                firstTitle={firstTitle}
+                                secondTitle={secondTitle}
+                                productionImg={productionImg}
+                                path={path}
+                            />
+                        </SwiperSlide>
+                    )
+                )}
+                {/* {productionArray.map(
                     ({ id, title, description, productionImg, path }) => (
                         <SwiperSlide key={id}>
-                            {/* <ProductionListItem
+                            <ProductionListItem
                                 id={id}
                                 title={title}
                                 description={description}
                                 productionImg={productionImg}
                                 path={path}
-                            /> */}
+                            />
                         </SwiperSlide>
                     )
-                )}
+                )} */}
             </Swiper>
         </>
     )

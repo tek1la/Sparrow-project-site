@@ -11,38 +11,51 @@ const PartnersSlider = (props: Props) => {
             <Swiper
                 slidesPerView={3}
                 navigation={true}
-                autoplay={{
-                    delay: 3500,
-                    disableOnInteraction: false,
-                }}
+                // autoplay={{
+                //     delay: 3500,
+                //     disableOnInteraction: false,
+                // }}
                 modules={[Autoplay, Navigation]}
                 className="mySwiper partners-slider"
             >
-                <SwiperSlide>
+                <SwiperSlide className="slide slide-1">
                     <img
                         src="img/partner-true-ukr.svg"
                         height="100px"
                         alt="true-ukr"
+                        className="slide-img"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="slide slide-2">
                     <img
                         src="img/partner-vexilum.svg"
                         height="100px"
                         alt="vexilum"
+                        className="slide-img"
                     />
                 </SwiperSlide>
-                <SwiperSlide>
-                    <img src="img/partner-atn.svg" height="100px" alt="atn" />
+                <SwiperSlide className="slide slide-3">
+                    <img
+                        src="img/partner-atn.svg"
+                        height="100px"
+                        alt="atn"
+                        className="slide-img"
+                    />
                 </SwiperSlide>
-                <SwiperSlide>
-                    <img src="img/partner-taf.svg" height="100px" alt="taf" />
+                <SwiperSlide className="slide slide-4">
+                    <img
+                        src="img/partner-taf.svg"
+                        height="100px"
+                        alt="taf"
+                        className="slide-img"
+                    />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="slide slide-5">
                     <img
                         src="img/partner-ts-fly.svg"
                         height="100px"
                         alt="tsfly"
+                        className="slide-img"
                     />
                 </SwiperSlide>
             </Swiper>

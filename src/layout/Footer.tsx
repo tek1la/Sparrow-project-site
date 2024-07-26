@@ -1,5 +1,4 @@
 import { Container, Grid, Link } from '@mui/material'
-import Logo from 'component/Logo/Logo'
 import './Footer.css'
 import FooterMenu from 'component/Menu/FooterMenu'
 import LanguageMenu from '../component/Menu/LanguageMenu'
@@ -14,12 +13,20 @@ const Footer = (props: Props) => {
                 <Container className="container">
                     <Grid container className="footer-item-wraper">
                         <Grid item sm={4} className="footer-item">
-                            <Grid container>
-                                <Grid item sm={6}>
+                            <Grid
+                                container
+                                sx={{
+                                    height: '100%',
+                                }}
+                            >
+                                <Grid item sm={5} className="footer-first-menu">
                                     <FooterMenu />
-                                    <LanguageMenu />
+                                    <div className="footer-lang-menu">
+                                        <LanguageMenu />
+                                    </div>
                                 </Grid>
-                                <Grid item sm={6} className="footer-info">
+                                <Grid item sm={4}></Grid>
+                                <Grid item sm={3} className="footer-info">
                                     <Grid container>
                                         <Grid item sm={6}>
                                             <Link
@@ -34,12 +41,12 @@ const Footer = (props: Props) => {
                                         </Grid>
                                         <Grid item sm={6}>
                                             <Link
-                                                href="https://www.youtube.com/channel/UC5gx0EUmtjz66XpfCAfr5aA"
+                                                href="https://www.facebook.com/sparrowavia"
                                                 className="social-link"
                                             >
                                                 <img
-                                                    src="img/social_networks_youtube.svg"
-                                                    alt="youtube"
+                                                    src="img/social_networks_facebook.svg"
+                                                    alt="facebook"
                                                 />
                                             </Link>
                                         </Grid>
@@ -47,12 +54,12 @@ const Footer = (props: Props) => {
                                     <Grid container>
                                         <Grid item sm={6}>
                                             <Link
-                                                href="https://www.linkedin.com/company/sparrow-avia/"
+                                                href="https://www.youtube.com/channel/UC5gx0EUmtjz66XpfCAfr5aA"
                                                 className="social-link"
                                             >
                                                 <img
-                                                    src="img/social_networks_linkedin.svg"
-                                                    alt="linkedin"
+                                                    src="img/social_networks_youtube.svg"
+                                                    alt="youtube"
                                                 />
                                             </Link>
                                         </Grid>
@@ -71,12 +78,12 @@ const Footer = (props: Props) => {
                                     <Grid container>
                                         <Grid item sm={6}>
                                             <Link
-                                                href="https://www.facebook.com/sparrowavia"
+                                                href="https://www.linkedin.com/company/sparrow-avia/"
                                                 className="social-link"
                                             >
                                                 <img
-                                                    src="img/social_networks_facebook.svg"
-                                                    alt="facebook"
+                                                    src="img/social_networks_linkedin.svg"
+                                                    alt="linkedin"
                                                 />
                                             </Link>
                                         </Grid>
@@ -142,12 +149,16 @@ const Footer = (props: Props) => {
                                     className="footer-contact"
                                 >
                                     info@sparrow-avia.tech
+                                    <br />
+                                    <span>(офіційний канал зв'язку)</span>
                                 </a>
                             </div>
                         </Grid>
                     </Grid>
                     <Grid container className={`footer-info-wraper`}>
-                        <Logo h={'50px'} w={'auto'} />
+                        <div>
+                            <img src="./img/footer-logo.svg" alt="logo" />
+                        </div>
                         <p>
                             © 2024 Товариство з обмеженою відповідальністю
                             "СПАРРОУ АВІА"

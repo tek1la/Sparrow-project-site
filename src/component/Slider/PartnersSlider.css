@@ -1,24 +1,76 @@
-.partners-slider {
-    height: 290px;
+.partners-slider .swiper-wrapper {
+    height: 247px;
 }
 
-.partners-slider .swiper-wrapper {
-    gap: 30px;
+.partners-slider .slide {
+    position: relative;
+    background-color: #F2F4F7;
+    transition: background-color 0.3s ease;
+}
+
+.partners-slider .slide-img {
+    display: block;
+    margin: auto;
+    transition: opacity 0.3s ease;
+}
+
+.partners-slider .slide:hover {
+    background-color: #141A29; 
+}
+
+.partners-slider .slide:hover .slide-img {
+    opacity: 0; 
+}
+
+.slide {
+    background-attachment: fixed;
+    background-position-y: 15px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.partners-slider .slide-1:hover {
+    background-image: url('../../../public/img/partner-true-ukr-hover.svg'); 
+}
+
+.partners-slider .slide-2:hover {
+    background-image: url('../../../public/img/partner-vexilum-hover.svg'); 
+}
+
+.partners-slider .slide-3:hover {
+    background-image: url('../../../public/img/partner-atn-hover.svg'); 
+}
+
+.partners-slider .slide-4:hover {
+    background-image: url('../../../public/img/partner-taf-hover.svg'); 
+}
+
+.partners-slider .slide-5:hover {
+    background-image: url('../../../public/img/partner-ts-fly-hover.svg'); 
 }
 
 .partners-slider .swiper-slide {
-    height: 200px;
+    height: fit-content;
+    padding: 15px 0 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 2px 6px 8px 0px rgba(0,0,0,0.25);
-    width: calc(33.333% - 30px)!important;
+    border-bottom: 1px solid #141A29;
+}
+
+.partners-slider .swiper-slide-next {
+    border-left: 1px solid #141A29;
+    border-right: 1px solid #141A29;
+}
+
+.partners-slider .swiper-slide img {
+    height: 120px;
 }
 
 .partners-slider .swiper-button-next {
     top: auto;
     bottom: 0 !important;
-    right: 10% !important;
+    right: 28% !important;
     content: url('../../assets/arrow_right.svg');
     width: 50px;
     height: 50px;
@@ -27,13 +79,8 @@
 .partners-slider .swiper-button-prev {
     top: auto;
     bottom: 0 !important;
-    left: 80% !important;
+    left: 62% !important;
     content: url('../../assets/arrow_left.svg');
     width: 50px;
     height: 50px;
-}
-
-.mision_slide_text {
-    font-family: 'e-Ukraine-Light';
-    font-size: 18px;
 }

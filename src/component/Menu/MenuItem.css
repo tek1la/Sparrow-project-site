@@ -26,6 +26,10 @@
     rotate: 180deg;
 }
 
+.header-menu-info .social-link:hover {
+    border-color: #F2F4F7;
+}
+
 .header-contact {
     font-size: 16px;
     font-weight: 500;

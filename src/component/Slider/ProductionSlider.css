@@ -1,0 +1,35 @@
+.production-slider .swiper-wrapper {
+    height: 393px;
+}
+
+.production-slider .swiper-slide {
+    height: fit-content;
+    /* padding: 15px 0 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #141A29;
+}
+
+.production-slider .swiper-slide-next {
+    border-left: 1px solid #141A29;
+    border-right: 1px solid #141A29;
+}
+
+.production-slider .swiper-button-next {
+    top: auto;
+    bottom: 0 !important;
+    right: 28% !important;
+    content: url('../../assets/arrow_right.svg');
+    width: 50px;
+    height: 50px;
+}
+
+.production-slider .swiper-button-prev {
+    top: auto;
+    bottom: 0 !important;
+    left: 62% !important;
+    content: url('../../assets/arrow_left.svg');
+    width: 50px;
+    height: 50px;
+}
