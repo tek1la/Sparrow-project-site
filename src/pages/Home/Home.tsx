@@ -19,14 +19,14 @@ const Home = (props: Props) => {
                 <HeroSection />
                 <Production />
                 <Advantages />
-                <CallBack />
+                <CallBack video={false} />
                 <Result />
                 <News />
                 <About />
                 <Developments />
                 <Partners />
                 <Contacts />
-                <CallBack />
+                <CallBack video={true} />
             </Grid>
         </>
     )

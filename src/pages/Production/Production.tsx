@@ -35,22 +35,21 @@ const Production = ({ path, title, firstTitle, secondTitle }: Props) => {
                         <BaseEquipment />
                     </>
                 ) : null}
-                {title === 'ударні fpv дрони “ГОРОБЕЦЬ 8-10”' ? (
+                {title === 'Ударні FPV дрони “ГОРОБЕЦЬ 8” та “ГОРОБЕЦЬ 10”' ? (
                     <>
                         <FpvDescription />
                         <TechChar path={path} />
                         <Accessories />
                     </>
                 ) : null}
-                {title === 'станція ретрансляції “FPV Re-Link”' ? (
+                {title === 'Станція ретрансляції “FPV Re-Link”' ? (
                     <>
                         <LinkDescription />
                         <TechChar path={path} />
                     </>
                 ) : null}
-                {title === 'акумуляторні збірки' ? (
+                {title === 'Акумуляторні збірки' ? (
                     <>
-                        {' '}
                         <BatteryDescription />
                         <TechChar path={path} tableSize={10} size={2} />
                         <AdvantagesBattery />
