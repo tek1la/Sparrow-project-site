@@ -15,7 +15,7 @@ const MenuItem = ({
     onMouseEnter,
     onMouseLeave,
 }: Props) => {
-    const childrenContent = Array.isArray(children) ? 'ВИРОБНИЦТВО' : children
+    // const childrenContent = Array.isArray(children) ? 'ВИРОБНИЦТВО' : children
     return (
         <>
             <Button

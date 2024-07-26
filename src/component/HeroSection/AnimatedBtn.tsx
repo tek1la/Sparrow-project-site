@@ -1,5 +1,4 @@
 import { Grid } from '@mui/material'
-import SouthIcon from '@mui/icons-material/South'
 
 type Props = {}
 const AnimatedBtn = (props: Props) => {

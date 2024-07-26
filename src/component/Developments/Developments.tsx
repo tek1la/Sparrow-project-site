@@ -10,6 +10,7 @@ const Developments = (props: Props) => {
     // Обробник для наведення на рядок
     const handleMouseEnter = (event: React.MouseEvent, index: number) => {
         const { clientX, clientY } = event
+        console.log(clientX, clientY)
         setHoveredItem(index)
         // Оновлюємо стилі картинки, щоб вона з'являлась біля мишки
         setImageStyle({

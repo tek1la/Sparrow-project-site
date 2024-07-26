@@ -1,6 +1,5 @@
 import { Container, Grid } from '@mui/material'
 import './Contacts.css'
-import ContactForm from 'component/ContactForm/ContactForm'
 
 type Props = {}
 const Contacts = (props: Props) => {
@@ -42,7 +41,6 @@ const Contacts = (props: Props) => {
                                     >
                                         <p>
                                             <span className="contact-tel">
-                                                {' '}
                                                 + 38 073 244 61 61
                                             </span>
 
