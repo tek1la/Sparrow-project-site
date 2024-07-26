@@ -5,7 +5,7 @@ import { NewsArray } from 'utils/NewsArray'
 import NewsListItem from 'component/Slider/NewsListItem'
 
 type Props = {}
-type News = {
+type NewsType = {
     id: number
     title: string
     description: string
@@ -15,7 +15,7 @@ type News = {
 }
 
 // Переворота масиву та обмеження до 5 об'єктів
-const modifiedNewsArray: News[] = [...NewsArray]
+const modifiedNewsArray: NewsType[] = [...NewsArray]
     .reverse() // Перевертає масив
     .slice(0, 5) // Обрізає до 5 об'єктів
 
