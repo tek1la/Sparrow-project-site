@@ -25,7 +25,7 @@ const Advantages = (props: Props) => {
                                 src="img/advantages-img-1.jpg"
                                 alt="advantages"
                             />
-                            <div className="advantages-icon-1"></div>
+                            {/* <div className="advantages-icon-1"></div> */}
                         </div>
                         <p>Великий обсяг замовлень</p>
                     </Grid>
@@ -36,7 +36,7 @@ const Advantages = (props: Props) => {
                                 src="img/advantages-img-2.jpg"
                                 alt="advantages"
                             />
-                            <div className="advantages-icon-2"></div>
+                            {/* <div className="advantages-icon-2"></div> */}
                         </div>
                         <p>Швидка та надійна доставка</p>
                     </Grid>
@@ -47,7 +47,7 @@ const Advantages = (props: Props) => {
                                 src="img/advantages-img-3.jpg"
                                 alt="advantages"
                             />
-                            <div className="advantages-icon-3"></div>
+                            {/* <div className="advantages-icon-3"></div> */}
                         </div>
                         <p>Тільки найкращі компоненти</p>
                     </Grid>

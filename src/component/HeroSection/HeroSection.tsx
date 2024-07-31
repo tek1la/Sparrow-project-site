@@ -8,7 +8,7 @@ const HeroSection = (props: Props) => {
         <>
             <div className="hero-wrapper">
                 <video className="hero-video" autoPlay muted loop>
-                    <source src="/video/4.mp4" type="video/mp4" />
+                    <source src="/video/full.webm" type="video/mp4" />
                     Ваш браузер не підтримує відео тег.
                 </video>
                 <div>
@@ -24,18 +24,7 @@ const HeroSection = (props: Props) => {
                         }}
                     >
                         <Grid container>
-                            <Grid
-                                item
-                                className="title-text-wraper"
-                                sm={6.4}
-                                sx={{
-                                    display: 'flex',
-                                    justifyContent: 'flex-end',
-                                    alignItems: 'center',
-                                    position: 'relative',
-                                    paddingRight: '23px',
-                                }}
-                            >
+                            <Grid item className="title-text-wraper" sm={6.4}>
                                 <p className="title-text">НАШЕ</p>
                             </Grid>
                             <Grid

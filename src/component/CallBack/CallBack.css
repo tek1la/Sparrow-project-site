@@ -7,6 +7,10 @@
     line-height: 69px;
 }
 
+.call-back-title h3 span {
+    color: #3030EF;
+}
+
 .call-back-title {
     padding: 15px;
     border: 1px solid #141A29;
@@ -31,4 +35,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+.call-back-wraper .cat-img {
+    content: url(../../../public/img/cat_img.svg);
+    height: 350px;
+    margin-left: 65px;
+}
+
+.call-back-wraper .call-back-img {
+    content: url(../../../public/img/call_back_img.png);
+    height: 300px;
 }

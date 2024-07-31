@@ -3,21 +3,34 @@ import './ProductHeroSection.css'
 import AnimatedBtn from './AnimatedBtn'
 
 type Props = {
+    id: number
+    title: string
+    subTitle: string
     firstTitle: string
     secondTitle: string
-    bgImg: string
+    description: string
+    productionImg: string
+    video: string
+    path: string
 }
-const ProductHeroSection = ({ firstTitle, secondTitle, bgImg }: Props) => {
+const ProductHeroSection = ({
+    id,
+    title,
+    subTitle,
+    firstTitle,
+    secondTitle,
+    description,
+    productionImg,
+    video,
+    path,
+}: Props) => {
     return (
         <>
-            <div
-                className="hero-wrapper"
-                style={{
-                    backgroundImage: `url("img/production/${bgImg}.jpg")`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                }}
-            >
+            <div className="hero-wrapper">
+                <video className="hero-video" autoPlay muted loop>
+                    <source src={video} type="video/mp4" />
+                    Ваш браузер не підтримує відео тег.
+                </video>
                 <div className="bg-wrapper">
                     <Container
                         className="container"
@@ -47,18 +60,7 @@ const ProductHeroSection = ({ firstTitle, secondTitle, bgImg }: Props) => {
                                     position: 'relative',
                                 }}
                             >
-                                <p className="title-text">{firstTitle}</p>
-                                <div
-                                    style={{
-                                        backgroundImage: `url('img/production/${firstTitle}_first_bg.png')`,
-                                        backgroundRepeat: 'no-repeat',
-                                        backgroundPosition: 'center',
-                                        backgroundSize: 'inherit',
-                                        position: 'absolute',
-                                        height: '204px',
-                                        width: '100vw',
-                                    }}
-                                ></div>
+                                <p className="title-text">{subTitle}</p>
                             </Grid>
                             <Grid
                                 item
@@ -79,17 +81,6 @@ const ProductHeroSection = ({ firstTitle, secondTitle, bgImg }: Props) => {
                                 >
                                     {secondTitle}
                                 </p>
-                                <div
-                                    style={{
-                                        backgroundImage: `url('img/production/${secondTitle}_second_bg.png')`,
-                                        backgroundRepeat: 'no-repeat',
-                                        backgroundPosition: 'center',
-                                        backgroundSize: 'inherit',
-                                        position: 'absolute',
-                                        height: '204px',
-                                        width: '100%',
-                                    }}
-                                ></div>
                             </Grid>
                         </Grid>
                         <AnimatedBtn />

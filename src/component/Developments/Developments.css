@@ -24,9 +24,9 @@
 
 .developments-item img {
     position: absolute;
-    display: none; /* Сховати картинку за замовчуванням */
-    pointer-events: none; /* Щоб картинка не заважала навігації */
-    z-index: 10; /* Переконуємось, що картинка відображається поверх інших елементів */
+    display: none; 
+    pointer-events: none; 
+    z-index: 10; 
 }
 
 .developments-item:hover img {

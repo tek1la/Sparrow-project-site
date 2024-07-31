@@ -13,18 +13,39 @@ import ProductionResult from 'component/Result/ProductionResult'
 import TechChar from 'component/TechChar/TechChar'
 
 type Props = {
+    id: number
     title: string
+    subTitle: string
     firstTitle: string
     secondTitle: string
+    description: string
+    productionImg: string
+    video: string
     path: string
 }
-const Production = ({ path, title, firstTitle, secondTitle }: Props) => {
+const Production = ({
+    id,
+    title,
+    subTitle,
+    firstTitle,
+    secondTitle,
+    description,
+    productionImg,
+    video,
+    path,
+}: Props) => {
     return (
         <>
             <ProductHeroSection
+                id={id}
+                title={title}
+                subTitle={subTitle}
                 firstTitle={firstTitle}
                 secondTitle={secondTitle}
-                bgImg={title}
+                description={description}
+                productionImg={productionImg}
+                video={video}
+                path={path}
             />
             <Grid className="body-wraper">
                 {title === 'Ударний БпАК “1В БОМБЕР”' ? (

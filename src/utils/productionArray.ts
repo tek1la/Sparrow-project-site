@@ -6,6 +6,7 @@ export type Productions = {
     secondTitle: string
     description: string
     productionImg: string
+    video: string
     path: string
 }
 
@@ -18,6 +19,7 @@ export const productionArray: Productions[] = [
         secondTitle: "",
         description: "Призначений для виконання ударних операції вдень та вночi в простих метеорологічних умовах, в умовах активного використання противником засобів радіоелектронної боротьби.",
         productionImg: 'img/udarnyy-BPLA.jpg',
+        video: 'video/BoomBeeR.webm',
         path: 'bpak'
     },
     {
@@ -28,6 +30,7 @@ export const productionArray: Productions[] = [
         secondTitle: "“Горобець 8” та “Горобець 10”",
         description: 'Безпiлотні авiацiйний комплекс "ГОРОБЕЦЬ 8"  та "ГОРОБЕЦЬ 10" призначені для  виконання ударних операцій в різних метеорологічних умовах.',
         productionImg: "img/udarnyy-fpv.jpg",
+        video: 'video/BoomBeeR.webm',
         path: 'fpv'
     },
     {
@@ -38,6 +41,7 @@ export const productionArray: Productions[] = [
         secondTitle: "“FPV Re-Link”",
         description: "Наземна станція призначена для посилення зв’язку з дроном та забезпечення безпеки оператора БпЛА, під час виконання завдань з розвідки, ударних операцій і тд.",
         productionImg: 'img/fpv-re-link.jpg',
+        video: 'video/BoomBeeR.webm',
         path: 'link',
     },
     {
@@ -48,6 +52,7 @@ export const productionArray: Productions[] = [
         secondTitle: "",
         description: "Акумуляторні збірки на елементах molicel INR-21700-P42A виготовляються з високоякісних матеріалів та проходять ретельне тестування. Це забезпечує їхню високу міцність та надійність.",
         productionImg: "img/battery.jpg",
+        video: 'video/BoomBeeR.webm',
         path: 'battery'
     },
     {
@@ -58,6 +63,7 @@ export const productionArray: Productions[] = [
         secondTitle: "",
         description: "Система скидання боєприпасів - це не лише модернізація дронів, а й оптимізація робочого процесу. Здатність квадрокоптера ефективно та безпечно скидати боєприпаси відкриває нові можливості для військових.",
         productionImg: 'img/sds-mini.jpg',
+        video: 'video/BoomBeeR.webm',
         path: 'sdsMini'
     },
 ]

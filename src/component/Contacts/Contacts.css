@@ -4,11 +4,11 @@
     align-items: center;
     justify-content: flex-end;
     padding: 15px;
+    border-bottom: 1px solid #141A29;
 }
 
 .contacts-wraper {
     border-top: 1px solid #141A29;
-    border-bottom: 1px solid #141A29;
 }
 
 .contacts-cell:first-child {
@@ -55,4 +55,8 @@
 .contacts-item-phone-icon img, .contacts-item-mail-icon img {
     height: 24px;
     width: 24px;
+}
+
+.email-contact, .contact-mail-icon {
+    border-bottom: 1px solid #141A29;
 }

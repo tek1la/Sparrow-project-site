@@ -15,22 +15,33 @@ const PriceList = ({ video }: Props) => {
                 }}
             >
                 <Grid container>
-                    <Grid item sm={video ? 5.5 : 4}>
+                    <Grid item sm={4}>
                         {video ? (
-                            <video
-                                className="contact-video"
-                                autoPlay
-                                muted
-                                loop
-                            >
-                                <source src="/video/cat.mp4" type="video/mp4" />
-                                Ваш браузер не підтримує відео тег.
-                            </video>
-                        ) : null}
+                            // <video
+                            //     className="contact-video"
+                            //     autoPlay
+                            //     muted
+                            //     loop
+                            // >
+                            //     <source src="/video/cat.mp4" type="video/mp4" />
+                            //     Ваш браузер не підтримує відео тег.
+                            // </video>
+                            <div className="cat-img"></div>
+                        ) : (
+                            <div className="call-back-img"></div>
+                        )}
                     </Grid>
-                    <Grid item sm={video ? 6.5 : 8}>
+                    <Grid
+                        item
+                        sm={8}
+                        sx={{
+                            paddingTop: '50px',
+                        }}
+                    >
                         <div className="call-back-title">
-                            <h3>Є питання?</h3>
+                            <h3>
+                                Є питання<span>?</span>
+                            </h3>
                             <div className="call-back-text">
                                 Заповніть форму і ми зв'яжемося з вами
                                 якнайшвидше!

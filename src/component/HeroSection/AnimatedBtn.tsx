@@ -17,7 +17,8 @@ const AnimatedBtn = (props: Props) => {
                 display: 'flex',
                 justifyContent: 'center',
                 bottom: '30px',
-                right: '150px',
+                right: '0px',
+                left: '0px',
             }}
         >
             <Grid

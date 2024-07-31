@@ -73,7 +73,7 @@ const Contacts = (props: Props) => {
                                 <Grid
                                     item
                                     sm={0.75}
-                                    className="contacts-item-icon"
+                                    className="contacts-item-icon contact-mail-icon"
                                 >
                                     <div className="contacts-item-mail-icon">
                                         <a
@@ -84,7 +84,11 @@ const Contacts = (props: Props) => {
                                         </a>
                                     </div>
                                 </Grid>
-                                <Grid item sm={11.25} className="contacts-item">
+                                <Grid
+                                    item
+                                    sm={5.625}
+                                    className="contacts-item email-contact"
+                                >
                                     <a
                                         href="mailto:info@sparrow-avia.tech"
                                         className="contacts"
