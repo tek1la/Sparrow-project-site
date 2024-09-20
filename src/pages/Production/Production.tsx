@@ -1,7 +1,4 @@
 import { Grid } from '@mui/material'
-import Accessories from 'component/Accessories/Accessories'
-import AdvantagesBattery from 'component/Advantages/AdvantagesBattery'
-import AdvantagesSdsMini from 'component/Advantages/AdvantagesSdsMini'
 import BaseEquipment from 'component/BaseEquipment/BaseEquipment'
 import BatteryDescription from 'component/Description/BatteryDescription'
 import BpakDescription from 'component/Description/BpakDescription'

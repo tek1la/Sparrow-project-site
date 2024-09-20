@@ -30,10 +30,6 @@ const ProductionResult = (props: Props) => {
             '.container'
         ) as HTMLElement
 
-        const parentWidth = parentElement
-            ? parentElement.getBoundingClientRect().width
-            : 1360
-
         const slideRect = event.currentTarget.getBoundingClientRect()
         setTooltip({
             visible: true,
