@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import MenuItem from './MenuItem'
 import ProductionSubMenu from './ProductionSubMenu'
@@ -10,79 +10,73 @@ const Menu = (props: Props) => {
     const [activeItem, setActiveItem] = useState<string | null>(null)
     const [isMouseOverMenu, setIsMouseOverMenu] = useState(false)
     const [isMouseOverSubMenu, setIsMouseOverSubMenu] = useState(false)
-    const [timer, setTimer] = useState<NodeJS.Timeout | null>(null)
     const navigate = useNavigate()
 
     useEffect(() => {
+        let timer: NodeJS.Timeout | null = null
+
         if (!isMouseOverMenu && !isMouseOverSubMenu) {
-            const newTimer = setTimeout(() => {
+            timer = setTimeout(() => {
                 setIsSubMenuOpen(false)
             }, 500)
-            setTimer(newTimer)
-        } else if (timer) {
-            clearTimeout(timer)
-            setTimer(null)
+        } else {
+            if (timer) clearTimeout(timer)
         }
 
         return () => {
-            if (timer) {
-                clearTimeout(timer)
-            }
+            if (timer) clearTimeout(timer)
         }
     }, [isMouseOverMenu, isMouseOverSubMenu])
 
-    const handleMouseEnter = () => {
+    const handleMouseEnter = useCallback(() => {
         setIsSubMenuOpen(true)
-    }
+    }, [])
 
-    const handleMouseLeaveMenu = () => {
+    const handleMouseLeave = useCallback(() => {
         setIsMouseOverMenu(false)
-    }
-
-    const handleMouseLeaveSubMenu = () => {
         setIsMouseOverSubMenu(false)
-    }
+    }, [])
 
-    const handleMouseEnterMenu = () => {
+    const handleMouseOverMenu = useCallback(() => {
         setIsMouseOverMenu(true)
         handleMouseEnter()
-    }
+    }, [handleMouseEnter])
 
-    const handleMouseEnterSubMenu = () => {
+    const handleMouseOverSubMenu = useCallback(() => {
         setIsMouseOverSubMenu(true)
         handleMouseEnter()
-    }
+    }, [handleMouseEnter])
 
-    const handleClick = (item: string) => {
+    const handleClick = useCallback((item: string) => {
         setActiveItem(item)
-    }
+    }, [])
 
-    const handleAboutClick = () => {
+    const handleAboutClick = useCallback(() => {
         setActiveItem('about')
-        navigate('/') // Перехід на головну сторінку
+        navigate('/')
 
-        // Чекаємо, поки сторінка завантажиться, і прокручуємо до елемента
-        setTimeout(() => {
+        // Прокрутка до секції через requestAnimationFrame для плавності
+        requestAnimationFrame(() => {
             const aboutSection = document.getElementById('about')
             if (aboutSection) {
                 aboutSection.scrollIntoView({ behavior: 'smooth' })
             }
-        }, 100)
-    }
+        })
+    }, [navigate])
 
     return (
         <>
             <MenuItem
-                onMouseEnter={handleMouseEnterMenu}
-                onMouseLeave={handleMouseLeaveMenu}
+                onMouseEnter={handleMouseOverMenu}
+                onMouseLeave={handleMouseLeave}
                 onClick={() => handleClick('production')}
                 className={`menu-item menu-arrow ${activeItem === 'production' ? 'active' : ''}`}
             >
                 ВИРОБНИЦТВО
                 {isSubMenuOpen && (
                     <ProductionSubMenu
-                        onMouseEnter={handleMouseEnterSubMenu}
-                        onMouseLeave={handleMouseLeaveSubMenu}
+                        onMouseEnter={handleMouseOverSubMenu}
+                        onMouseLeave={handleMouseLeave}
                     />
                 )}
             </MenuItem>
