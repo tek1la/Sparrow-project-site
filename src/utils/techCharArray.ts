@@ -144,15 +144,15 @@ export const fpv: Table[] = [
     {
     id: 6,
     rowName: "Крейсерська швидкість польоту БпАК",
-    description: "60 км\год",
-    secondDescription: "60 км\год",
+    description: "60 км/год",
+    secondDescription: "60 км/год",
     number: "05",
     },
     {
     id: 7,
     rowName: "Максимальна швидкість польоту БпАК",
-    description: "100 км\год",
-    secondDescription: "100 км\год",
+    description: "100 км/год",
+    secondDescription: "100 км/год",
     number: "06",
     },
     {
