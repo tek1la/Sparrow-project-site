@@ -36,10 +36,13 @@
     padding: 17px 15px;
     text-decoration: none;
     color: white;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 40px;
 }
 
 .header-contact:hover {
-    color: #1818ED;
+    border: 1px solid #F2F4F7;
+    border-radius: 40px;
 }
 
 .menu-item.active {
