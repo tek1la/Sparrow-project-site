@@ -1,5 +1,5 @@
 import { Container, Grid } from '@mui/material'
-import { useState, useRef, MouseEvent } from 'react'
+import { useState } from 'react'
 import './ProductionResult.css'
 
 type Props = {}
@@ -33,8 +33,6 @@ const ProductionResult = (props: Props) => {
         const parentWidth = parentElement
             ? parentElement.getBoundingClientRect().width
             : 1360
-
-        const parentWidthNumber = Number(parentWidth)
 
         const slideRect = event.currentTarget.getBoundingClientRect()
         setTooltip({

@@ -1,4 +1,4 @@
-import { useState, useRef, MouseEvent } from 'react'
+import { useState, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import './PartnersSlider.css'

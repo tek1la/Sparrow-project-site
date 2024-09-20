@@ -8,11 +8,9 @@ import Contacts from '../pages/Contacts/Contacts'
 import Production from '../pages/Production/Production'
 import { productionArray } from 'utils/productionArray'
 import 'utils/i18n'
-import { useTranslation } from 'react-i18next' // Імпорт хука для перекладів
 
 type Props = {}
 const App = (props: Props) => {
-    const { t } = useTranslation() // Ініціалізація хука для доступу до перекладів
     return (
         <>
             <StyledEngineProvider injectFirst>
