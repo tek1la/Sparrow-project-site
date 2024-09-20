@@ -26,10 +26,6 @@ const ProductionResult = (props: Props) => {
             return
         }
 
-        const parentElement = event.currentTarget.closest(
-            '.container'
-        ) as HTMLElement
-
         const slideRect = event.currentTarget.getBoundingClientRect()
         setTooltip({
             visible: true,
