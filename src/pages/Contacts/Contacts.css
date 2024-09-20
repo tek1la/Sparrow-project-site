@@ -1,0 +1,75 @@
+.contact-page-bg-wraper {
+    background-color: #F2F4F7;
+}
+
+.contacts-page-title-wraper {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
+    margin-bottom: 5px;
+}
+
+.contacts-page-content-wraper {
+    margin: 65px 0;
+}
+
+.contacts-page-title {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-left: 1px solid #141A29;
+}
+
+.contact-page-info {
+    display: flex;
+    padding: 15px;
+    line-height: 24px;
+    background-color: #F2F4F7;
+    width: 100%;
+    border-left: 1px solid #141A29;
+}
+
+.contact-page-item {
+    border: 1px solid #141A29;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    
+}
+
+.contact-page-icon {
+    width: 54px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.contacts-page-title h3 {
+    font-family: "e-Ukraine";
+    font-size: 120px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+    line-height: 120px;
+}
+
+.contact-page-info p {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Montserrat';
+   
+}
+
+.contact-page-info .contact-page-text {
+    font-size: 16px;
+}
+
+.contact-page-tel:hover, .contact-page-mail:hover {
+    color: #1818ED;
+}
+
+.email-page-contact, .contact-page-mail-icon {
+    border-bottom: 1px solid #141A29;
+}

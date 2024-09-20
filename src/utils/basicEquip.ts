@@ -1,63 +1,90 @@
 export type Table = {
     id: number
+    number: string
+    secondNumber: string
     rowName: string
-    description: string
+    secondRowName: string
 }
 
 export const bpakEquip: Table[] = [
     {
         id: 1,
-        rowName: "Ударний безпілотний літальний апарат (БпЛА) “1В БОМБЕР”",
-        description: "1 шт",
+        number: "01",
+        secondNumber: "06",
+        rowName: "Ударний безпілотний літальний апарат “1В БОМБЕР”",
+        secondRowName: "Кабель управління (магістраль 40 м)"
     },
     {
         id: 2,
-        rowName: "Тепловізійна камера “PHOENIX EYE”",
-        description: "1 шт",
+        number: "02",
+        secondNumber: "07",
+        rowName: "Тепловізійна камера  “PHOENIX EYE”",
+        secondRowName: "Станція керування БпЛА"
     },
     {
         id: 3,
-        rowName: "Станція керування БпЛА",
-        description: "1 шт",
+        number: "03",
+        secondNumber: "08",
+        rowName: "Комплект з 2-х акумуляторів",
+        secondRowName: "Станція ретрансляції"
     },
     {
         id: 4,
-        rowName: "Станція ретрансляції",
-        description: "1 шт",
+        number: "04",
+        secondNumber: "09",
+        rowName: "Універсальна модульна система скиду “SDS —1”",
+        secondRowName: "Захисний кейс “1В БОМБЕР”"
     },
     {
         id: 5,
-        rowName: "Зарядна станція для станції керування",
-        description: "1 шт",
+        number: "05",
+        secondNumber: "10",
+        rowName: "Зарядна станція для акумуляторів",
+        secondRowName: "Інструменти та приладдя"
+    },
+]
+
+export const reLinkEquip: Table[] = [
+    {
+        id: 1,
+        number: "01",
+        secondNumber: "07",
+        rowName: "Щогла 8 м",
+        secondRowName: "Модуль керування"
+    },
+    {
+        id: 2,
+        number: "02",
+        secondNumber: "08",
+        rowName: "Редуктор",
+        secondRowName: "Антена прийому відеосигналу"
+    },
+    {
+        id: 3,
+        number: "03",
+        secondNumber: "09",
+        rowName: "Powerbank + usb кабель",
+        secondRowName: "Сумка для транспортування"
+    },
+    {
+        id: 4,
+        number: "04",
+        secondNumber: "10",
+        rowName: "Пульт керування поворотною станцією",
+        secondRowName: "Кронштейн для логоперіодичної антениА"
+    },
+    {
+        id: 5,
+        number: "05",
+        secondNumber: "11",
+        rowName: "Магістраль керування поворотним механізмом на катушці (кабель 80м)",
+        secondRowName: "Трос та кілок для встановлення щогли"
     },
     {
         id: 6,
-        rowName: 'Комплект акумуляторів "1В БОМБЕР" (2 акум.)',
-        description: "1 шт",
-    },
-    {
-        id: 7,
-        rowName: 'Захисний кейс "1В БОМБЕР',
-        description: "1 шт",
-    },
-    {
-        id: 8,
-        rowName: "Універсальна модульна система скиду “SDS-1” ",
-        description: "1 шт",
-    },
-    {
-        id: 9,
-        rowName: "Інструменти та приладдя",
-        description: "1 шт",
-    },
-    {
-        id: 10,
-        rowName: "Зарядна станція для акумуляторів",
-        description: "1 шт",
-    },
-    {
-        id: 11,
-        rowName: "Кабель управління - магістраль 40 метрів",
-        description: "1 шт",
+        number: "06",
+        secondNumber: "12",
+        rowName: "Магістраль живлення  ретранслятора на катушці (кабель 40 м)",
+        secondRowName: "Магістраль управління  ретранслятором на катушці (кабель 40 м)"
     },
 ]

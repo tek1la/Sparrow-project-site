@@ -22,20 +22,13 @@
 }
 
 .partners-title h3 {
-    font-family: "Gerhaus";
+    font-family: "e-Ukraine";
     margin: 15px;
     font-size: 60px;
-    font-weight: 400;
+    font-weight: 500;
     color: #141A29;
     text-transform: uppercase;
     letter-spacing: 5.5px;
-}
-
-.partners-item p {
-    margin: 15px 0;
-    font-size: 25px;
-    font-weight: 500;
-    font-family: 'Montserrat';
 }
 
 .partners-img {

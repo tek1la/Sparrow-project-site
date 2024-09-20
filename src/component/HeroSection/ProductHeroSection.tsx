@@ -1,4 +1,4 @@
-import { Container, Grid } from '@mui/material'
+import { Button, Container, Grid } from '@mui/material'
 import './ProductHeroSection.css'
 import AnimatedBtn from './AnimatedBtn'
 
@@ -52,7 +52,6 @@ const ProductHeroSection = ({
                             <Grid
                                 item
                                 sx={{
-                                    height: '205px',
                                     width: '100%',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -62,25 +61,10 @@ const ProductHeroSection = ({
                             >
                                 <p className="title-text">{subTitle}</p>
                             </Grid>
-                            <Grid
-                                item
-                                sx={{
-                                    height: '205px',
-                                    width: '100%',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    position: 'relative',
-                                }}
-                            >
-                                <p
-                                    className="title-text second-title-text"
-                                    style={{
-                                        marginRight: '0',
-                                    }}
-                                >
-                                    {secondTitle}
-                                </p>
+                            <Grid item className="hero-section-btn">
+                                <Button className="hero-btn">
+                                    КОНСУЛЬТАЦІЯ
+                                </Button>
                             </Grid>
                         </Grid>
                         <AnimatedBtn />

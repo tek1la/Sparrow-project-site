@@ -19,43 +19,24 @@ const TechChar = ({ path, tableSize, size }: Props) => {
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0',
+                    padding: '120px 0 80px',
                     position: 'relative',
                 }}
             >
-                <Grid>
-                    <div className="tech-char-title">
-                        <h3>
-                            Технічні
-                            <br />
-                            характеристики
-                        </h3>
-                    </div>
+                <Grid container className="tech-char-wraper">
+                    <Grid item sm={4}></Grid>
+                    <Grid item sm={8} className="tech-char-title">
+                        <h3>технічні характеристики</h3>
+                    </Grid>
                 </Grid>
-                <Grid
-                    container
-                    sx={{
-                        gap: '30px',
-                        flexWrap: 'nowrap',
-                        alignItems: 'center',
-                    }}
-                >
+                <Grid container>
                     <Grid
-                        xs={tableSize || 8}
+                        xs={tableSize || 12}
                         item
-                        className="descript-description"
-                        style={{
-                            gap: '30px',
-                            flexWrap: 'nowrap',
-                        }}
+                        className="tech-char-description"
                     >
-                        <div className="descript-text">
-                            <div
-                                className="descript-first-text"
-                                style={{
-                                    marginBottom: '30px',
-                                }}
-                            >
+                        <div className="tech-char-text">
+                            <div className="tech-char-first-text">
                                 <TableContainer
                                     component={Paper}
                                     className="link-table"
@@ -63,9 +44,6 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                     <Table
                                         sx={{ minWidth: 650 }}
                                         aria-label="simple table"
-                                        style={{
-                                            borderBottom: 'none',
-                                        }}
                                     >
                                         {path === 'bpak' ? (
                                             <TableBody>
@@ -74,15 +52,29 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                         id,
                                                         rowName,
                                                         description,
+                                                        number,
                                                     }) => (
-                                                        <TableRow key={id}>
+                                                        <TableRow
+                                                            className="table-row"
+                                                            key={id}
+                                                        >
                                                             <TableCell
                                                                 sx={{
-                                                                    padding:
-                                                                        '10px',
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    width: '60%',
+                                                                    width: '33.4%',
+                                                                }}
+                                                                component="th"
+                                                                scope="row"
+                                                                className="table-cell"
+                                                            >
+                                                                {number}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                sx={{
+                                                                    lineHeight:
+                                                                        '1.38',
+                                                                    width: '33.333%',
                                                                 }}
                                                                 component="th"
                                                                 scope="row"
@@ -92,12 +84,12 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                             </TableCell>
                                                             <TableCell
                                                                 sx={{
-                                                                    padding:
-                                                                        '10px',
                                                                     lineHeight:
                                                                         '1.38',
                                                                 }}
                                                                 className="table-cell"
+                                                                component="th"
+                                                                scope="row"
                                                                 align="left"
                                                             >
                                                                 {description}
@@ -116,6 +108,7 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                         description,
                                                         secondDescription,
                                                         header,
+                                                        number,
                                                     }) => (
                                                         <TableRow
                                                             key={id}
@@ -123,11 +116,21 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                         >
                                                             <TableCell
                                                                 sx={{
-                                                                    padding:
-                                                                        '10px',
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    width: '42%',
+                                                                    width: '5%',
+                                                                }}
+                                                                component="th"
+                                                                scope="row"
+                                                                className="table-cell"
+                                                            >
+                                                                {number}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                sx={{
+                                                                    lineHeight:
+                                                                        '1.38',
+                                                                    width: '28.4%',
                                                                 }}
                                                                 component="th"
                                                                 scope="row"
@@ -137,10 +140,9 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                             </TableCell>
                                                             <TableCell
                                                                 sx={{
-                                                                    padding:
-                                                                        '10px',
                                                                     lineHeight:
                                                                         '1.38',
+                                                                    width: '33.333%',
                                                                 }}
                                                                 className="table-cell"
                                                                 align="left"
@@ -149,8 +151,6 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                             </TableCell>
                                                             <TableCell
                                                                 sx={{
-                                                                    padding:
-                                                                        '10px',
                                                                     lineHeight:
                                                                         '1.38',
                                                                 }}
@@ -173,26 +173,34 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                         id,
                                                         rowName,
                                                         description,
+                                                        number,
                                                     }) => (
                                                         <TableRow key={id}>
                                                             <TableCell
                                                                 sx={{
-                                                                    padding:
-                                                                        '10px',
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    width: '60%',
+                                                                    width: '33.4%',
                                                                 }}
                                                                 component="th"
                                                                 scope="row"
                                                                 className="table-cell"
                                                             >
+                                                                {number}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                sx={{
+                                                                    lineHeight:
+                                                                        '1.38',
+                                                                    width: '33.3333%',
+                                                                }}
+                                                                className="table-cell"
+                                                                align="left"
+                                                            >
                                                                 {rowName}
                                                             </TableCell>
                                                             <TableCell
                                                                 sx={{
-                                                                    padding:
-                                                                        '10px',
                                                                     lineHeight:
                                                                         '1.38',
                                                                 }}
@@ -217,6 +225,7 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                         thirdDescription,
                                                         fourthDescription,
                                                         header,
+                                                        number,
                                                     }) => (
                                                         <TableRow
                                                             key={id}
@@ -224,13 +233,25 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                         >
                                                             <TableCell
                                                                 sx={{
-                                                                    textAlign:
-                                                                        'end',
                                                                     padding:
                                                                         '10px',
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    width: '36%',
+                                                                    width: '6%',
+                                                                }}
+                                                                component="th"
+                                                                scope="row"
+                                                                className="table-cell battery-table-cell"
+                                                            >
+                                                                {number}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                sx={{
+                                                                    padding:
+                                                                        '10px',
+                                                                    lineHeight:
+                                                                        '1.38',
+                                                                    width: '26.1%',
                                                                 }}
                                                                 component="th"
                                                                 scope="row"
@@ -244,8 +265,6 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                         '10px',
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    textAlign:
-                                                                        'center',
                                                                     width: '16%',
                                                                 }}
                                                                 className="table-cell battery-table-cell"
@@ -259,8 +278,6 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                         '10px',
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    textAlign:
-                                                                        'center',
                                                                     width: '16%',
                                                                 }}
                                                                 className="table-cell battery-table-cell"
@@ -276,8 +293,6 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                         '10px',
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    textAlign:
-                                                                        'center',
                                                                     width: '16%',
                                                                 }}
                                                                 className="table-cell battery-table-cell"
@@ -293,11 +308,9 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                         '10px',
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    textAlign:
-                                                                        'center',
                                                                     width: '16%',
                                                                 }}
-                                                                className="table-cell"
+                                                                className="table-cell battery-table-cell"
                                                                 align="left"
                                                             >
                                                                 {
@@ -310,184 +323,196 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                             </TableBody>
                                         ) : null}
                                         {path === 'sdsMini' ? (
-                                            <TableBody>
+                                            <TableBody
+                                                sx={{
+                                                    width: '100%',
+                                                }}
+                                            >
                                                 {sdsMini.map(
                                                     ({
                                                         id,
                                                         rowName,
                                                         description,
+                                                        secondDescription,
+                                                        thirdDescription,
+                                                        number,
+                                                        mainHeader,
+                                                        secondRowName,
+                                                        thirdRowName,
                                                     }) => (
-                                                        <TableRow key={id}>
-                                                            <TableCell
-                                                                sx={{
-                                                                    padding:
-                                                                        '10px',
-                                                                    lineHeight:
-                                                                        '1.38',
-                                                                    width: '60%',
-                                                                }}
-                                                                component="th"
-                                                                scope="row"
-                                                                className="table-cell"
-                                                            >
-                                                                {rowName}
-                                                            </TableCell>
-                                                            <TableCell
-                                                                sx={{
-                                                                    padding:
-                                                                        '10px',
-                                                                    lineHeight:
-                                                                        '1.38',
-                                                                }}
-                                                                className="table-cell"
-                                                                align="left"
-                                                            >
-                                                                {description}
-                                                            </TableCell>
+                                                        <TableRow
+                                                            key={id}
+                                                            className="table-main"
+                                                        >
+                                                            {id === 6 ? (
+                                                                <>
+                                                                    <TableCell
+                                                                        sx={{
+                                                                            lineHeight:
+                                                                                '1.38',
+                                                                            width: '33.4%',
+                                                                        }}
+                                                                        component="th"
+                                                                        scope="row"
+                                                                        className="table-cell"
+                                                                    >
+                                                                        {number}
+                                                                    </TableCell>
+                                                                    <TableCell
+                                                                        colSpan={
+                                                                            2
+                                                                        }
+                                                                        sx={{
+                                                                            lineHeight:
+                                                                                '1.38',
+                                                                            width: '33.3333%',
+                                                                        }}
+                                                                        className="table-cell span-table-cell"
+                                                                        align="left"
+                                                                    >
+                                                                        <Table size="small">
+                                                                            <TableBody>
+                                                                                <TableRow>
+                                                                                    <TableCell
+                                                                                        colSpan={
+                                                                                            2
+                                                                                        }
+                                                                                        className="table-cell right-table-cell"
+                                                                                        sx={{
+                                                                                            fontWeight:
+                                                                                                '700',
+                                                                                        }}
+                                                                                    >
+                                                                                        {
+                                                                                            mainHeader
+                                                                                        }
+                                                                                    </TableCell>
+                                                                                </TableRow>
+                                                                                <TableRow>
+                                                                                    <TableCell
+                                                                                        sx={{
+                                                                                            width: '50%',
+                                                                                        }}
+                                                                                        className="table-cell"
+                                                                                    >
+                                                                                        {
+                                                                                            rowName
+                                                                                        }
+                                                                                    </TableCell>
+                                                                                    <TableCell
+                                                                                        className="table-cell right-table-cell"
+                                                                                        align="left"
+                                                                                    >
+                                                                                        {
+                                                                                            description
+                                                                                        }
+                                                                                    </TableCell>
+                                                                                </TableRow>
+                                                                                <TableRow>
+                                                                                    <TableCell
+                                                                                        sx={{
+                                                                                            width: '50%',
+                                                                                        }}
+                                                                                        className="table-cell"
+                                                                                    >
+                                                                                        {
+                                                                                            secondRowName
+                                                                                        }
+                                                                                    </TableCell>
+                                                                                    <TableCell
+                                                                                        className="table-cell right-table-cell"
+                                                                                        align="left"
+                                                                                    >
+                                                                                        {
+                                                                                            secondDescription
+                                                                                        }
+                                                                                    </TableCell>
+                                                                                </TableRow>
+                                                                                <TableRow>
+                                                                                    <TableCell
+                                                                                        sx={{
+                                                                                            width: '50%',
+                                                                                        }}
+                                                                                        className="table-cell bottom-table-cell"
+                                                                                    >
+                                                                                        {
+                                                                                            thirdRowName
+                                                                                        }
+                                                                                    </TableCell>
+                                                                                    <TableCell
+                                                                                        className="table-cell bottom-table-cell right-table-cell"
+                                                                                        align="left"
+                                                                                    >
+                                                                                        {
+                                                                                            thirdDescription
+                                                                                        }
+                                                                                    </TableCell>
+                                                                                </TableRow>
+                                                                            </TableBody>
+                                                                        </Table>
+                                                                    </TableCell>
+                                                                </>
+                                                            ) : (
+                                                                <>
+                                                                    <TableCell
+                                                                        sx={{
+                                                                            lineHeight:
+                                                                                '1.38',
+                                                                            width: '33.4%',
+                                                                        }}
+                                                                        component="th"
+                                                                        scope="row"
+                                                                        className="table-cell"
+                                                                    >
+                                                                        {number}
+                                                                    </TableCell>
+                                                                    <TableCell
+                                                                        sx={{
+                                                                            lineHeight:
+                                                                                '1.38',
+                                                                            width: '33.3333%',
+                                                                        }}
+                                                                        className="table-cell"
+                                                                        align="left"
+                                                                    >
+                                                                        {
+                                                                            rowName
+                                                                        }
+                                                                    </TableCell>
+                                                                    <TableCell
+                                                                        sx={{
+                                                                            lineHeight:
+                                                                                '1.38',
+                                                                        }}
+                                                                        className="table-cell"
+                                                                        align="left"
+                                                                    >
+                                                                        {
+                                                                            description
+                                                                        }
+                                                                    </TableCell>
+                                                                </>
+                                                            )}
                                                         </TableRow>
                                                     )
                                                 )}
                                             </TableBody>
                                         ) : null}
                                     </Table>
+                                    <div className="table-text-wraper">
+                                        <p className="table-text">
+                                            *комплектація та зовнішній вигляд
+                                            можуть бути змінені вироюбником, з
+                                            обов’язковим
+                                            <br />
+                                            дотриманням заявлених ТТХ виробу.
+                                        </p>
+                                    </div>
                                 </TableContainer>
                             </div>
                         </div>
                     </Grid>
-                    <Grid xs={size || 4} item className="descript-first-text">
-                        {path === 'bpak' ? (
-                            <img
-                                style={{
-                                    width: '100%',
-                                }}
-                                src="./img/production/bpak-table-bg.png"
-                                alt=""
-                            />
-                        ) : null}
-                        {path === 'fpv' ? (
-                            <img
-                                style={{
-                                    width: '100%',
-                                }}
-                                src="./img/production/fpv-table-bg.png"
-                                alt=""
-                            />
-                        ) : null}
-                        {path === 'link' ? (
-                            <img
-                                style={{
-                                    width: '100%',
-                                }}
-                                src="./img/production/link-table-bg.png"
-                                alt=""
-                            />
-                        ) : null}
-                        {path === 'battery' ? (
-                            <img
-                                style={{
-                                    width: '100%',
-                                }}
-                                src="./img/production/battery-table-bg.png"
-                                alt=""
-                            />
-                        ) : null}
-                        {path === 'sdsMini' ? (
-                            <img
-                                style={{
-                                    width: '100%',
-                                }}
-                                src="./img/production/sdsMini-table-bg.png"
-                                alt=""
-                            />
-                        ) : null}
-                    </Grid>
                 </Grid>
-                {path === 'bpak' ? (
-                    <Grid container className="bpak-wraper-description">
-                        <Grid item className="bpak-item-description">
-                            <img
-                                src="./img/production/tech-char-img-1.jpg"
-                                alt="cam"
-                            />
-                            <h5 className="bpak-item-description-title">
-                                тепловізійна камера "PHOENIX EYE"
-                            </h5>
-                            <p>
-                                Вона легко інтегрується з різноманітними
-                                моделями БПЛА, працюючи як у день, так і вночі,
-                                у будь-яких погодних умовах, що дозволяє
-                                максимально розширити можливості розвідки та
-                                спостереження в повітряному просторі.
-                            </p>
-                            <p>
-                                Новаторська аналогова тепловізійна камера,
-                                спеціально розроблена для безпілотних літальних
-                                апаратів (БПЛА), що поєднує вищу роздільну
-                                здатність та найвищу чутливість до теплового
-                                випромінювання.
-                            </p>
-                            <p>
-                                Ця універсальна камера забезпечує надзвичайно
-                                чітке, деталізоване та високоякісне візуальне
-                                представлення теплових об'єктів навіть у
-                                найскладніших умовах.
-                            </p>
-                        </Grid>
-                        <Grid item className="bpak-item-description">
-                            <img
-                                src="./img/production/tech-char-img-2.jpg"
-                                alt="re-link"
-                            />
-                            <h5 className="bpak-item-description-title">
-                                Станція ретрансляції та керування “Sparrow Pro
-                                Link”
-                            </h5>
-                            <p>
-                                Універсальна та інтуітивна система керування
-                                безпілотними пристроями, ціль якої - підвищити
-                                безпеку оператора завдяки розділенню модуля
-                                передавача та керування на відстань до 80
-                                метрів.
-                            </p>
-                            <p>
-                                Захищений та адаптивний зв’язок з безпілотником,
-                                за рахунок викориcтання дублювання каналів
-                                відео, управління та телеметрії. Основний канал
-                                передачі даних працює з технологією адаптивного
-                                ППРЧ, що ускладнює подавлення сигналу управління
-                                засобами РЕБ та виявлення засобами РЕР.
-                            </p>
-                            <p>
-                                Станція ретрансляції та керування "Sparrow Pro
-                                link" та ретрансляції призначена для БпАК "1В
-                                БОМБЕР" та інших бортів виробництва ТОВ "СПРАРОУ
-                                АВІА", але не обмежується в сумісності з іншими
-                                розробками БпАК, що за рахунок простоти
-                                використання та маштабування виробництва,
-                                дозволить підвищити безпеку особистого складу
-                                екіпажів БпАК.
-                            </p>
-                        </Grid>
-                        <Grid item className="bpak-item-description">
-                            <img
-                                src="./img/production/tech-char-img-3.jpg"
-                                alt=""
-                            />
-                            <h5 className="bpak-item-description-title">
-                                УНІВЕРСАЛЬНА МОДУЛЬНА СИСТЕМА СКИДУ “SDS-1”
-                            </h5>
-                            <p>
-                                Швидкозмінна система скиду під 4 боєприпаси
-                                калібру 60 мм або 2 боєприпаси 82 мм.
-                            </p>
-                            <p>УНІВЕРСАЛЬНА МОДУЛЬНА СИСТЕМА СКИДУ “SDS-2”</p>
-                            <p>
-                                Швидкозмінна система скиду під 4 касети по 3
-                                боєприпаси калібру 40-50 м.
-                            </p>
-                        </Grid>
-                    </Grid>
-                ) : null}
             </Container>
         </>
     )

@@ -1,35 +1,74 @@
-import { Container, Grid } from '@mui/material'
+import { Button, Container, Grid } from '@mui/material'
 import './Description.css'
+import { useRef, useState } from 'react'
 
 type Props = {}
 const FpvDescription = (props: Props) => {
+    const videoRef = useRef<HTMLVideoElement>(null)
+    const [isPopupOpen, setIsPopupOpen] = useState(false)
+
+    const handlePlayClick = () => {
+        setIsPopupOpen(true)
+    }
+
+    const handleCloseClick = () => {
+        if (videoRef.current) {
+            videoRef.current.pause()
+            videoRef.current.currentTime = 0
+        }
+        setIsPopupOpen(false)
+    }
+
+    const handlePopupClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (e.target === e.currentTarget) {
+            handleCloseClick()
+        }
+    }
+
     return (
         <>
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0',
+                    padding: '120px 0 80px',
                     position: 'relative',
                 }}
             >
-                <div className="descript-title">
-                    <h3>опис</h3>
-                </div>
-                <Grid
-                    container
-                    className="descript-wraper"
-                    style={{
-                        marginBottom: '0',
-                    }}
-                >
-                    <Grid xs={6} item className="descript-description">
+                <Grid container className="descript-wraper">
+                    <Grid item sm={4}></Grid>
+                    <Grid item sm={8} className="descript-title">
+                        <h3>горобець 8" горобець 10"</h3>
+                    </Grid>
+                </Grid>
+                <Grid container className="descript-item-wraper">
+                    <Grid xs={3.8} item className="descript-item">
                         <div className="descript-text">
-                            <div
-                                className="descript-first-text"
-                                style={{
-                                    marginBottom: '30px',
-                                }}
-                            >
+                            <p className="descript-bold">
+                                Додатково комплектуємо акумуляторами 6S2P з
+                                елементів molicel.
+                            </p>
+                        </div>
+                        <div
+                            className="descript-video-wraper"
+                            onClick={handlePlayClick}
+                        >
+                            <video className="descript-video" muted loop>
+                                <source
+                                    src="video/BoomBeeR.webm"
+                                    type="video/webm"
+                                />
+                                Ваш браузер не підтримує відео тег.
+                            </video>
+                            <img
+                                src="img/play_btn.svg"
+                                alt="play"
+                                className="play-icon"
+                            />
+                        </div>
+                    </Grid>
+                    <Grid xs={3.8} item className="descript-item">
+                        <Grid className="descript-list-item">
+                            <div className="fpv-descript-text descript-text">
                                 <p>
                                     БпЛА призначений для виконання бойових задач
                                     із ураження живої сили та легко/ важко
@@ -42,27 +81,58 @@ const FpvDescription = (props: Props) => {
                                     дотриманням експлуатаційних обмежень.
                                 </p>
                             </div>
-                            <div className="fpv-descript-img-wraper">
-                                <div>
-                                    <img
-                                        src="./img/production/fpv_desc_img_1.jpg"
-                                        alt="fpv"
-                                    />
+                        </Grid>
+                        <Button className="contact-form-btn fpv-descript-btn">
+                            В МАГАЗИН
+                        </Button>
+                    </Grid>
+                    <Grid xs={3.8} item className="descript-item">
+                        <Grid className="descript-list-item">
+                            <div className="descript-text-page">
+                                <div className="second-descript-img">
+                                    <img src="./img/fpv-8.jpg" alt="bpla" />
+                                    <p className="descript-mini-text">
+                                        Горобець 8"
+                                    </p>
                                 </div>
-                                <div>
-                                    <img
-                                        src="./img/production/fpv_desc_img_2.jpg"
-                                        alt="fpv"
-                                    />
+                                <div className="third-descript-img">
+                                    <div>
+                                        <img
+                                            src="./img/fpv-10.jpg"
+                                            alt="bpla"
+                                        />
+                                        <p>Горобець 10"</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Grid>
-                    <Grid xs={6} item className="descript-img">
-                        <img src="./img/fpv_img.jpg" alt="bpla" />
+                        </Grid>
                     </Grid>
                 </Grid>
             </Container>
+            {isPopupOpen && (
+                <div className="video-popup" onClick={handlePopupClick}>
+                    <div className="video-popup-content">
+                        <video
+                            ref={videoRef}
+                            controls
+                            autoPlay
+                            className="video-popup-video"
+                        >
+                            <source
+                                src="video/BoomBeeR.webm"
+                                type="video/webm"
+                            />
+                            Ваш браузер не підтримує відео тег.
+                        </video>
+                        <button
+                            className="video-popup-close"
+                            onClick={handleCloseClick}
+                        >
+                            Х
+                        </button>
+                    </div>
+                </div>
+            )}
         </>
     )
 }

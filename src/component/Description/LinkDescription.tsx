@@ -1,241 +1,139 @@
-import { Container, Grid } from '@mui/material'
-import Table from '@mui/material/Table'
-import TableBody from '@mui/material/TableBody'
-import TableCell from '@mui/material/TableCell'
-import TableContainer from '@mui/material/TableContainer'
-import TableRow from '@mui/material/TableRow'
-import Paper from '@mui/material/Paper'
+import { Button, Container, Grid } from '@mui/material'
 import './Description.css'
+import { useRef, useState } from 'react'
 
 type Props = {}
 const LinkDescription = (props: Props) => {
+    const videoRef = useRef<HTMLVideoElement>(null)
+    const [isPopupOpen, setIsPopupOpen] = useState(false)
+
+    const handlePlayClick = () => {
+        setIsPopupOpen(true)
+    }
+
+    const handleCloseClick = () => {
+        if (videoRef.current) {
+            videoRef.current.pause()
+            videoRef.current.currentTime = 0
+        }
+        setIsPopupOpen(false)
+    }
+
+    const handlePopupClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (e.target === e.currentTarget) {
+            handleCloseClick()
+        }
+    }
+
     return (
         <>
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0',
+                    padding: '120px 0 80px',
                     position: 'relative',
                 }}
             >
-                <div className="descript-title">
-                    <h3>опис</h3>
-                </div>
-                <Grid
-                    container
-                    className="descript-wraper"
-                    sx={{
-                        flexDirection: 'column',
-                    }}
-                    style={{
-                        gap: '60px',
-                        marginBottom: '0',
-                    }}
-                >
-                    <Grid
-                        container
-                        style={{
-                            gap: '30px',
-                            flexWrap: 'nowrap',
-                        }}
-                    >
-                        <Grid
-                            xs={6}
-                            item
-                            className="descript-description"
-                            style={{
-                                gap: '30px',
-                                flexWrap: 'nowrap',
-                            }}
+                <Grid container className="descript-wraper">
+                    <Grid item sm={4}></Grid>
+                    <Grid item sm={8} className="descript-title">
+                        <h3>fpv re-link</h3>
+                    </Grid>
+                </Grid>
+                <Grid container className="descript-item-wraper">
+                    <Grid xs={3.8} item className="descript-item">
+                        <div
+                            className="descript-video-wraper"
+                            onClick={handlePlayClick}
                         >
-                            <div className="descript-text">
-                                <div
-                                    className="descript-first-text"
-                                    style={{
-                                        marginBottom: '30px',
-                                    }}
-                                >
-                                    <TableContainer
-                                        component={Paper}
-                                        className="link-table"
-                                    >
-                                        <Table
-                                            sx={{ minWidth: 650 }}
-                                            aria-label="simple table"
-                                            style={{
-                                                borderBottom: 'none',
-                                            }}
-                                        >
-                                            <TableBody>
-                                                <TableRow>
-                                                    <TableCell
-                                                        component="th"
-                                                        scope="row"
-                                                        className="table-cell"
-                                                    >
-                                                        Виносний модуль
-                                                        ретрансляції
-                                                    </TableCell>
-                                                    <TableCell
-                                                        className="table-cell"
-                                                        align="left"
-                                                    >
-                                                        1 шт
-                                                    </TableCell>
-                                                </TableRow>
-                                                <TableRow>
-                                                    <TableCell
-                                                        className="table-cell"
-                                                        component="th"
-                                                        scope="row"
-                                                    >
-                                                        Магістраль управління
-                                                        (кабель 40 м) та
-                                                        <br />
-                                                        модуль в апаратуру
-                                                    </TableCell>
-                                                    <TableCell
-                                                        className="table-cell"
-                                                        align="left"
-                                                    >
-                                                        1 шт
-                                                    </TableCell>
-                                                </TableRow>
-                                                <TableRow>
-                                                    <TableCell
-                                                        className="table-cell"
-                                                        component="th"
-                                                        scope="row"
-                                                    >
-                                                        Антена 5.8 ГГц патч або
-                                                        антена 1.2 ГГц патч
-                                                    </TableCell>
-                                                    <TableCell
-                                                        className="table-cell"
-                                                        align="left"
-                                                    >
-                                                        1 шт
-                                                    </TableCell>
-                                                </TableRow>
-                                                <TableRow>
-                                                    <TableCell
-                                                        className="table-cell"
-                                                        component="th"
-                                                        scope="row"
-                                                    >
-                                                        Антена “хвильовий канал”
-                                                        850-950 МГц або антена
-                                                        “логоперіодична” 700-950
-                                                        МГц
-                                                    </TableCell>
-                                                    <TableCell
-                                                        className="table-cell"
-                                                        align="left"
-                                                    >
-                                                        1 шт
-                                                    </TableCell>
-                                                </TableRow>
-                                                <TableRow>
-                                                    <TableCell
-                                                        className="table-cell"
-                                                        component="th"
-                                                        scope="row"
-                                                    >
-                                                        Щогла + поворотний
-                                                        механізм 8 м.
-                                                    </TableCell>
-                                                    <TableCell
-                                                        className="table-cell"
-                                                        align="left"
-                                                    >
-                                                        1 шт
-                                                    </TableCell>
-                                                </TableRow>
-                                            </TableBody>
-                                        </Table>
-                                    </TableContainer>
-                                </div>
-                            </div>
-                        </Grid>
-                        <Grid xs={6} item className="descript-first-text">
-                            <p
-                                style={{
-                                    marginBottom: '30px',
-                                }}
-                            >
-                                Наземна станція призначена для посилення зв’язку
-                                з дроном та забезпечення безпеки оператора БпЛА,
-                                під час виконання завдань з розвідки, ударних
-                                операцій і тд. Станція ретрансляції “FPV
-                                Re-Link” допоможе забезпечувати стабільний та
-                                стійкий зв’язок оператора та БпЛА на відстані до
-                                15 км та швидке перемикання між бортами БпАК.
-                            </p>
+                            <video className="descript-video" muted loop>
+                                <source
+                                    src="video/ReLink.webm"
+                                    type="video/webm"
+                                />
+                                Ваш браузер не підтримує відео тег.
+                            </video>
                             <img
-                                style={{
-                                    width: '100%',
-                                }}
-                                src="./img/production/link_desc_img.png"
-                                alt=""
+                                src="img/play_btn.svg"
+                                alt="play"
+                                className="play-icon"
                             />
+                        </div>
+                        <Button className="contact-form-btn link-descript-btn">
+                            В МАГАЗИН
+                        </Button>
+                    </Grid>
+                    <Grid xs={3.8} item className="descript-item">
+                        <Grid className="descript-list-item">
+                            <div className="fpv-descript-text descript-text">
+                                <p>
+                                    Наземна станція призначена для зміцнення
+                                    зв’язку з дроном та забезпечення безпеки
+                                    оператора в процесі розвідки та ударних
+                                    операцій.
+                                </p>
+                                <p>
+                                    Станція ретрансляції “FPV Re-Link”
+                                    забезпечує стабільний зв’язок на відстані до
+                                    15 км та швидке перемикання між БпАК.
+                                </p>
+                                <p>
+                                    Поворотний механізм антени дозволяє
+                                    коригувати напрямок сигналу з пульта
+                                    керування, що мінімізує ризики для пілота та
+                                    забезпечує онлайн-корекцію направлення
+                                    сигналу.
+                                </p>
+                            </div>
                         </Grid>
                     </Grid>
-                    <Grid
-                        container
-                        style={{
-                            gap: '30px',
-                            flexWrap: 'nowrap',
-                        }}
-                    >
-                        <Grid xs={6} item className="descript-first-text">
-                            <p
-                                style={{
-                                    marginBottom: '0',
-                                }}
-                            >
-                                Щогла облаштована поворотним механізмом, що
-                                дозволяє дистанційно, з пульта керування,
-                                повертати антену у потрібному напрямку, не
-                                наражаючи при цьому на небезпеку пілота та
-                                корегувати у режимі “онлайн” направлення сигналу
-                                зв’язку.
-                            </p>
-                            <img
-                                style={{
-                                    marginTop: '25px',
-                                }}
-                                src="./img/production/link_desc_img_1.png"
-                                alt="link"
-                            />
-                            <div
-                                style={{
-                                    marginTop: '15px',
-                                    display: 'flex',
-                                    gap: '15px',
-                                }}
-                            >
-                                <img
-                                    style={{
-                                        borderRadius: '10px',
-                                    }}
-                                    src="./img/production/link_desc_img_2.jpg"
-                                    alt="link"
-                                />
-                                <img
-                                    style={{
-                                        borderRadius: '10px',
-                                    }}
-                                    src="./img/production/link_desc_img_3.jpg"
-                                    alt="link"
-                                />
+                    <Grid xs={3.8} item className="descript-item">
+                        <Grid className="descript-list-item">
+                            <div className="descript-text-page">
+                                <div className="second-descript-img">
+                                    <img
+                                        src="./img/link-relink.jpg"
+                                        alt="relink"
+                                    />
+                                    <p className="descript-mini-text">
+                                        Станція ретрансляції
+                                    </p>
+                                </div>
+                                <div className="third-descript-img">
+                                    <div>
+                                        <img
+                                            src="./img/link-d.jpg"
+                                            alt="relink"
+                                        />
+                                        <p>Редуктор</p>
+                                    </div>
+                                </div>
                             </div>
-                        </Grid>
-                        <Grid xs={6} item className="descript-img">
-                            <img src="./img/link_desc_img.jpg" alt="bpla" />
                         </Grid>
                     </Grid>
                 </Grid>
             </Container>
+            {isPopupOpen && (
+                <div className="video-popup" onClick={handlePopupClick}>
+                    <div className="video-popup-content">
+                        <video
+                            ref={videoRef}
+                            controls
+                            autoPlay
+                            className="video-popup-video"
+                        >
+                            <source src="video/ReLink.webm" type="video/webm" />
+                            Ваш браузер не підтримує відео тег.
+                        </video>
+                        <button
+                            className="video-popup-close"
+                            onClick={handleCloseClick}
+                        >
+                            Х
+                        </button>
+                    </div>
+                </div>
+            )}
         </>
     )
 }

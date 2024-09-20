@@ -110,7 +110,7 @@ const Header = (props: Props) => {
                 className="container"
                 sx={{
                     display: 'flex',
-                    height: '90px',
+                    height: '84px',
                     alignItems: 'center',
                     justifyContent: 'space-between',
                 }}

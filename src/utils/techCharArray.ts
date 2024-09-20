@@ -6,6 +6,10 @@ export type Table = {
     thirdDescription?: string
     fourthDescription?: string
     header?: string
+    number?: string
+    mainHeader?: string
+    secondRowName?: string
+    thirdRowName?: string
 }
 
 export const bpak: Table[] = [
@@ -13,76 +17,91 @@ export const bpak: Table[] = [
         id: 1,
         rowName: "Максимальна злітна маса",
         description: "33 кг",
+        number: "01",
     },
     {
         id: 2,
         rowName: "Максимальна тривалість польоту",
         description: "40 хв без навантаження 25-30 хв з навантаженням",
+        number: "02",
     },
     {
         id: 3,
         rowName: "Максимальна швидкість",
         description: "54 км/год 45 км/год",
+        number: "03",
     },
     {
         id: 4,
         rowName: "Радіус дії радіоканалу управління",
         description: "до 15 км",
+        number: "04",
     },
     {
         id: 5,
         rowName: "Максимальна висота польоту (AMSL)",
         description: "600 м",
+        number: "05",
     },
     {
         id: 6,
         rowName: "Максимальна протяжність польоту",
         description: "до 10 км",
+        number: "06",
     },
     {
         id: 7,
         rowName: "Максимально допустима швидкість вітру при старті",
         description: "10 м/с",
+        number: "07",
     },
     {
         id: 8,
         rowName: "Корисне навантаження",
         description: "2 міни 82 мм, 4 міни 60 мм, 4 РКГ-3, 4 ПТАБ-2,5, 12 вогів 40-60 мм, 1 протитанкова міна",
+        number: "08",
     },
     {
         id: 9,
         rowName: "Тепловізійна камера",
         description: "наявна",
+        number: "09",
     },
     {
         id: 10,
         rowName: "Нічна камера",
         description: "наявна",
+        number: "10",
     },
     {
         id: 11,
         rowName: "Гравітаційний приціл (показує прогнозоване попадіння снаряду)",
         description: "наявна",
+        number: "11",
     },
     {
         id: 12,
         rowName: "Стійкість до РЕБ і РЕП засобів",
         description: "ППРЧ зв'язок, пройшов усі випробування в умовах РЕБ і дослідження РЕП",
+        number: "12",
     },
     {
         id: 13,
         rowName: "Стійкість до завад навігації",
         description: "наявна",
+        number: "13",
     },
     {
         id: 14,
         rowName: "Швидкозмінні скиди корисного навантаження",
         description: "наявна",
+        number: "14",
     },
     {
         id: 15,
         rowName: "Виносна станція керування",
         description: "до 80 м",
+        number: "15",
     }
 ]
 
@@ -90,123 +109,107 @@ export const fpv: Table[] = [
     {
     id: 1,
     rowName: "",
-    description: "“ГОРОБЕЦЬ 8”",
-    secondDescription: "“ГОРОБЕЦЬ 10”",
+    description: "8”",
+    secondDescription: "10”",
     header: "table-header"
     },
     {
     id: 2,
-    rowName: "Тактичний радiус дії",
-    description: "15 км",
-    secondDescription: "20 км",
+    rowName: "Максимальна дальність польоту",
+    description: "до 13 км",
+    secondDescription: "до 15 км",
+    number: "01",
     },
     {
     id: 3,
-    rowName: "Час розгортання",
-    description: "5 хв",
-    secondDescription: "5 хв",
+    rowName: "Максимальна тривалість польоту з навантаженням",
+    description: "13 хв",
+    secondDescription: "15 хв",
+    number: "02",
     },
     {
     id: 4,
-    rowName: "Маса корисного навантаження",
-    description: "до 2 кг",
-    secondDescription: "до 3.5 кг",
+    rowName: "Максимальна висота польоту",
+    description: "500 м",
+    secondDescription: "500 м",
+    number: "03",
     },
     {
     id: 5,
-    rowName: "Маса БпЛА без акумулятора",
-    description: "0.65 кг",
-    secondDescription: "0.95 кг",
+    rowName: "Робоча висота польоту",
+    description: "70 м",
+    secondDescription: "70 м",
+    number: "04",
     },
     {
     id: 6,
-    rowName: "Тип силової установки",
-    description: "електрична",
-    secondDescription: "електрична",
+    rowName: "Крейсерська швидкість польоту БпАК",
+    description: "60 км\год",
+    secondDescription: "60 км\год",
+    number: "05",
     },
     {
     id: 7,
-    rowName: "Кількість акумуляторів",
-    description: "1 шт",
-    secondDescription: "1 шт",
+    rowName: "Максимальна швидкість польоту БпАК",
+    description: "100 км\год",
+    secondDescription: "100 км\год",
+    number: "06",
     },
     {
     id: 8,
-    rowName: "Загальна вага акумуляторів",
-    description: "6s2p - 0.9 кг",
-    secondDescription: "6s2p - 0.9 кг, 6s3p - 1.4 кг",
+    rowName: "Дальність виявлення та розпізнавання типових цілей (танк, автомобіль, ростова фігура) відеокамерою",
+    description: "100 м",
+    secondDescription: "100 м",
+    number: "07",
     },
     {
     id: 9,
-    rowName: "Напруга живлення",
-    description: "25 В",
-    secondDescription: "25 В",
+    rowName: "Середньоквадратичне відхилення від цілі",
+    description: "1,5 м",
+    secondDescription: "1,5 м",
+    number: "08",
     },
     {
     id: 10,
-    rowName: "Час заряджання акумулятора",
-    description: "60 хв",
-    secondDescription: "60 хв",
+    rowName: "Максимальна маса цільового навантаження",
+    description: "до 1,5 кг",
+    secondDescription: "до 2 кг",
+    number: "09",
     },
     {
     id: 11,
-    rowName: "Максимальна тривалість польоту БпЛА",
-    description: "17 хв",
-    secondDescription: "22 хв",
+    rowName: "Тип БпЛА",
+    description: "коптерний",
+    secondDescription: "коптерний",
+    number: "10",
     },
     {
     id: 12,
-    rowName: "Типова тривалість польоту БпЛА",
-    description: "14 хв",
-    secondDescription: "17 хв",
+    rowName: "Основне призначення",
+    description: "ураження броньованої / не броньованої техніки, особового складу тощо",
+    secondDescription: "ураження броньованої / не броньованої техніки, особового складу тощо",
+    number: "11",
     },
     {
     id: 13,
-    rowName: "Практична стеля БпЛА",
-    description: "500 м",
-    secondDescription: "500 м",
+    rowName: "Тип (марка) бойової частини",
+    description: "термобарична, ОФ, кумулятивна, фугасна, тощо",
+    secondDescription: "термобарична, ОФ, кумулятивна, фугасна, тощо",
+    number: "12",
     },
     {
     id: 14,
-    rowName: "Максимальна допустима швидкість БпЛА",
-    description: "100 км",
-    secondDescription: "110 км",
+    rowName: "Маса засобу ураження",
+    description: "до 1,5 кг",
+    secondDescription: "до 3 кг",
+    number: "13",
     },
     {
     id: 15,
-    rowName: "Крейсерська швидкість БпЛА",
-    description: "60 км",
-    secondDescription: "60 км",
-    },
-    {
-    id: 16,
-    rowName: "Максимальна швидкість підйому",
-    description: "8 м/сек",
-    secondDescription: "8 м/сек",
-    },
-    {
-    id: 17,
-    rowName: "Максимальна швидкість спуску",
-    description: "8 м/сек",
-    secondDescription: "8 м/сек",
-    },
-    {
-    id: 18,
-    rowName: "Бойове напруження",
-    description: "10 вильотів на добу",
-    secondDescription: "10 вильотів на добу",
-    },
-    {
-    id: 19,
-    rowName: "Діапазони частот БпЛА:",
-    description: "Управління: 915 МГц Телеметрія: 915 МГц Аналогове відео: 5.8 ГГц",
-    secondDescription: "Управління: 915 МГц Телеметрія: 915 МГц Аналогове відео: 5.8 ГГц",
-    },
-    {
-    id: 20,
-    rowName: "Максимальна  дальність зв язку",
-    description: "до 20 км",
-    secondDescription: "до 20 км",
+    rowName: "Спосіб захисту від неконтрольованого спрацювання бойової частини",
+    description: "електричний та механічний",
+    secondDescription: "електричний та механічний",
+    number: "14",
     },
 ]
 export const link: Table[] = [
@@ -214,82 +217,79 @@ export const link: Table[] = [
     id: 1,
     rowName: "Повна транспортна маса комплекту",
     description: "до 40 кг",
+    number: "01",
     },
     {
     id: 2,
     rowName: "Транспортні габарити штативу у згорнутому стані",
     description: "висота - 1400 мм; ",
+    number: "02",
     },
     {
     id: 3,
     rowName: "Транспортні габарити кейсу",
     description: "висота - 120 мм; довжина та ширина  - 350 мм",
+    number: "03",
     },
     {
     id: 4,
     rowName: "Максимальна висота штативу",
     description: "до 8,5 м",
+    number: "04",
     },
     {
     id: 5,
-    rowName: "Тип живлення - акумулятор",
-    description: "від 4s ~ 14.8 V до 6s ~ 22.2 V",
+    rowName: "Тип живлення",
+    description: "акумулятор 6s2p",
+    number: "05",
     },
     {
     id: 6,
     rowName: "Час автономної роботи",
     description: "при використанні 6s тривалість роботи складатиме до 16 год*",
+    number: "06",
     },
     {
     id: 7,
     rowName: "Стандартна довжина кабелю",
     description: "40 м",
+    number: "07",
     },
     {
     id: 8,
     rowName: "Максимально допустима довжина кабелю",
-    description: "до 100 м",
+    description: "до 80 м",
+    number: "08",
     },
     {
     id: 9,
-    rowName: "Протоколи зв’язку на вибір:**",
-    description: "",
+    rowName: "Діапазон напруг",
+    description: "13.5 ... 30 V (АКБ 4s - 6s)",
+    number: "09",
     },
     {
     id: 10,
-    rowName: "CRSF (S-PORT)",
-    description: "модуль TBS CROSSFIRE модуль Happymodel Expresslrs",
+    rowName: "Протоколи зв’язку на вибір:",
+    description: "CRSF (S-PORT)",
+    secondDescription: "модуль TBS CROSSFIRE / Happymodel Expresslrs / Sine.link",
+    thirdDescription: "SBUS",
+    fourthDescription: "модуль Sine.link",
+    number: "10",
     },
     {
     id: 11,
-    rowName: "SBUS",
-    description: "модуль Sine.link",
-    },
-    {
-    id: 12,
-    rowName: "Та інші радіомодулі, які підтримують ці два протоколи",
-    description: "",
-    },
-    {
-    id: 13,
     rowName: "Відеоприймач на вибір:",
-    description: "",
+    description: "Caddx 1.3 GHz VRX + Фільтр TBS 1.2 GHz VRX Notch Filter 868/915 MHz",
+    secondDescription: "Частота: 1,3 ГГц; Кількість каналів: 9 (1060-1380 Мгц).",
+    thirdDescription: "SKYZONE SteadyView X 5.8 Ghz",
+    fourthDescription: "Частота: 5.8 ГГц; Кількість каналів: 48.",
+    number: "11",
     },
-    {
-    id: 14,
-    rowName: "SKYZONE 1.2 GHz Diversity",
-    description: "Частота: 1,2 ГГц; Кількість каналів: 9 (1080/1120/1160/1200/1240/ 1280/1320/1360/1258).",
-    },
-    {
-    id: 15,
-    rowName: "SKYZONE SteadyView X 5.8 Ghz",
-    description: "Частота: 5.8 ГГц; Кількість каналів: 48.",
-    }
 ]
 export const battery: Table[] = [
     {
     id: 1,
-    rowName: "Тип збірки",
+    rowName: "",
     description: "4S2P",
     secondDescription: "6S1P",
     thirdDescription: "6S2P",
@@ -302,7 +302,8 @@ export const battery: Table[] = [
     description: "145x45x45 мм",
     secondDescription: "75x65x45 мм",
     thirdDescription: "145x65x45 мм",
-    fourthDescription: "215x65x45 мм"
+    fourthDescription: "215x65x45 мм",
+    number: "01",
     },
     {
     id: 3,
@@ -310,7 +311,8 @@ export const battery: Table[] = [
     description: "570 грам",
     secondDescription: "470 грам",
     thirdDescription: "850 грам",
-    fourthDescription: "1250 грам"
+    fourthDescription: "1250 грам",
+    number: "02",
     },
     {
     id: 4,
@@ -318,7 +320,8 @@ export const battery: Table[] = [
     description: "8400 мА/год",
     secondDescription: "4200 мА/год",
     thirdDescription: "8400 мА/год",
-    fourthDescription: "12600 мА/год"
+    fourthDescription: "12600 мА/год",
+    number: "03",
     },
     {
     id: 5,
@@ -326,7 +329,8 @@ export const battery: Table[] = [
     description: "14,8 В",
     secondDescription: "22,2 В",
     thirdDescription: "22,2 В",
-    fourthDescription: "22,2 В"
+    fourthDescription: "22,2 В",
+    number: "04",
     },
     {
     id: 6,
@@ -334,7 +338,8 @@ export const battery: Table[] = [
     description: "10 В",
     secondDescription: "15 В",
     thirdDescription: "15 В",
-    fourthDescription: "15 В"
+    fourthDescription: "15 В",
+    number: "05",
     },
     {
     id: 7,
@@ -342,7 +347,8 @@ export const battery: Table[] = [
     description: "16,8 В",
     secondDescription: "25,2 В",
     thirdDescription: "25,2 В",
-    fourthDescription: "25,2 В"
+    fourthDescription: "25,2 В",
+    number: "06",
     },
     {
     id: 8,
@@ -350,7 +356,8 @@ export const battery: Table[] = [
     description: "124 Вт/год",
     secondDescription: "93 Вт/год",
     thirdDescription: "186 Вт/год",
-    fourthDescription: "280 Вт/год"
+    fourthDescription: "280 Вт/год",
+    number: "07",
     },
     {
     id: 9,
@@ -358,7 +365,8 @@ export const battery: Table[] = [
     description: "90 А",
     secondDescription: "45 А",
     thirdDescription: "90 А",
-    fourthDescription: "135 А"
+    fourthDescription: "135 А",
+    number: "08",
     },
     {
     id: 10,
@@ -366,7 +374,8 @@ export const battery: Table[] = [
     description: "8 А",
     secondDescription: "4 А",
     thirdDescription: "8 А",
-    fourthDescription: "12 А"
+    fourthDescription: "12 А",
+    number: "09",
     },
     {
     id: 11,
@@ -374,7 +383,8 @@ export const battery: Table[] = [
     description: "-40С до +60С",
     secondDescription: "-40С до +60С",
     thirdDescription: "-40С до +60С",
-    fourthDescription: "-40С до +60С"
+    fourthDescription: "-40С до +60С",
+    number: "10",
     },
     {
     id: 12,
@@ -382,7 +392,8 @@ export const battery: Table[] = [
     description: "0С до +45С",
     secondDescription: "0С до +45С",
     thirdDescription: "0С до +45С",
-    fourthDescription: "0С до +45С"
+    fourthDescription: "0С до +45С",
+    number: "11",
     },
 ]
 export const sdsMini: Table[] = [
@@ -390,45 +401,41 @@ export const sdsMini: Table[] = [
     id: 1,
     rowName: "Вага",
     description: "270 г",
+    number: "01",
     },
     {
     id: 2,
     rowName: "Матеріал",
     description: "Алюміній, ударостійкий полікарбонат",
+    number: "02",
     },
     {
     id: 3,
-    rowName: "Габарити скида:",
-    description: "",
+    rowName: "Відстань від дрона до боєприпаса",
+    description: "17 мм",
+    number: "03",
     },
     {
     id: 4,
-    rowName: "Ширина",
-    description: "192 мм",
+    rowName: "Виступ скида нижче дрона",
+    description: "30 мм",
+    number: "04",
     },
     {
     id: 5,
-    rowName: "Висота",
-    description: "68 мм",
+    rowName: "Діапазон діаметрів використовуваного вантажу",
+    description: "від 42 мм до 82 мм",
+    number: "05",
     },
     {
     id: 6,
-    rowName: "Глибина",
-    description: "88 мм",
+    mainHeader: "Габарити системи скидання боєприпасів:",
+    rowName: "Ширина",
+    secondRowName: "Висота",
+    thirdRowName: "Глибина",
+    description: "140 мм",
+    secondDescription: "69 мм",
+    thirdDescription: "93 мм",
+    number: "06",
     },
-    {
-    id: 7,
-    rowName: "Відстань від дрона до боєприпаса",
-    description: "17 мм",
-    },
-    {
-    id: 8,
-    rowName: "Виступ скида нижче дрона",
-    description: "30 мм ",
-    },
-    {
-    id: 9,
-    rowName: "Діапазон діаметрів використовуваного вантажу",
-    description: "від 42 мм до 82 мм",
-    }
 ]

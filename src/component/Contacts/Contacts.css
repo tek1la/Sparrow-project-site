@@ -1,60 +1,66 @@
+.contact-bg-wraper {
+    background-color: #2B3857;
+}
+
+.contacts-title-wraper {
+    border-top: 1px solid #F2F4F7;
+    border-bottom: 1px solid #F2F4F7;
+    margin-bottom: 5px;
+}
+
 .contacts-title {
-    border-right: 1px solid #141A29;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     padding: 15px;
-    border-bottom: 1px solid #141A29;
+    border-left: 1px solid #F2F4F7;
 }
 
-.contacts-wraper {
-    border-top: 1px solid #141A29;
-}
-
-.contacts-cell:first-child {
-    border-bottom: 1px solid #141A29;
-}
-
-.contacts-item {
+.contact-info {
     display: flex;
-    border-right: 1px solid #141A29;
     padding: 15px;
     line-height: 24px;
+    background-color: #F2F4F7;
+    width: 100%;
 }
 
-.contacts-item-icon {
+.contact-item {
     display: flex;
     align-items: center;
+    gap: 5px;
+}
+
+.contact-icon {
+    border: 1px solid #F2F4F7;
+    width: 54px;
+    height: 80px;
+    display: flex;
     justify-content: center;
-    border-right: 1px solid #141A29;
+    align-items: center;
 }
 
 .contacts-title h3 {
-    font-family: "Gerhaus";
+    font-family: "e-Ukraine";
     font-size: 60px;
-    font-weight: 400;
-    color: #141A29;
+    font-weight: 500;
+    color: #F2F4F7;
     text-transform: uppercase;
     letter-spacing: 5.5px;
+    line-height: 72px;
 }
 
-.contacts-item p {
+.contact-info p {
     font-size: 25px;
     font-weight: 500;
     font-family: 'Montserrat';
+   
 }
 
-.contacts-item .contact-text {
+.contact-info .contact-text {
     font-size: 16px;
 }
 
 .contact-tel:hover, .contact-mail:hover {
     color: #1818ED;
-}
-
-.contacts-item-phone-icon img, .contacts-item-mail-icon img {
-    height: 24px;
-    width: 24px;
 }
 
 .email-contact, .contact-mail-icon {

@@ -1,7 +1,3 @@
-.partners-slider .swiper-wrapper {
-    height: 247px;
-}
-
 .partners-slider .slide {
     position: relative;
     background-color: #F2F4F7;
@@ -29,6 +25,44 @@
     background-repeat: no-repeat;
 }
 
+.partners-slider .slide-title {
+    position: absolute;
+    bottom: -40px; /* Відстань між слайдом і підсказкою */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #141A29; /* Фон назви */
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    pointer-events: none; /* Щоб текст не перекривав собою клікабельні елементи */
+    font-size: 14px;
+}
+
+.partners-slider .slide-title::after {
+    content: '';
+    position: absolute;
+    top: -7px; /* Розташування стрілки відносно назви */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent #141A29 transparent;
+    /* Створюємо трикутник, який вказує на слайд */
+}
+
+.partners-slider .slide:hover .slide-title {
+    opacity: 1;
+    bottom: -60px; /* Підсказка піднімається ближче до слайда */
+}
+
+.partners-slider .slide:hover .slide-title {
+    opacity: 1;
+    bottom: -40px; /* Підсказка піднімається ближче до слайда */
+}
+
 .partners-slider .slide-1:hover {
     background-image: url('../../../public/img/partner-true-ukr-hover.svg'); 
 }
@@ -49,13 +83,16 @@
     background-image: url('../../../public/img/partner-ts-fly-hover.svg'); 
 }
 
+.partners-slider .slide-6:hover {
+    background-image: url('../../../public/img/partner-optivita-hover.svg'); 
+}
+
 .partners-slider .swiper-slide {
     height: fit-content;
     padding: 15px 0 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #141A29;
 }
 
 .partners-slider .swiper-slide-next {
@@ -67,20 +104,14 @@
     height: 120px;
 }
 
-.partners-slider .swiper-button-next {
-    top: auto;
-    bottom: 0 !important;
-    right: 28% !important;
-    content: url('../../assets/arrow_right.svg');
-    width: 50px;
-    height: 50px;
+.partner-nav-btn-wraper  {
+    margin-top: 29px;
 }
 
-.partners-slider .swiper-button-prev {
-    top: auto;
-    bottom: 0 !important;
-    left: 62% !important;
-    content: url('../../assets/arrow_left.svg');
-    width: 50px;
-    height: 50px;
+.partner-nav-btn-wraper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 30px;
 }

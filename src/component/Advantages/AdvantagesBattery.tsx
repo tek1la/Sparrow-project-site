@@ -73,10 +73,7 @@ const AdvantagesBattery = (props: Props) => {
                     </Grid>
                     <Grid xs={6} item className="battery-descript-img">
                         <div>
-                            <img
-                                src="./img/production/battery-advantages.jpg"
-                                alt="battery"
-                            />
+                            <img src="" alt="battery" />
                         </div>
                     </Grid>
                 </Grid>

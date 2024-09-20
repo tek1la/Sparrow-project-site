@@ -1,0 +1,44 @@
+.component-wraper {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
+}
+
+.component-title {
+    border-left: 1px solid #141A29;
+    line-height: 69px;
+}
+
+.component-title h3 {
+    font-family: 'e-Ukraine';
+    margin: 15px;
+    font-size: 60px;
+    font-weight: 500;
+    color: #141A29;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+}
+
+.component-description {
+    padding: 30px 12px;
+}
+
+.second-descript {
+    border-left: 1px solid #141A29;
+    border-right: 1px solid #141A29;
+}
+
+.component-img {
+    margin-bottom: 15px;
+}
+
+.component-text-title h4 {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.component-text-text {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}

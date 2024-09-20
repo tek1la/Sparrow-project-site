@@ -1,110 +1,149 @@
-import {
-    Container,
-    Grid,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableRow,
-} from '@mui/material'
+import { Container, Grid } from '@mui/material'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import TableContainer from '@mui/material/TableContainer'
+import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import './BaseEquipment.css'
-import { bpakEquip } from 'utils/basicEquip'
+import { bpakEquip, reLinkEquip } from 'utils/basicEquip'
 
-type Props = {}
-const BaseEquipment = (props: Props) => {
+type Props = {
+    path: string
+}
+const BaseEquipment = ({ path }: Props) => {
     return (
-        <Container
-            className="container"
-            sx={{
-                padding: '120px 0',
-                position: 'relative',
-            }}
-        >
-            <Grid>
-                <div className="base-equip-title">
-                    <h3>
-                        базова
-                        <br />
-                        комплектація
-                    </h3>
-                </div>
-            </Grid>
-            <Grid
-                container
-                className="base-equip-wraper"
+        <>
+            <Container
+                className="container"
                 sx={{
-                    gap: '30px',
-                    flexWrap: 'nowrap',
-                    alignItems: 'center',
+                    padding: '120px 0 80px',
+                    position: 'relative',
                 }}
             >
-                <Grid xs={6} item className="descript-description">
-                    <div className="descript-text">
-                        <div
-                            className="descript-first-text"
-                            style={{
-                                marginBottom: '30px',
-                            }}
-                        >
-                            <TableContainer
-                                component={Paper}
-                                className="link-table"
-                            >
-                                <Table
-                                    aria-label="simple table"
-                                    style={{
-                                        borderBottom: 'none',
-                                    }}
+                <Grid container className="base-equip-wraper">
+                    <Grid item sm={12} className="base-equip-title">
+                        <h3>базова комплектація</h3>
+                    </Grid>
+                </Grid>
+                <Grid container>
+                    <Grid xs={12} item className="base-equip-description">
+                        <div className="base-equip-text">
+                            <div className="base-equip-first-text">
+                                <TableContainer
+                                    component={Paper}
+                                    className="link-table"
                                 >
-                                    <TableBody>
-                                        {bpakEquip.map(
-                                            ({ id, rowName, description }) => (
-                                                <TableRow key={id}>
-                                                    <TableCell
-                                                        sx={{
-                                                            padding: '10px',
-                                                            lineHeight: '1.38',
-                                                            width: '80%',
-                                                        }}
-                                                        component="th"
-                                                        scope="row"
-                                                        className="table-cell"
-                                                    >
-                                                        {rowName}
-                                                    </TableCell>
-                                                    <TableCell
-                                                        sx={{
-                                                            padding: '10px',
-                                                            lineHeight: '1.38',
-                                                        }}
-                                                        className="table-cell"
-                                                        align="left"
-                                                    >
-                                                        {description}
-                                                    </TableCell>
-                                                </TableRow>
-                                            )
-                                        )}
-                                    </TableBody>
-                                </Table>
-                            </TableContainer>
+                                    <Table
+                                        sx={{ minWidth: 650 }}
+                                        aria-label="simple table"
+                                    >
+                                        {path === 'bpak' ? (
+                                            <TableBody>
+                                                {bpakEquip.map(
+                                                    ({
+                                                        id,
+                                                        rowName,
+                                                        number,
+                                                        secondNumber,
+                                                        secondRowName,
+                                                    }) => (
+                                                        <TableRow
+                                                            className="table-row"
+                                                            key={id}
+                                                        >
+                                                            <TableCell
+                                                                component="th"
+                                                                scope="row"
+                                                                className="table-cell"
+                                                            >
+                                                                {number}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                component="th"
+                                                                scope="row"
+                                                                className="table-cell second-table-cell"
+                                                            >
+                                                                {rowName}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                className="table-cell second-table-cell"
+                                                                component="th"
+                                                                scope="row"
+                                                                align="left"
+                                                            >
+                                                                {secondNumber}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                className="table-cell"
+                                                                component="th"
+                                                                scope="row"
+                                                                align="left"
+                                                            >
+                                                                {secondRowName}
+                                                            </TableCell>
+                                                        </TableRow>
+                                                    )
+                                                )}
+                                            </TableBody>
+                                        ) : null}
+                                        {path === 'link' ? (
+                                            <TableBody>
+                                                {reLinkEquip.map(
+                                                    ({
+                                                        id,
+                                                        rowName,
+                                                        number,
+                                                        secondNumber,
+                                                        secondRowName,
+                                                    }) => (
+                                                        <TableRow
+                                                            className="table-row"
+                                                            key={id}
+                                                        >
+                                                            <TableCell
+                                                                component="th"
+                                                                scope="row"
+                                                                className="table-cell"
+                                                            >
+                                                                {number}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                component="th"
+                                                                scope="row"
+                                                                className="table-cell second-table-cell"
+                                                            >
+                                                                {rowName}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                className="table-cell second-table-cell"
+                                                                component="th"
+                                                                scope="row"
+                                                                align="left"
+                                                            >
+                                                                {secondNumber}
+                                                            </TableCell>
+                                                            <TableCell
+                                                                className="table-cell"
+                                                                component="th"
+                                                                scope="row"
+                                                                align="left"
+                                                            >
+                                                                {secondRowName}
+                                                            </TableCell>
+                                                        </TableRow>
+                                                    )
+                                                )}
+                                            </TableBody>
+                                        ) : null}
+                                    </Table>
+                                </TableContainer>
+                            </div>
                         </div>
-                    </div>
+                    </Grid>
                 </Grid>
-                <Grid xs={6} item className="descript-description-player">
-                    <div>
-                        <a href="#main">
-                            <img
-                                src="./img/production/play-video-img.png"
-                                alt=""
-                            />
-                        </a>
-                    </div>
-                </Grid>
-                <div className="base-equip-bg-wraper"></div>
-            </Grid>
-        </Container>
+            </Container>
+        </>
     )
 }
 export default BaseEquipment

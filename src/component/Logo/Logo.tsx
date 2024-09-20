@@ -1,4 +1,4 @@
-import logo from 'assets/menu_logo.svg'
+import logo from 'assets/menu_logo_img.svg'
 import { Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 import './Logo.css'

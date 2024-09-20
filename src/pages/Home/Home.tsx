@@ -4,7 +4,6 @@ import HeroSection from 'component/HeroSection/HeroSection'
 import './Home.css'
 import Production from 'component/Production/Production'
 import Advantages from 'component/Advantages/Advantages'
-import Result from 'component/Result/Result'
 import Partners from 'component/Partners/Partners'
 import News from 'component/News/News'
 import Contacts from 'component/Contacts/Contacts'
@@ -19,13 +18,13 @@ const Home = (props: Props) => {
                 <HeroSection />
                 <Production />
                 <Advantages />
-                <CallBack video={false} />
-                <Result />
-                <News />
                 <About />
+                <Contacts />
                 <Developments />
                 <Partners />
-                <Contacts />
+                <News />
+                {/* <CallBack video={false} />
+                <Result /> */}
                 <CallBack video={true} />
             </Grid>
         </>

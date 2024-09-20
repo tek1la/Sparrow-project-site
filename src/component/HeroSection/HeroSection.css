@@ -5,12 +5,8 @@
     overflow: hidden;
 }
 
-.hero-wrapper .title-text-wraper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.title-text-wraper {
     position: relative;
-    padding-right: 23px;
 }
 
 .hero-wrapper > div {
@@ -38,46 +34,67 @@
 .title-text {
     font-size: 120px;
     font-weight: bold;
-    font-family: "Gerhaus";
+    font-family: "e-Ukraine";
     line-height: 138px;
-    letter-spacing: 10.5px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
 }
 
 .title {
+    padding-left: 30px;
     font-size: 25px;
     font-weight: 400;
     font-family: "Montserrat";
-    color: #656C7D;
+    color: #F2F4F7;
+    line-height: 30px;
 }
 
 .down-btn-animated {
     position: absolute;
-    animation: moveBtnUpDown 3s infinite alternate;
+    
+}
+
+.animated-img {
+    width: 14px;
+    animation: moveBtnUpDown 4s infinite alternate;
+}
+
+.animated-img-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    border: 1px solid white;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
 }
 
 @keyframes moveBtnUpDown {
     0% {
-        padding-bottom: 30px;
+        padding-bottom: 35px;
     }
     10% {
-        padding-bottom: 30px;
+        padding-bottom: 35px;
     }
-    25% {
-        padding-bottom: 10;
-        transform: scaleY(0.95);
-    }
+    /* 25% {
+        padding-bottom: 10px;
+    } */
     50% {
-        padding-bottom: 0;
-        transform: scaleY(0.8);
+        padding-bottom: 10px;
     }
-    75% {
-        padding-bottom: 10;
-        transform: scaleY(0.95);
-    }
+    /* 75% {
+        padding-bottom: 10px;
+    } */
     90% {
-        padding-bottom: 30px;
+        padding-bottom: 35px;
     }
     100% {
-        padding-bottom: 30px;
+        padding-bottom: 35px;
     }
 }

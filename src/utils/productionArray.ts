@@ -36,12 +36,12 @@ export const productionArray: Productions[] = [
     {
         id: 3,
         title: "Станція ретрансляції “FPV Re-Link”",
-        subTitle: "Ретранслятори",
+        subTitle: "Станція ретрансляції",
         firstTitle: "Станція ретрансляції",
         secondTitle: "“FPV Re-Link”",
         description: "Наземна станція призначена для посилення зв’язку з дроном та забезпечення безпеки оператора БпЛА, під час виконання завдань з розвідки, ударних операцій і тд.",
         productionImg: 'img/fpv-re-link.jpg',
-        video: 'video/BoomBeeR.webm',
+        video: 'video/ReLink.webm',
         path: 'link',
     },
     {
@@ -52,18 +52,18 @@ export const productionArray: Productions[] = [
         secondTitle: "",
         description: "Акумуляторні збірки на елементах molicel INR-21700-P42A виготовляються з високоякісних матеріалів та проходять ретельне тестування. Це забезпечує їхню високу міцність та надійність.",
         productionImg: "img/battery.jpg",
-        video: 'video/BoomBeeR.webm',
+        video: 'video/Bat.webm',
         path: 'battery'
     },
     {
         id: 5,
         title: "Системи скидів “SDS-mini”",
-        subTitle: "Скиди",
+        subTitle: "система скиду",
         firstTitle: "Системи скидів “SDS-mini”",
         secondTitle: "",
         description: "Система скидання боєприпасів - це не лише модернізація дронів, а й оптимізація робочого процесу. Здатність квадрокоптера ефективно та безпечно скидати боєприпаси відкриває нові можливості для військових.",
         productionImg: 'img/sds-mini.jpg',
-        video: 'video/BoomBeeR.webm',
+        video: 'video/mini.webm',
         path: 'sdsMini'
     },
 ]

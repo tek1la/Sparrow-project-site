@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import MenuItem from './MenuItem'
 import ProductionSubMenu from './ProductionSubMenu'
 
@@ -10,53 +11,63 @@ const Menu = (props: Props) => {
     const [isMouseOverMenu, setIsMouseOverMenu] = useState(false)
     const [isMouseOverSubMenu, setIsMouseOverSubMenu] = useState(false)
     const [timer, setTimer] = useState<NodeJS.Timeout | null>(null)
+    const navigate = useNavigate()
 
-    const handleMouseEnterMenu = () => {
-        if (timer) {
+    useEffect(() => {
+        if (!isMouseOverMenu && !isMouseOverSubMenu) {
+            const newTimer = setTimeout(() => {
+                setIsSubMenuOpen(false)
+            }, 500)
+            setTimer(newTimer)
+        } else if (timer) {
             clearTimeout(timer)
+            setTimer(null)
         }
+
+        return () => {
+            if (timer) {
+                clearTimeout(timer)
+            }
+        }
+    }, [isMouseOverMenu, isMouseOverSubMenu])
+
+    const handleMouseEnter = () => {
         setIsSubMenuOpen(true)
-        setIsMouseOverMenu(true)
     }
 
     const handleMouseLeaveMenu = () => {
-        if (timer) {
-            clearTimeout(timer)
-        }
-        const newTimer = setTimeout(() => {
-            if (!isMouseOverSubMenu) {
-                setIsSubMenuOpen(false)
-            }
-        }, 500) // Затримка перед закриттям підменю (500 мс)
-        setTimer(newTimer)
         setIsMouseOverMenu(false)
-        setIsMouseOverSubMenu(false)
-    }
-
-    const handleMouseEnterSubMenu = () => {
-        if (timer) {
-            clearTimeout(timer)
-        }
-        setIsSubMenuOpen(true)
-        setIsMouseOverSubMenu(true)
     }
 
     const handleMouseLeaveSubMenu = () => {
-        if (timer) {
-            clearTimeout(timer)
-        }
-        const newTimer = setTimeout(() => {
-            if (isMouseOverMenu) {
-                setIsSubMenuOpen(false)
-            }
-        }, 500)
-        setTimer(newTimer)
         setIsMouseOverSubMenu(false)
-        setIsMouseOverMenu(false)
+    }
+
+    const handleMouseEnterMenu = () => {
+        setIsMouseOverMenu(true)
+        handleMouseEnter()
+    }
+
+    const handleMouseEnterSubMenu = () => {
+        setIsMouseOverSubMenu(true)
+        handleMouseEnter()
     }
 
     const handleClick = (item: string) => {
         setActiveItem(item)
+    }
+
+    const handleAboutClick = () => {
+        setActiveItem('about')
+        navigate('/') // Перехід на головну сторінку
+
+        // Чекаємо, поки сторінка завантажиться, і прокручуємо до елемента
+        setTimeout(() => {
+            const aboutSection = document.getElementById('about')
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' })
+            }
+        }, 100)
     }
 
     return (
@@ -78,17 +89,19 @@ const Menu = (props: Props) => {
             <MenuItem
                 onClick={() => handleClick('contacts')}
                 className={`menu-item ${activeItem === 'contacts' ? 'active' : ''}`}
+                to={'contacts'}
             >
                 КОНТАКТИ
             </MenuItem>
             <MenuItem
                 onClick={() => handleClick('blog')}
                 className={`menu-item ${activeItem === 'blog' ? 'active' : ''}`}
+                to={'all-news'}
             >
                 БЛОГ
             </MenuItem>
             <MenuItem
-                onClick={() => handleClick('about')}
+                onClick={() => handleAboutClick()}
                 className={`menu-item ${activeItem === 'about' ? 'active' : ''}`}
             >
                 ПРО НАС

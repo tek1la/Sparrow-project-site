@@ -1,0 +1,44 @@
+.blog {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
+}
+
+.blog-array-wraper {
+    border: 1px solid #141A29;
+}
+
+.blog-title {
+    border-left: 1px solid #141A29;
+}
+
+.blog-title h3 {
+    font-family: 'e-Ukraine';
+    margin: 15px;
+    font-size: 120px;
+    font-weight: 500;
+    color: #141A29;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+}
+
+.blog-array-btn {
+    margin-top: 29px;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-btn {
+    padding: 15px 41.5px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #F2F4F7;
+    background-color: #2B3857;
+    border: 1px solid #141A29;
+}
+
+.blog-btn:hover {
+    color: #141A29;
+    border: 1px solid #141A29;
+}

@@ -2,26 +2,27 @@
     width: 100%;
 }
 
-.second-input {
-    margin-top: 15px;
-}
-
 .contact-form-btn {
-    padding: 27.5px 30px;
-    font-size: 25px;
-    font-weight: 500;
+    padding: 13px 41.5px;
     font-family: 'Montserrat';
-    color: #141A29;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #2B3857;
+    color: #F2F4F7;
     border: 1px solid #141A29;
-    border-radius: 500px;
-    max-width: 216px;
-    height: 100%;
-    line-height: 29px;
-    margin-top: 0;
-    margin-left: 15px;
 }
 
 .contact-form-btn:hover {
-    color: #1818ED;
-    border-color: #1818ED;
+    color: #141A29;
+    border: 1px solid #141A29;
+}
+
+.news-array-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.news-array-btn p {
+    line-height: 30px;
+    
 }

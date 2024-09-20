@@ -1,55 +1,36 @@
+.base-equip-wraper {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
+}
+
 .base-equip-title {
-    font-size: 56.5px;
-    background-image: url('/public/img/production/bpak_base_eqip_bg.png');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: center;
-    background-size:inherit;
-    margin-bottom: 100px;
-    color: white;
-    text-transform: uppercase;
+    line-height: 69px;
 }
 
 .base-equip-title h3 {
-    font-family: 'e-Ukraine-Medium';
-    margin: 0;
-    line-height: 102px;
-    text-align: end;
+    font-family: 'e-Ukraine';
+    margin: 15px;
     font-size: 60px;
-    margin-bottom: 100px;
-    color: white;
+    font-weight: 500;
+    color: #141A29;
     text-transform: uppercase;
-    position: relative;
+    letter-spacing: 5.5px;
 }
 
-.base-equip-wraper {
-    position: relative;
+.base-equip-description .table-row {
+    border-left: none;
 }
 
-.base-equip-bg-wraper {
-    content: url('/public/img/production/base-equip-bg-2.png');
-    position: absolute;
-    right: -5vw;
+.base-equip-description .table-cell {
+    border-right: none;
 }
 
-.descript-description-player > div {
-    position: absolute;
-    bottom: 70px;
-    right: 108px;
-    z-index: 1;
+.base-equip-description .second-table-cell {
+    border-right: 1px solid #141A29;
+    border-left: 1px solid #141A29;
 }
 
-.descript-description-player div a::after {
-    content: url('/public/img/production/play-img.png');
-    position: absolute;
-    top: 25px;
-    left: 154px;
-}
-
-.descript-description-player a {
-    display: block;
-}
-
-.descript-description-player img {
-    border-radius: 10px;
+.base-equip-description .table-cell {
+    line-height: 1.38;
+    width: 25%;
 }

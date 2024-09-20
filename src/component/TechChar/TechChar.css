@@ -1,68 +1,71 @@
+.tech-char-wraper {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
+}
+
 .tech-char-title {
-    font-size: 56.5px;
-    background-image: url('/public/img/production/tech-char-bg.png');
-    background-repeat: no-repeat;
-    background-position-x: 10px;
-    background-position-y: center;
-    background-size:inherit;
-    margin-bottom: 100px;
-    color: white;
-    text-transform: uppercase;
+    border-left: 1px solid #141A29;
+    line-height: 69px;
 }
 
 .tech-char-title h3 {
-    margin: 0;
-    line-height: 102px;
-}
-
-.descript-first-text .link-table .table-header {
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-.table-header td {
-    font-size: 25px;
-    font-family: 'e-Ukraine-Medium';
-}
-
-.battery-table-header th, .battery-table-header td {
-    font-size: 25px;
-    font-family: 'e-Ukraine-Medium';
-    background-color: rgba(255, 255, 255, 0.25);
+    font-family: 'e-Ukraine';
+    margin: 15px;
+    font-size: 60px;
+    font-weight: 500;
+    color: #141A29;
     text-transform: uppercase;
+    letter-spacing: 5.5px;
 }
 
-.bpak-wraper-description {
-    margin-top: 50px;
-    gap: 30px;
+.link-table {
+    background-color: #F2F4F7;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
-.bpak-item-description {
-    max-width: calc(50% - 15px);
+.table-row {
+    border-left: 1px solid #141A29;
 }
 
-.bpak-wraper-description div:last-child{
-    margin-top: 30px;
+.table-cell {
+    font-family: 'e-Ukraine';
+    padding: 15px;
+    font-size: 16px;
+    border-right: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
 }
 
-.bpak-item-description img{
-    width: 100%;
+.table-text-wraper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
 }
 
-.bpak-item-description-title {
-    font-family: 'e-Ukraine-Medium';
-    font-size: 25px;
+.table-text {
+    text-align: start;
+    font-size: 12px;
+    color: #656C7D;
 }
 
-.bpak-item-description p {
-    font-family: 'e-Ukraine-Light';
-    font-size: 18px;
-    margin: 15px 0;
+.battery-table-header .battery-table-cell, .table-header .table-cell{
+    font-weight: bold;
 }
 
-.bpak-item-description p:last-child {
-    margin-bottom: 0;
+.span-table-cell {
+    padding: 0;
 }
 
-.battery-table-cell {
-    border-right: 1px solid white;
+.bottom-table-cell {
+    border-bottom: none;
+}
+
+.right-table-cell {
+    border-right: none;
+}
+
+.row-table-cell {
+    border-left: none;
+    border-right: none;
 }

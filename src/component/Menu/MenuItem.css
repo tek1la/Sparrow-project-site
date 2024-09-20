@@ -43,19 +43,5 @@
 }
 
 .menu-item.active {
-    border: 1px solid #1818ED;
-    color: #1818ED;
     border-radius: 50px;
-}
-
-.menu-item.active p{
-    color: #1818ED;
-}
-
-.menu-arrow.active::after {
-    content: url('/src/assets/text-arrow-active.svg');
-}
-
-.menu-arrow.active:hover::after {
-    content: url('/src/assets/text-arrow-active.svg');
 }

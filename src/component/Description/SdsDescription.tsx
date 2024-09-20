@@ -1,184 +1,163 @@
-import { Container, Grid } from '@mui/material'
+import { useRef, useState } from 'react'
+import { Button, Container, Grid } from '@mui/material'
 import './Description.css'
 
 type Props = {}
 const SdsDescription = (props: Props) => {
+    const videoRef = useRef<HTMLVideoElement>(null)
+    const [isPopupOpen, setIsPopupOpen] = useState(false)
+
+    const handlePlayClick = () => {
+        setIsPopupOpen(true)
+    }
+
+    const handleCloseClick = () => {
+        if (videoRef.current) {
+            videoRef.current.pause()
+            videoRef.current.currentTime = 0
+        }
+        setIsPopupOpen(false)
+    }
+
+    const handlePopupClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (e.target === e.currentTarget) {
+            handleCloseClick()
+        }
+    }
     return (
         <>
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0',
+                    padding: '120px 0 80px',
                     position: 'relative',
                 }}
             >
-                <div className="descript-title">
-                    <h3>опис</h3>
-                </div>
-                <Grid
-                    container
-                    className="descript-wraper"
-                    sx={{
-                        flexDirection: 'column',
-                    }}
-                    style={{
-                        gap: '60px',
-                        marginBottom: '0',
-                    }}
-                >
-                    <Grid
-                        container
-                        style={{
-                            gap: '30px',
-                            flexWrap: 'nowrap',
-                        }}
-                    >
-                        <Grid
-                            xs={6}
-                            item
-                            className="descript-description"
-                            style={{
-                                gap: '30px',
-                                flexWrap: 'nowrap',
-                            }}
-                        >
-                            <div className="descript-text">
-                                <div
-                                    className="descript-first-text"
-                                    style={{
-                                        marginBottom: '30px',
-                                    }}
-                                >
-                                    <p
-                                        style={{
-                                            marginBottom: '15px',
-                                        }}
-                                    >
-                                        Зростаюче зацікавлення використанням
-                                        квадрокоптерів у військовій сфері
-                                        ставить перед науково-технічною
-                                        спільнотою завдання щодо вдосконалення
-                                        їх функціональних можливостей. Одним із
-                                        аспектів, що потребує оптимізації, є
-                                        система скидання боєприпасів.
-                                    </p>
-                                    <p>
-                                        Здатність квадрокоптера ефективно та
-                                        безпечно скидати боєприпаси відкриває
-                                        нові перспективи досліджень у цій сфері.
-                                    </p>
-                                </div>
+                <Grid container className="descript-wraper">
+                    <Grid item sm={4}></Grid>
+                    <Grid item sm={8} className="descript-title">
+                        <h3>скид “sds—mini”</h3>
+                    </Grid>
+                </Grid>
+                <Grid container className="descript-item-wraper">
+                    <Grid xs={3.8} item className="descript-item">
+                        <Grid className="descript-list-item">
+                            <div
+                                className="descript-video-wraper descript-video-wraper-mt"
+                                onClick={handlePlayClick}
+                            >
+                                <video className="descript-video" muted loop>
+                                    <source
+                                        src="video/mini.webm"
+                                        type="video/webm"
+                                    />
+                                    Ваш браузер не підтримує відео тег.
+                                </video>
+                                <img
+                                    src="img/play_btn.svg"
+                                    alt="play"
+                                    className="play-icon"
+                                />
                             </div>
                         </Grid>
-                        <Grid
-                            xs={6}
-                            item
-                            className="descript-first-text"
-                            sx={{
-                                display: 'flex',
-                                gap: '15px',
-                            }}
-                        >
-                            <img
-                                style={{
-                                    borderRadius: '10px',
-                                }}
-                                src="./img/production/sds_desc_img_1.jpg"
-                                alt=""
-                            />
-                            <img
-                                style={{
-                                    borderRadius: '10px',
-                                }}
-                                src="./img/production/sds_desc_img_2.jpg"
-                                alt=""
-                            />
+                        <Grid className="descript-list-item">
+                            <div className="descript-text-page">
+                                <div>
+                                    <img
+                                        src="./img/sds_mini_1.jpg"
+                                        alt="batary"
+                                    />
+                                    <p>Встановлення скиду на дрон</p>
+                                </div>
+                                <div>
+                                    <img
+                                        src="./img/sds_mini_2.jpg"
+                                        alt="batary"
+                                    />
+                                    <p>Повна комплектація FPV</p>
+                                </div>
+                            </div>
                         </Grid>
                     </Grid>
-                    <Grid
-                        container
-                        style={{
-                            gap: '30px',
-                            flexWrap: 'nowrap',
-                        }}
-                    >
-                        <Grid
-                            xs={6}
-                            item
-                            className="descript-first-text"
-                            sx={{
-                                display: 'flex',
-                                gap: '15px',
-                            }}
-                        >
-                            <img
-                                style={{
-                                    borderRadius: '10px',
-                                    height: '200px',
-                                }}
-                                src="./img/production/sds_desc_img_3.jpg"
-                                alt=""
-                            />
-                            <img
-                                style={{
-                                    borderRadius: '10px',
-                                    height: '200px',
-                                }}
-                                src="./img/production/sds_desc_img_4.jpg"
-                                alt=""
-                            />
-                        </Grid>
-                        <Grid xs={6} item className="descript-img">
-                            <div
-                                className="descript-first-text"
-                                style={{
-                                    marginBottom: '30px',
-                                }}
-                            >
-                                <p
-                                    style={{
-                                        marginBottom: '15px',
-                                    }}
-                                >
-                                    Недолік існуючих систем скидання вантажу для
-                                    квадрокоптерів з точки зору аеродинаміки
-                                    призводить до зменшення ефективності
-                                    літального апарата, а перевищення параметрів
-                                    міцності конструкції порівняно з цільовим
-                                    навантаженням призводить до надмірного
-                                    використання матеріалів та збільшення ваги.
+                    <Grid xs={3.8} item className="descript-item">
+                        <Grid className="descript-list-item">
+                            <div className="descript-text">
+                                <p>
+                                    Зацікавлення використанням квадрокоптерів у
+                                    військовій сфері зростає, що ставить перед
+                                    науково-технічною спільнотою завдання
+                                    вдосконалити їхні функціональні можливості.
                                 </p>
-                                <div
-                                    style={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '15px',
-                                    }}
-                                >
-                                    <div>
-                                        <img
-                                            src="./img/production/sds_desc_icon.svg"
-                                            alt="icon"
-                                        />
-                                    </div>
-                                    <div>
-                                        <p>
-                                            Для вирішення цих проблем потрібно
-                                            оптимізувати конструкцію системи
-                                            скидання боєприпасів з точки зору
-                                            аеродинаміки та параметрів міцності,
-                                            що дозволить підвищити загальну
-                                            ефективність дрона-носія та
-                                            покращити його літальні
-                                            характеристики.
-                                        </p>
-                                    </div>
+                                <p>
+                                    Однією з ключових проблем є система скидання
+                                    боєприпасів. Вдосконалення цієї системи
+                                    дозволить дронам ефективно та безпечно
+                                    здійснювати скидання.
+                                </p>
+                            </div>
+                        </Grid>
+                        <Grid className="descript-list-item">
+                            <div className="descript-text-page">
+                                <div>
+                                    <img
+                                        src="./img/sds_mini_3.jpg"
+                                        alt="batary"
+                                    />
+                                    <p>Сторона кріплення до дрону</p>
+                                </div>
+                                <div>
+                                    <img
+                                        src="./img/sds_mini_4.jpg"
+                                        alt="batary"
+                                    />
+                                    <p>Сторона кріплення боєприпасу</p>
                                 </div>
                             </div>
+                        </Grid>
+                    </Grid>
+                    <Grid xs={3.8} item className="descript-item">
+                        <Grid className="descript-text">
+                            <div>
+                                <p>
+                                    Розміщення габаритних частин по боках рами
+                                </p>
+                                <p>Зручне транспортування дрону</p>
+                                <p>Підтримка кріплення на FPV 10″</p>
+                                <p>Покращення міцності та зменшення ваги</p>
+                                <p>Оптимізація аеродинамічних характеристик</p>
+                                <p>
+                                    Зменшення загальної висоти дрона (всього на
+                                    3 см більше висоти рами дрона)
+                                </p>
+                            </div>
+                            <Button className="contact-form-btn link-descript-btn">
+                                В МАГАЗИН
+                            </Button>
                         </Grid>
                     </Grid>
                 </Grid>
             </Container>
+            {isPopupOpen && (
+                <div className="video-popup" onClick={handlePopupClick}>
+                    <div className="video-popup-content">
+                        <video
+                            ref={videoRef}
+                            controls
+                            autoPlay
+                            className="video-popup-video"
+                        >
+                            <source src="video/mini.webm" type="video/webm" />
+                            Ваш браузер не підтримує відео тег.
+                        </video>
+                        <button
+                            className="video-popup-close"
+                            onClick={handleCloseClick}
+                        >
+                            Х
+                        </button>
+                    </div>
+                </div>
+            )}
         </>
     )
 }

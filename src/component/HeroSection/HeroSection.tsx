@@ -1,9 +1,12 @@
-import { Button, Container, Grid } from '@mui/material'
+import { Container, Grid } from '@mui/material'
 import './HeroSection.css'
 import AnimatedBtn from './AnimatedBtn'
+import 'utils/i18n'
+import { useTranslation } from 'react-i18next'
 
 type Props = {}
 const HeroSection = (props: Props) => {
+    const { t } = useTranslation()
     return (
         <>
             <div className="hero-wrapper">
@@ -24,73 +27,52 @@ const HeroSection = (props: Props) => {
                         }}
                     >
                         <Grid container>
-                            <Grid item className="title-text-wraper" sm={6.4}>
-                                <p className="title-text">НАШЕ</p>
-                            </Grid>
+                            <Grid item sm={1.8}></Grid>
                             <Grid
                                 item
+                                className="title-text-wraper"
                                 sm={4}
                                 sx={{
                                     display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    position: 'relative',
+                                    justifyContent: 'flex-start',
                                 }}
                             >
+                                <p className="title-text">
+                                    {t('hero_section_title1')}
+                                </p>
+                            </Grid>
+                            <Grid
+                                item
+                                className="title-text-wraper main-title"
+                                sm={4}
+                            >
                                 <h1 className="title">
-                                    УКРАЇНСЬКИЙ ВИРОБНИК СУЧАСНИХ УДАРНИХ БПЛА
+                                    {t('hero_section_title_text')}
                                 </h1>
                             </Grid>
                         </Grid>
-                        <Grid
-                            item
-                            sx={{
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                position: 'relative',
-                            }}
-                        >
-                            <p className="title-text">НЕБО-НАШІ</p>
-                        </Grid>
                         <Grid container>
+                            <Grid item sm={1.8}></Grid>
                             <Grid
+                                className="title-text-wraper"
                                 item
-                                sm={3.5}
-                                sx={{
-                                    display: 'flex',
-                                    justifyContent: 'flex-end',
-                                    alignItems: 'center',
-                                    position: 'relative',
-                                }}
-                            >
-                                <Button
-                                    sx={{
-                                        color: '#656C7D',
-                                        border: '1px solid #656C7D',
-                                        fontSize: '25px',
-                                        fontWeight: '400',
-                                        padding: '25px 30px',
-                                        fontFamily: 'Montserrat',
-                                        borderRadius: '500px',
-                                        marginRight: '10px',
-                                    }}
-                                >
-                                    консультація
-                                </Button>
-                            </Grid>
-                            <Grid
-                                item
-                                sm={8.5}
+                                sm={10.2}
                                 sx={{
                                     display: 'flex',
                                     justifyContent: 'flex-start',
-                                    alignItems: 'center',
-                                    position: 'relative',
-                                    paddingLeft: '20px',
                                 }}
                             >
-                                <p className="title-text">ПРАВИЛА!</p>
+                                <p className="title-text">
+                                    {t('hero_section_title2')}
+                                </p>
+                            </Grid>
+                        </Grid>
+                        <Grid container>
+                            <Grid item sm={2.7}></Grid>
+                            <Grid item sm={8} className="title-text-wraper">
+                                <p className="title-text">
+                                    {t('hero_section_title3')}
+                                </p>
                             </Grid>
                         </Grid>
                     </Container>

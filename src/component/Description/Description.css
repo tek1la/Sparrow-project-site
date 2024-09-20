@@ -1,114 +1,137 @@
-.descript-title, .descript-first-text, .descript-second-text {
-    color: white;
-    font-family: 'e-Ukraine-Medium';
+.descript-wraper {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
+    margin-bottom: 30px;
 }
-     
+
 .descript-title {
-    font-size: 60px;
-    background-image: url('/public/img/production/DescriptTitle_bg.png');
-    background-repeat: no-repeat;
-    background-position:left;
-    background-size:inherit;
-    margin-bottom: 100px;
+    border-left: 1px solid #141A29;
+    line-height: 46.5px;
 }
 
 .descript-title h3 {
+    font-family: 'e-Ukraine';
+    margin: 15px;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 60px;
+    color: #141A29;
     text-transform: uppercase;
+    letter-spacing: 5.5px;
 }
 
-.descript-first-text p {
-    margin-bottom: 15px;
-    font-family: 'e-Ukraine-Light';
-    font-size: 18px;
-    line-height: 22px;
+.descript-item-wraper {
+    justify-content: space-between;
 }
 
-.descript-second-text {
-    font-size: 25px;
-    text-transform: uppercase;
-    line-height: 30px;
+.descript-text p {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    color: #141A29;
+    letter-spacing: normal;
+    line-height: 18.5px;
 }
 
-.descript-wraper {
-    gap: 30px;
-    flex-wrap: nowrap;
-    margin-bottom: 60px;
+.fpv-descript-text p {
+    line-height: 20px;
 }
 
-.descript-img img {
-    border-radius: 10px;
+.descript-marg {
+    margin-top: 30px;
 }
 
-.descript-block-wraper {
-    gap: 30px;
+.descript-text .descript-bold {
+    font-weight: bold;
 }
 
-.descript-block-item {
-    width: calc(33.3333% - 30px);
-    border: 1px solid white;
-    border-radius: 10px;
-    height: 170px;
-    text-align: center;
+.descript-text .descript-mini-text {
+    font-size: 12px;
+    color: #656C7D;
+}
+
+.descript-video-wraper {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    margin-top: 30px;
+}
+
+.descript-video-wraper-mt {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.descript-video-wraper img {
+    display: block;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.descript-video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.descript-item {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.descript-block-item:last-child {
-    width: 33.3333%;
-}
-
-.descript-block-item div {
-    font-family: 'e-Ukraine-Medium';
-    font-size: 25px;
-    text-transform: uppercase;
-}
-
-.descript-block-item div p:nth-child(2){
-    font-family: 'e-Ukraine-Light';
-    font-size: 18px;
-    text-transform: lowercase;
-}
-
-.descript-block-item span {
-    color: #3CC4E1;
-}
-
-
-.fpv-descript-img-wraper {
+.descript-text-end {
     display: flex;
-    gap: 15px;
+    justify-content: end;
 }
 
-.fpv-descript-img-wraper div img{
-    border-radius: 10px;
-}
-
-.link-table {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.link-table tr:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.link-table td {
-    width: 105px;
-}
-
-.table-cell {
-    font-size: 18px;
-    font-family: 'e-Ukraine-Light';
-    color: white;
-    border-bottom: none;
-}
-
-.battery-descript-img {
+.descript-text-page {
     display: flex;
     gap: 15px;
 }
 
-.battery-descript-img img {
-    border-radius: 10px;
+.third-descript-img {
+    display: flex;
+    gap: 15px;
+}
+
+.descript-text > p:nth-child(2) {
+    margin: 30px 0;
+}
+
+.descript-text > div > p {
+    padding: 15px;
+    border-top: 1px solid #141A29;
+}
+
+.descript-text > div > p:last-child {
+    border-bottom: 1px solid #141A29;
+}
+
+.descript-text > div > div {
+    border-top: 1px solid #141A29;
+    padding: 15px;
+}
+
+.descript-text > div > div p {
+    padding: 0;
+}
+
+.descript-text > div > div ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.fpv-descript-btn {
+    width: 100%;
+}
+
+.link-descript-btn {
+    width: 100%;
+    margin-top: 30px;
 }

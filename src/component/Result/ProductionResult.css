@@ -1,12 +1,66 @@
+.result-mision-wraper {
+    border-top: 1px solid #141A29;
+    border-bottom: 1px solid #141A29;
+}
+
 .result-mision-title {
-    text-align: end;
-    font-size: 56.5px;
-    margin-bottom: 100px;
-    color: white;
-    text-transform: uppercase;
-    position: relative;
+    border-left: 1px solid #141A29;
+    line-height: 69px;
 }
 
 .result-mision-title h3 {
-    margin: 0;
+    font-family: 'e-Ukraine';
+    margin: 15px;
+    font-size: 60px;
+    font-weight: 500;
+    color: #141A29;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+}
+
+.result-mision-description {
+    border-bottom: 1px solid #141A29;
+}
+
+.result-mision-img {
+    text-align: center;
+    margin: 30px auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120px;
+}
+
+.result-mision-img img {
+    height: 120px;
+}
+
+.result-mision-description:hover {
+    background-color: #141A29;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 108px;
+}
+
+.result-mision-description-1:hover .result-mision-img {
+    background-image: url("../../../public/img/result-mision-hover-img-1.png");
+}
+.result-mision-description-2:hover .result-mision-img {
+    background-image: url("../../../public/img/result-mision-hover-img-2.png");
+}
+.result-mision-description-3:hover .result-mision-img {
+    background-image: url("../../../public/img/result-mision-hover-img-3.png");
+}
+.result-mision-description-4:hover .result-mision-img {
+    background-image: url("../../../public/img/result-mision-hover-img-4.png");
+}
+.result-mision-description-5:hover .result-mision-img {
+    background-image: url("../../../public/img/result-mision-hover-img-5.png");
+}
+.result-mision-description-6:hover .result-mision-img {
+    background-image: url("../../../public/img/result-mision-hover-img-6.png");
+}
+
+.result-mision-description:hover img {
+    display: none;
 }

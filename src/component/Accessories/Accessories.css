@@ -1,10 +1,5 @@
 .accessories-title {
     font-size: 60px;
-    background-image: url('/public/img/production/accessories-bg.png');
-    background-repeat: no-repeat;
-    background-position-x: 10px;
-    background-position-y: center;
-    background-size:inherit;
     margin-bottom: 100px;
     color: white;
     text-transform: uppercase;

@@ -1,4 +1,5 @@
 import { Button } from '@mui/material'
+import { NavLink } from 'react-router-dom'
 import './MenuItem.css'
 
 type Props = {
@@ -7,6 +8,7 @@ type Props = {
     className?: string
     onMouseEnter?: () => void
     onMouseLeave?: () => void
+    to?: any
 }
 const MenuItem = ({
     onClick,
@@ -14,13 +16,12 @@ const MenuItem = ({
     className,
     onMouseEnter,
     onMouseLeave,
+    to,
 }: Props) => {
-    // const childrenContent = Array.isArray(children) ? 'ВИРОБНИЦТВО' : children
     return (
         <>
             <Button
                 onClick={onClick}
-                // href={`/#${childrenContent}`}
                 sx={{
                     position: 'relative',
                 }}
@@ -29,7 +30,9 @@ const MenuItem = ({
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                <p>{children}</p>
+                <NavLink to={to}>
+                    <p>{children}</p>
+                </NavLink>
             </Button>
         </>
     )

@@ -1,13 +1,31 @@
 @font-face {
-    font-family: 'Gerhaus';
-    src: url('../../assets/fonts/Gerhaus.ttf') format('opentype');
+    font-family: 'e-Ukraine';
+    src: url('../../assets/fonts/e-Ukraine-Medium.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Gerhaus';
-    src: url('../../assets/fonts/Gerhaus.ttf') format('opentype');
+    font-family: 'e-Ukraine';
+    src: url('../../assets/fonts/e-Ukraine-Bold.otf') format('opentype');
     font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'e-Ukraine';
+    src: url('../../assets/fonts/e-Ukraine-Light.otf') format('opentype');
+    font-weight: light;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'e-Ukraine';
+    src: url('../../assets/fonts/e-Ukraine-Regular.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'e-Ukraine';
+    src: url('../../assets/fonts/e-Ukraine-UltraLight.otf') format('opentype');
+    font-weight: 100;
     font-style: normal;
 }
 

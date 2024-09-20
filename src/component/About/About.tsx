@@ -1,12 +1,34 @@
+import { useRef, useState } from 'react'
 import { Container, Grid } from '@mui/material'
 import './About.css'
 
 type Props = {}
 const About = (props: Props) => {
+    const videoRef = useRef<HTMLVideoElement>(null)
+    const [isPopupOpen, setIsPopupOpen] = useState(false)
+
+    const handlePlayClick = () => {
+        setIsPopupOpen(true)
+    }
+
+    const handleCloseClick = () => {
+        if (videoRef.current) {
+            videoRef.current.pause()
+            videoRef.current.currentTime = 0
+        }
+        setIsPopupOpen(false)
+    }
+
+    const handlePopupClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (e.target === e.currentTarget) {
+            handleCloseClick()
+        }
+    }
+
     return (
         <>
             <Container
-                id="ПРО НАС"
+                id="about"
                 className="container"
                 sx={{
                     padding: '120px 0 80px',
@@ -121,11 +143,21 @@ const About = (props: Props) => {
                                     унікальних проектів та досягнення великих
                                     цілей.
                                 </p>
-                                <div className="about-video">
+                                <div
+                                    className="about-video-wraper"
+                                    onClick={handlePlayClick}
+                                >
+                                    <video className="about-video" muted loop>
+                                        <source
+                                            src="video/BoomBeeR.webm"
+                                            type="video/webm"
+                                        />
+                                        Ваш браузер не підтримує відео тег.
+                                    </video>
                                     <img
-                                        className="video"
-                                        src="img/about-video.jpg"
-                                        alt="about"
+                                        src="img/play_btn.svg"
+                                        alt="play"
+                                        className="play-icon"
                                     />
                                 </div>
                             </div>
@@ -133,6 +165,30 @@ const About = (props: Props) => {
                     </Grid>
                 </Grid>
             </Container>
+            {isPopupOpen && (
+                <div className="video-popup" onClick={handlePopupClick}>
+                    <div className="video-popup-content">
+                        <video
+                            ref={videoRef}
+                            controls
+                            autoPlay
+                            className="video-popup-video"
+                        >
+                            <source
+                                src="video/BoomBeeR.webm"
+                                type="video/webm"
+                            />
+                            Ваш браузер не підтримує відео тег.
+                        </video>
+                        <button
+                            className="video-popup-close"
+                            onClick={handleCloseClick}
+                        >
+                            Х
+                        </button>
+                    </div>
+                </div>
+            )}
         </>
     )
 }

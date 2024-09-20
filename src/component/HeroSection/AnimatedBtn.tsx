@@ -21,13 +21,8 @@ const AnimatedBtn = (props: Props) => {
                 left: '0px',
             }}
         >
-            <Grid
-                onClick={scrollDown}
-                sx={{
-                    cursor: 'pointer',
-                }}
-            >
-                <img src="img/arrow_bottom.svg" alt="" />
+            <Grid onClick={scrollDown} className="animated-img-wraper">
+                <img className="animated-img" src="img/text-arrow.svg" alt="" />
             </Grid>
         </Grid>
     )

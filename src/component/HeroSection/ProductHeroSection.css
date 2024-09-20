@@ -1,0 +1,13 @@
+.hero-section-btn {
+    margin-top: 60px;
+}
+
+.hero-section-btn .hero-btn {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #F2F4F7;
+    padding: 25px 30px;
+    border: 1px solid #F2F4F7;
+    border-radius: 50px;
+}

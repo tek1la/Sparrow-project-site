@@ -17,7 +17,7 @@ type NewsType = {
 // Переворота масиву та обмеження до 5 об'єктів
 const modifiedNewsArray: NewsType[] = [...NewsArray]
     .reverse() // Перевертає масив
-    .slice(0, 5) // Обрізає до 5 об'єктів
+    .slice(0, 6)
 
 const News = (props: Props) => {
     const navigate = useNavigate()
@@ -61,15 +61,11 @@ const News = (props: Props) => {
                             </Grid>
                         )
                     )}
-                    <Grid item sm={4} className="news-array-btn">
-                        <Button className="news-btn" onClick={handleViewAll}>
-                            <p>
-                                переглянути
-                                <br />
-                                всі публікації
-                            </p>
-                        </Button>
-                    </Grid>
+                </Grid>
+                <Grid container className="news-array-btn">
+                    <Button className="news-btn" onClick={handleViewAll}>
+                        переглянути всі публікації
+                    </Button>
                 </Grid>
             </Container>
         </>
