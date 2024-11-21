@@ -1,4 +1,4 @@
-import { Button, Container, Grid } from '@mui/material'
+import { Button, Container, Grid, useMediaQuery } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import './News.css'
 import { NewsArray } from 'utils/NewsArray'
@@ -26,13 +26,20 @@ const News = (props: Props) => {
     const handleViewAll = () => {
         navigate('/all-news') // Шлях до сторінки з усіма новинами
     }
+
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:375px)')
     return (
         <>
             <Container
                 id="Блог"
                 className="container"
                 sx={{
-                    padding: '120px 0 80px',
+                    padding: isMobile
+                        ? '80px 15px 60px'
+                        : isTablet
+                          ? '120px 0 80px'
+                          : '120px 0 80px',
                 }}
             >
                 <Grid container className="news">

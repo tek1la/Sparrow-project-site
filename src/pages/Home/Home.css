@@ -38,10 +38,23 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .container {
     max-width: 1360px;
-    padding-left: 0;
-    padding-right: 0;
+    /* padding-left: 0;
+    padding-right: 0; */
 }
 
 .body-wraper {
     background-color: #F2F4F7;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 944px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+       padding-left: 15px;
+       padding-right: 15px;
+    }
 }

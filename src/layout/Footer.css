@@ -120,3 +120,31 @@
 .footer-menu-item-submenu button:hover a {
     color: #1818ED;
 }
+
+@media (max-width: 375px) {
+    .footer-wraper {
+        padding-top: 80px;
+    }
+
+    .footer-item div {
+        flex-wrap: nowrap;
+    }
+
+    .footer-info-wraper {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .footer-info-wraper p {
+        width: 225px;
+    }
+
+    .footer-item:nth-child(2) {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid #141A29;
+        border-bottom: 1px solid #141A29;
+    }
+}

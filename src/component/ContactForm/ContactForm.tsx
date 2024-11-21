@@ -118,7 +118,7 @@ const ContactForm = (props: Props) => {
                     onSubmit={handleFormSubmit}
                 >
                     <Grid container gap={1.2}>
-                        <Grid item sm={3.9}>
+                        <Grid className="contact-form-input" item sm={3.9}>
                             <TextField
                                 id="outlined-multiline-flexible"
                                 label="Ваше ім’я"
@@ -128,7 +128,7 @@ const ContactForm = (props: Props) => {
                                 inputProps={{ type: 'name' }}
                             />
                         </Grid>
-                        <Grid item sm={3.9}>
+                        <Grid className="contact-form-input" item sm={3.9}>
                             <TextField
                                 id="outlined-multiline-flexible"
                                 label="Номер телефону"
@@ -138,7 +138,7 @@ const ContactForm = (props: Props) => {
                                 inputProps={{ type: 'tel' }}
                             />
                         </Grid>
-                        <Grid item sm={3.9}>
+                        <Grid className="contact-form-btn-wraper" item sm={3.9}>
                             <Button type="submit" className="contact-form-btn">
                                 замовити дзвінок
                             </Button>

@@ -1,4 +1,4 @@
-import { Container, Grid } from '@mui/material'
+import { Container, Grid, useMediaQuery } from '@mui/material'
 import { useState } from 'react'
 import './Developments.css'
 
@@ -26,12 +26,19 @@ const Developments = (props: Props) => {
         setImageStyle({ display: 'none' }) // Сховати картинку
     }
 
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:375px)')
+
     return (
         <>
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0 80px',
+                    padding: isMobile
+                        ? '80px 15px 60px'
+                        : isTablet
+                          ? '120px 0 80px'
+                          : '120px 0 80px',
                 }}
             >
                 <Grid container className="developments-wraper">

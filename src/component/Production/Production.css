@@ -20,3 +20,44 @@
     text-transform: uppercase;
     letter-spacing: 5.5px;
 }
+
+@media (max-width: 1024px) {
+    .production {
+        padding: 15px;
+    }
+
+    .prodaction-array-wraper {
+        border: 1px solid #141A29;
+        padding: 8px;
+    }
+
+    .production-title {
+        border-left: 1px solid #141A29;
+    }
+
+    .production-title h3 {
+        font-size: 50px; /* Зменшення розміру шрифту */
+        letter-spacing: 4px; /* Зменшення відстані між літерами */
+    }
+}
+
+@media (max-width: 375px) {
+    .production {
+        padding: 10px;
+    }
+
+    .prodaction-array-wraper {
+        border: none;
+        padding: 5px;
+    }
+
+    .production-title {
+        border-left: none;
+        text-align: center; /* Вирівнювання тексту по центру */
+    }
+
+    .production-title h3 {
+        font-size: 30px; /* Зменшення розміру шрифту для мобільних */
+        letter-spacing: 2px; /* Зменшення відстані між літерами */
+    }
+}

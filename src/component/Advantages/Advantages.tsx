@@ -1,15 +1,21 @@
-import { Container, Grid } from '@mui/material'
+import { Container, Grid, useMediaQuery } from '@mui/material'
 import './Advantages.css'
 
 type Props = {}
 const Advantages = (props: Props) => {
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:375px)')
     return (
         <>
             <div className="advantages-bg-wraper">
                 <Container
                     className="container"
                     sx={{
-                        padding: '80px 0 80px',
+                        padding: isMobile
+                            ? '80px 15px 60px'
+                            : isTablet
+                              ? '80px 0 80px'
+                              : '80px 0 80px',
                     }}
                 >
                     <Grid container className="advantages-items-wraper">

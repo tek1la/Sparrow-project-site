@@ -168,3 +168,63 @@
 .video-popup-close:hover {
     background-color: #2B3857;
 }
+
+@media (max-width: 1024px) {
+    .about {
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .about-title {
+        border-left: none;
+        text-align: center;
+    }
+
+    .about-title h3 {
+        font-size: 50px;
+        line-height: 40px;
+        letter-spacing: 4px;
+    }
+
+    .about-img-wraper {
+        margin-bottom: 20px;
+    }
+
+    .about-video-wraper {
+        height: 150px;
+    }
+
+    .about-wraper p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .about {
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+
+    .about-title {
+        border-left: none;
+        text-align: start;
+    }
+
+    .about-title h3 {
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: 2px;
+    }
+
+    .about-img-wraper {
+        margin-bottom: 15px;
+    }
+
+    .about-video-wraper {
+        height: 200px;
+    }
+
+    .about-wraper p {
+        font-size: 16px;
+    }
+}

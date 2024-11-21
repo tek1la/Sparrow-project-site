@@ -66,3 +66,87 @@
 .email-contact, .contact-mail-icon {
     border-bottom: 1px solid #141A29;
 }
+
+@media (max-width: 1024px) {
+    .contacts-title {
+        padding: 10px;
+    }
+
+    .contacts-title h3 {
+        font-size: 50px; /* Зменшення розміру шрифту */
+        line-height: 60px;
+        letter-spacing: 4px; /* Зменшення відстані між літерами */
+    }
+
+    .contact-info {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        line-height: 20px;
+        height: 100%;
+    }
+
+    .contact-item {
+        margin-bottom: 10px;
+        min-width: 49%;
+    }
+
+    .contact-icon {
+        width: 40px;
+    }
+
+    .contact-info p {
+        font-size: 20px;
+    }
+
+    .contact-info .contact-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+.mobile-contact-wraper {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.contact-item {
+    margin-bottom: 0;
+    flex-direction: column;
+    width: 100%;
+}
+
+    .contacts-title {
+        text-align: center;
+        border-left: none;
+    }
+
+    .contacts-title h3 {
+        font-size: 30px; /* Ще менший розмір для мобільних */
+        line-height: 40px;
+        letter-spacing: 2px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        padding: 5px;
+        line-height: 18px;
+    }
+
+    .contact-icon {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-info p {
+        font-size: 20px;
+    }
+
+    .contact-icon, .contact-info {
+        padding: 20px 10px;
+    }
+
+    .contact-info .contact-text {
+        font-size: 16px;
+    }
+}

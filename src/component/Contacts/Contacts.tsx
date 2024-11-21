@@ -1,16 +1,22 @@
-import { Container, Grid } from '@mui/material'
+import { Container, Grid, useMediaQuery } from '@mui/material'
 import './Contacts.css'
 
 type Props = {}
 const Contacts = (props: Props) => {
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:375px)')
     return (
         <>
             <div className="contact-bg-wraper">
                 <Container
                     id="КОНТАКТИ"
-                    className="container"
+                    className="container mobile-contact-wraper"
                     sx={{
-                        padding: '80px 0 80px',
+                        padding: isMobile
+                            ? '80px 15px 60px'
+                            : isTablet
+                              ? '80px 0 80px'
+                              : '80px 0 80px',
                         position: 'relative',
                     }}
                 >

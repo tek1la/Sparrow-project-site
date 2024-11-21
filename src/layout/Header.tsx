@@ -6,12 +6,18 @@ import {
     Slide,
     Grid,
     Button,
+    Drawer,
+    IconButton,
 } from '@mui/material'
 import Menu from '../component/Menu/Menu'
 import LanguageMenu from '../component/Menu/LanguageMenu'
 import Logo from '../component/Logo/Logo'
 import { useEffect, useRef, useState } from 'react'
 import HeaderMenu from 'component/Menu/HeaderMenu'
+import SocialMediaIcons from 'component/SocialMediaIcons/SocialMediaIcons'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
+import { useMediaQuery } from '@mui/material'
 
 type Props = {}
 
@@ -25,6 +31,12 @@ function HideOnScroll(props: any) {
 }
 
 const Header = (props: Props) => {
+    const isTabletOrSmaller = useMediaQuery('(max-width:768px)')
+    const [isMenuOpen, setMenuOpen] = useState(false)
+
+    const toggleMenu = () => {
+        setMenuOpen((prev) => !prev)
+    }
     const [showHeader, setShowHeader] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
     const [heroSection, setHeroSection] = useState(false)
@@ -116,35 +128,152 @@ const Header = (props: Props) => {
                 }}
             >
                 <Logo h={'50px'} w={'auto'} />
-                <Toolbar
-                    className="container"
-                    sx={{
-                        gap: '5vh',
-                        height: '100%',
-                    }}
-                >
-                    <Box
-                        sx={{
-                            height: '100%',
-                            display: 'flex',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <Menu />
-                    </Box>
-                    <Box>
-                        <LanguageMenu />
-                    </Box>
-                    <Box>
-                        <Button
-                            sx={{
-                                minWidth: '40px',
+                {isTabletOrSmaller ? (
+                    <>
+                        <IconButton onClick={toggleMenu}>
+                            <MenuIcon sx={{ color: 'white' }} />
+                        </IconButton>
+                        <Drawer
+                            anchor="right"
+                            open={isMenuOpen}
+                            onClose={toggleMenu}
+                            PaperProps={{
+                                sx: {
+                                    width: '100%',
+                                    height: '100%',
+                                    backgroundColor: '#1C1C1C',
+                                    color: 'white',
+                                },
                             }}
                         >
-                            <img src="img/light-theme_icon.svg" alt="" />
-                        </Button>
-                    </Box>
-                </Toolbar>
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'space-between',
+                                    height: '100%',
+                                    p: 3,
+                                }}
+                            >
+                                <Box>
+                                    <HeaderMenu />
+                                </Box>
+                                {/* Верхня частина меню */}
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        alignItems: 'center',
+                                    }}
+                                >
+                                    <Logo h={'50px'} w={'auto'} />
+                                    <IconButton
+                                        onClick={toggleMenu}
+                                        sx={{ color: 'white' }}
+                                    >
+                                        <CloseIcon />
+                                    </IconButton>
+                                </Box>
+                                {/* Основний список навігації */}
+                                <Box
+                                    sx={{
+                                        mt: 4,
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                    }}
+                                >
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'flex-start',
+                                        }}
+                                    >
+                                        <Menu />
+                                    </Box>
+
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                        }}
+                                    >
+                                        <SocialMediaIcons />
+                                    </Box>
+                                </Box>
+                                {/* Нижня частина меню */}
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        alignItems: 'center',
+                                        mt: 'auto',
+                                    }}
+                                >
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            gap: 2,
+                                            justifyContent: 'space-between',
+                                            width: '100%',
+                                            alignItems: 'center',
+                                        }}
+                                    >
+                                        <Grid>
+                                            <Button
+                                                sx={{
+                                                    minWidth: '40px',
+                                                    height: '40px',
+                                                    border: '1px solid white',
+                                                    borderRadius: '50%',
+                                                    color: 'white',
+                                                }}
+                                            >
+                                                <img
+                                                    src="img/light-theme_icon.svg"
+                                                    alt="theme"
+                                                />
+                                            </Button>
+                                        </Grid>
+                                        <Grid>
+                                            <LanguageMenu />
+                                        </Grid>
+                                    </Box>
+                                </Box>
+                            </Box>
+                        </Drawer>
+                    </>
+                ) : (
+                    <Toolbar
+                        className="container"
+                        sx={{
+                            gap: '5vh',
+                            height: '100%',
+                        }}
+                    >
+                        <Box
+                            sx={{
+                                height: '100%',
+                                display: 'flex',
+                                alignItems: 'center',
+                            }}
+                        >
+                            <Menu />
+                        </Box>
+                        <Box>
+                            <LanguageMenu />
+                        </Box>
+                        <Box>
+                            <Button
+                                sx={{
+                                    minWidth: '40px',
+                                }}
+                            >
+                                <img src="img/light-theme_icon.svg" alt="" />
+                            </Button>
+                        </Box>
+                    </Toolbar>
+                )}
             </Container>
         </AppBar>
     )

@@ -24,5 +24,10 @@
 
 .news-array-btn p {
     line-height: 30px;
-    
+}
+
+@media (max-width: 375px) {
+    .contact-form-btn, .contact-form-btn-wraper {
+        width: 100%;
+    }
 }

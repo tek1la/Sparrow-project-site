@@ -103,7 +103,7 @@ const Footer = (props: Props) => {
                             </Grid>
                         </Grid>
                         <Grid item sm={4} className="footer-item">
-                            <div>
+                            <div className="footer-item-menu">
                                 <p className="footer-title">Виробництво:</p>
                                 <div className="footer-menu-item-submenu">
                                     {productionArray.map(

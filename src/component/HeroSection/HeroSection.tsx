@@ -3,13 +3,18 @@ import './HeroSection.css'
 import AnimatedBtn from './AnimatedBtn'
 import 'utils/i18n'
 import { useTranslation } from 'react-i18next'
+import { useMediaQuery } from '@mui/material'
 
 type Props = {}
 const HeroSection = (props: Props) => {
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:375px)')
     const { t } = useTranslation()
     return (
         <>
-            <div className="hero-wrapper">
+            <div
+                className={`hero-wrapper ${isMobile ? 'mobile' : isTablet ? 'tablet' : ''}`}
+            >
                 <video className="hero-video" autoPlay muted loop>
                     <source src="/video/full.webm" type="video/mp4" />
                     Ваш браузер не підтримує відео тег.
@@ -35,19 +40,51 @@ const HeroSection = (props: Props) => {
                                 sx={{
                                     display: 'flex',
                                     justifyContent: 'flex-start',
+                                    '@media (max-width: 1024px)': {
+                                        justifyContent: 'center',
+                                    },
                                 }}
                             >
-                                <p className="title-text">
-                                    {t('hero_section_title1')}
+                                <p
+                                    className={
+                                        isMobile
+                                            ? 'title'
+                                            : isTablet
+                                              ? 'title-text'
+                                              : 'title-text'
+                                    }
+                                >
+                                    {isMobile
+                                        ? t('hero_section_title_text')
+                                        : isTablet
+                                          ? t('hero_section_title1')
+                                          : t('hero_section_title1')}
                                 </p>
                             </Grid>
                             <Grid
                                 item
                                 className="title-text-wraper main-title"
                                 sm={4}
+                                sx={{
+                                    '@media (max-width: 1024px)': {
+                                        textAlign: 'center',
+                                    },
+                                }}
                             >
-                                <h1 className="title">
-                                    {t('hero_section_title_text')}
+                                <h1
+                                    className={
+                                        isMobile
+                                            ? 'title-text'
+                                            : isTablet
+                                              ? 'title'
+                                              : 'title'
+                                    }
+                                >
+                                    {isMobile
+                                        ? t('hero_section_title1')
+                                        : isTablet
+                                          ? t('hero_section_title_text')
+                                          : t('hero_section_title_text')}
                                 </h1>
                             </Grid>
                         </Grid>
@@ -60,6 +97,9 @@ const HeroSection = (props: Props) => {
                                 sx={{
                                     display: 'flex',
                                     justifyContent: 'flex-start',
+                                    '@media (max-width: 1024px)': {
+                                        justifyContent: 'center',
+                                    },
                                 }}
                             >
                                 <p className="title-text">
