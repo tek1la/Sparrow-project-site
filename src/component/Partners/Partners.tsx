@@ -5,7 +5,7 @@ import './Partners.css'
 type Props = {}
 const Partners = (props: Props) => {
     const isTablet = useMediaQuery('(max-width:1024px)')
-    const isMobile = useMediaQuery('(max-width:375px)')
+    const isMobile = useMediaQuery('(max-width:545px)')
     return (
         <>
             <Container

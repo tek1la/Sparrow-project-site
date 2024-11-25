@@ -4,7 +4,7 @@ import './Contacts.css'
 type Props = {}
 const Contacts = (props: Props) => {
     const isTablet = useMediaQuery('(max-width:1024px)')
-    const isMobile = useMediaQuery('(max-width:375px)')
+    const isMobile = useMediaQuery('(max-width:545px)')
     return (
         <>
             <div className="contact-bg-wraper">

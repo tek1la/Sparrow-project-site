@@ -64,6 +64,35 @@
     }
 }
 
+@media (max-width: 545px) {
+    .news-title {
+        border-left: none;
+        text-align: center;
+    }
+
+    .news-title h3 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .news-array-wraper {
+        margin: 5px;
+        border-left: none;
+        border-right: none;
+    }
+
+    .news-btn {
+        padding: 8px 20px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .news-array-btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 @media (max-width: 375px) {
     .news-title {
         border-left: none;

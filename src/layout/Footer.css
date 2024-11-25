@@ -121,13 +121,18 @@
     color: #1818ED;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 545px) {
     .footer-wraper {
         padding-top: 80px;
     }
 
+    .footer-item {
+        width: 100%;
+    }
+
     .footer-item div {
         flex-wrap: nowrap;
+        justify-content: space-between;
     }
 
     .footer-info-wraper {

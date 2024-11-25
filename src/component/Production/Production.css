@@ -36,8 +36,29 @@
     }
 
     .production-title h3 {
-        font-size: 50px; /* Зменшення розміру шрифту */
-        letter-spacing: 4px; /* Зменшення відстані між літерами */
+        font-size: 50px; 
+        letter-spacing: 4px; 
+    }
+}
+
+@media (max-width: 545px) {
+    .production {
+        padding: 10px;
+    }
+
+    .prodaction-array-wraper {
+        border: none;
+        padding: 5px;
+    }
+
+    .production-title {
+        border-left: none;
+        text-align: center; 
+    }
+
+    .production-title h3 {
+        font-size: 30px; 
+        letter-spacing: 2px; 
     }
 }
 
@@ -53,11 +74,11 @@
 
     .production-title {
         border-left: none;
-        text-align: center; /* Вирівнювання тексту по центру */
+        text-align: center; 
     }
 
     .production-title h3 {
-        font-size: 30px; /* Зменшення розміру шрифту для мобільних */
-        letter-spacing: 2px; /* Зменшення відстані між літерами */
+        font-size: 30px; 
+        letter-spacing: 2px; 
     }
 }

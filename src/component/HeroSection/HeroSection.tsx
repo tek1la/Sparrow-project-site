@@ -8,7 +8,7 @@ import { useMediaQuery } from '@mui/material'
 type Props = {}
 const HeroSection = (props: Props) => {
     const isTablet = useMediaQuery('(max-width:1024px)')
-    const isMobile = useMediaQuery('(max-width:375px)')
+    const isMobile = useMediaQuery('(max-width:545px)')
     const { t } = useTranslation()
     return (
         <>
@@ -21,7 +21,7 @@ const HeroSection = (props: Props) => {
                 </video>
                 <div>
                     <Container
-                        className="container"
+                        className="container mobile-container"
                         sx={{
                             height: '100vh',
                             maxHeight: '1024px',
@@ -31,7 +31,10 @@ const HeroSection = (props: Props) => {
                             justifyContent: 'center',
                         }}
                     >
-                        <Grid container>
+                        <Grid
+                            container
+                            sx={isMobile ? { flexDirection: 'column' } : {}}
+                        >
                             <Grid item sm={1.8}></Grid>
                             <Grid
                                 item

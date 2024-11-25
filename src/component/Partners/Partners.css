@@ -77,6 +77,33 @@
     }
 }
 
+@media (max-width: 545px) {
+    .partners-title {
+        border-left: none;
+        text-align: center;
+    }
+
+    .partners-title h3 {
+        font-size: 30px; 
+        letter-spacing: 2px;
+    }
+
+    .partners-item {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .partners-img {
+        height: 80px;
+    }
+
+    .partners-img img {
+        transform: scale(1);
+    }
+}
+
 @media (max-width: 375px) {
     .partners-title {
         border-left: none;
@@ -91,7 +118,7 @@
     .partners-item {
         padding-top: 5px;
         padding-bottom: 10px;
-        flex-direction: column; /* Елементи розташовані вертикально */
+        flex-direction: column;
         text-align: center;
     }
 

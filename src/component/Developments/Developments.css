@@ -72,7 +72,7 @@
     }
 
     .developments-title h3 {
-        font-size: 50px; /* Зменшено розмір шрифту */
+        font-size: 50px; 
         letter-spacing: 4px;
     }
 
@@ -89,13 +89,44 @@
 
 @media (max-width: 600px) {
     .developments-title h3 {
-        font-size: 30px; /* Зменшено розмір шрифту ще більше */
+        font-size: 30px;
         line-height: normal;
         letter-spacing: 2px;
     }
 
     .developments-item-cell {
         width: 33%;
+    }
+}
+
+@media (max-width: 545px) {
+    .developments-title {
+        text-align: center;
+        border-left: none;
+    }
+
+    .developments-title h3 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .developments-wraper {
+        padding: 5px;
+    }
+
+    .developments-item-cell {
+        flex-direction: column;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .developments-item {
+        flex-wrap: nowrap;
+    }
+
+    .developments-item p {
+        font-size: 16px;
+        line-height: 16px;
     }
 }
 
@@ -106,7 +137,7 @@
     }
 
     .developments-title h3 {
-        font-size: 30px; /* Зменшено розмір шрифту ще більше */
+        font-size: 30px;
         letter-spacing: 2px;
     }
 
