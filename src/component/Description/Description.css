@@ -135,3 +135,33 @@
     width: 100%;
     margin-top: 30px;
 }
+
+@media (max-width: 545px) {
+    .descript-item-wraper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+    .descript-title h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .descript-title {
+        border-left: none;
+    }
+    .descript-item {
+        gap: 30px;
+    }
+    .descript-text-page {
+        flex-direction: column;
+    }
+    .second-descript-img img{
+        width: 100%;
+    }
+    .third-descript-img img, .third-descript-img div{
+        width: 100%;
+    }
+    .descript-text-page img{
+        width: 100%;
+    }
+}

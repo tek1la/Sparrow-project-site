@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import { Grid, useMediaQuery } from '@mui/material'
 import BaseEquipment from 'component/BaseEquipment/BaseEquipment'
 import BatteryDescription from 'component/Description/BatteryDescription'
 import BpakDescription from 'component/Description/BpakDescription'
@@ -62,7 +62,7 @@ const Production = ({
                         <FpvDescription />
                         <TechChar path={path} />
                         {/* <Accessories /> */}
-                        <CallBack video={false} />
+                        <CallBack video={true} />
                     </>
                 ) : null}
                 {title === 'Станція ретрансляції “FPV Re-Link”' ? (
@@ -70,7 +70,7 @@ const Production = ({
                         <LinkDescription />
                         <TechChar path={path} />
                         <BaseEquipment path={path} />
-                        <CallBack video={false} />
+                        <CallBack video={true} />
                     </>
                 ) : null}
                 {title === 'Акумуляторні збірки' ? (
@@ -78,7 +78,7 @@ const Production = ({
                         <BatteryDescription />
                         <TechChar path={path} tableSize={12} size={2} />
                         {/* <AdvantagesBattery /> */}
-                        <CallBack video={false} />
+                        <CallBack video={true} />
                     </>
                 ) : null}
                 {title === 'Системи скидів “SDS-mini”' ? (
@@ -86,7 +86,7 @@ const Production = ({
                         <SdsDescription />
                         <TechChar path={path} tableSize={12} size={6} />
                         {/* <AdvantagesSdsMini /> */}
-                        <CallBack video={false} />
+                        <CallBack video={true} />
                     </>
                 ) : null}
             </Grid>

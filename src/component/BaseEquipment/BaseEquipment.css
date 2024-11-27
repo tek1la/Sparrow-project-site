@@ -34,3 +34,14 @@
     line-height: 1.38;
     width: 25%;
 }
+
+@media (max-width: 545px) {
+    .base-equip-title h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .base-equip-description .table-cell {
+        line-height: 1.38;
+        width: auto;
+    }
+}

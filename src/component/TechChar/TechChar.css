@@ -69,3 +69,13 @@
     border-left: none;
     border-right: none;
 }
+
+@media (max-width: 545px) {
+    .tech-char-title h3 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .table-row, .tech-char-title {
+        border-left: none;
+    }
+}

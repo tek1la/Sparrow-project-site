@@ -1,9 +1,11 @@
-import { Container, Grid } from '@mui/material'
+import { Container, Grid, useMediaQuery } from '@mui/material'
 import { useState } from 'react'
 import './ProductionResult.css'
 
 type Props = {}
 const ProductionResult = (props: Props) => {
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:545px)')
     const [tooltip, setTooltip] = useState({
         visible: false,
         text: '',
@@ -75,7 +77,11 @@ const ProductionResult = (props: Props) => {
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0 80px',
+                    padding: isMobile
+                        ? '80px 15px 60px'
+                        : isTablet
+                          ? '100px 30px 70px'
+                          : '120px 0 80px',
                     position: 'relative',
                 }}
             >
@@ -85,7 +91,7 @@ const ProductionResult = (props: Props) => {
                         <h3>вже випробували</h3>
                     </Grid>
                 </Grid>
-                <Grid container>
+                <Grid container className="result-mision-mob">
                     <Grid
                         item
                         sm={4}

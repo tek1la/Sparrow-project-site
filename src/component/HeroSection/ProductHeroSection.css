@@ -11,3 +11,9 @@
     border: 1px solid #F2F4F7;
     border-radius: 50px;
 }
+
+@media (max-width: 545px) {
+    .hero-section-btn .hero-btn {
+        font-size: 18px;
+    }
+}

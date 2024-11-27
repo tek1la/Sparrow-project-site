@@ -1,4 +1,4 @@
-import { Container, Grid } from '@mui/material'
+import { Container, Grid, useMediaQuery } from '@mui/material'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
@@ -14,12 +14,18 @@ type Props = {
     size?: number
 }
 const TechChar = ({ path, tableSize, size }: Props) => {
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:545px)')
     return (
         <>
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0 80px',
+                    padding: isMobile
+                        ? '80px 15px 60px'
+                        : isTablet
+                          ? '100px 30px 70px'
+                          : '120px 0 80px',
                     position: 'relative',
                 }}
             >
@@ -62,7 +68,9 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                 sx={{
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    width: '33.4%',
+                                                                    width: isMobile
+                                                                        ? '8%'
+                                                                        : '33.4%',
                                                                 }}
                                                                 component="th"
                                                                 scope="row"
@@ -180,7 +188,9 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                 sx={{
                                                                     lineHeight:
                                                                         '1.38',
-                                                                    width: '33.4%',
+                                                                    width: isMobile
+                                                                        ? '8%'
+                                                                        : '33.4%',
                                                                 }}
                                                                 component="th"
                                                                 scope="row"
@@ -350,7 +360,9 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                         sx={{
                                                                             lineHeight:
                                                                                 '1.38',
-                                                                            width: '33.4%',
+                                                                            width: isMobile
+                                                                                ? '8%'
+                                                                                : '33.4%',
                                                                         }}
                                                                         component="th"
                                                                         scope="row"
@@ -391,6 +403,8 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                                 <TableRow>
                                                                                     <TableCell
                                                                                         sx={{
+                                                                                            lineHeight:
+                                                                                                '1.38',
                                                                                             width: '50%',
                                                                                         }}
                                                                                         className="table-cell"
@@ -411,6 +425,8 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                                 <TableRow>
                                                                                     <TableCell
                                                                                         sx={{
+                                                                                            lineHeight:
+                                                                                                '1.38',
                                                                                             width: '50%',
                                                                                         }}
                                                                                         className="table-cell"
@@ -431,6 +447,8 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                                 <TableRow>
                                                                                     <TableCell
                                                                                         sx={{
+                                                                                            lineHeight:
+                                                                                                '1.38',
                                                                                             width: '50%',
                                                                                         }}
                                                                                         className="table-cell bottom-table-cell"
@@ -458,7 +476,9 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                         sx={{
                                                                             lineHeight:
                                                                                 '1.38',
-                                                                            width: '33.4%',
+                                                                            width: isMobile
+                                                                                ? '8%'
+                                                                                : '33.4%',
                                                                         }}
                                                                         component="th"
                                                                         scope="row"
@@ -483,6 +503,7 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                                                                         sx={{
                                                                             lineHeight:
                                                                                 '1.38',
+                                                                            width: '33.3333%',
                                                                         }}
                                                                         className="table-cell"
                                                                         align="left"

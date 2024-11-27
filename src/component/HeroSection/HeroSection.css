@@ -132,7 +132,7 @@
   
     .title-text {
       height: 36px;
-      font-size: 30px;
+      font-size: 29px;
       line-height: 50px;
       letter-spacing: 2px;
       padding: 0;
@@ -160,5 +160,7 @@
   }
 
 @media (max-width: 375px) {
-    
+  .title-text {
+    font-size: 25px;
+  }
   }

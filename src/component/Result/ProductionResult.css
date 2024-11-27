@@ -64,3 +64,17 @@
 .result-mision-description:hover img {
     display: none;
 }
+
+@media (max-width: 545px) {
+    .result-mision-title h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .result-mision-title {
+        border-left: none;
+    }
+    .result-mision-mob {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}

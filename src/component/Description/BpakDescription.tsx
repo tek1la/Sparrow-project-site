@@ -1,9 +1,12 @@
 import { useRef, useState } from 'react'
 import { Container, Grid } from '@mui/material'
 import './Description.css'
+import { useMediaQuery } from '@mui/material'
 
 type Props = {}
 const BpakDescription = (props: Props) => {
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:545px)')
     const videoRef = useRef<HTMLVideoElement>(null)
     const [isPopupOpen, setIsPopupOpen] = useState(false)
 
@@ -30,18 +33,28 @@ const BpakDescription = (props: Props) => {
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0 80px',
+                    padding: isMobile
+                        ? '80px 15px 60px'
+                        : isTablet
+                          ? '100px 30px 70px'
+                          : '120px 0 80px',
                     position: 'relative',
                 }}
             >
                 <Grid container className="descript-wraper">
                     <Grid item sm={4}></Grid>
                     <Grid item sm={8} className="descript-title">
-                        <h3>Бпак “1В Бомбер”</h3>
+                        {isMobile ? (
+                            <h3>
+                                Бпак <br /> “1В Бомбер”
+                            </h3>
+                        ) : (
+                            <h3>Бпак “1В Бомбер”</h3>
+                        )}
                     </Grid>
                 </Grid>
                 <Grid container className="descript-item-wraper">
-                    <Grid xs={3.8} item className="descript-item">
+                    <Grid sm={3.8} xs={12} item className="descript-item">
                         <Grid className="descript-list-item">
                             <div className="descript-text">
                                 <p className="descript-bold">
@@ -70,23 +83,38 @@ const BpakDescription = (props: Props) => {
                         <Grid className="descript-list-item">
                             <div className="descript-text-page">
                                 <div>
-                                    <img
-                                        src="./img/bpak_station.jpg"
-                                        alt="bpla"
-                                    />
+                                    {isMobile ? (
+                                        <img
+                                            src="./img/bpak_station_mob.jpg"
+                                            alt="bpla"
+                                        />
+                                    ) : (
+                                        <img
+                                            src="./img/bpak_station.jpg"
+                                            alt="bpla"
+                                        />
+                                    )}
                                     <p>Станція керування</p>
                                 </div>
                                 <div>
-                                    <img
-                                        src="./img/re-link-station.jpg"
-                                        alt="bpla"
-                                    />
+                                    {isMobile ? (
+                                        <img
+                                            src="./img/re-link-station-mob.jpg"
+                                            alt="bpla"
+                                        />
+                                    ) : (
+                                        <img
+                                            src="./img/re-link-station.jpg"
+                                            alt="bpla"
+                                        />
+                                    )}
+
                                     <p>Станція ретрансляції</p>
                                 </div>
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid xs={3.8} item className="descript-item">
+                    <Grid sm={3.8} xs={12} item className="descript-item">
                         <Grid className="descript-list-item">
                             <div className="descript-text">
                                 <p>
@@ -119,21 +147,39 @@ const BpakDescription = (props: Props) => {
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid xs={3.8} item className="descript-item">
+                    <Grid sm={3.8} xs={12} item className="descript-item">
                         <Grid className="descript-list-item">
                             <div className="descript-text-page">
                                 <div className="second-descript-img">
-                                    <img src="./img/bpak-cam.jpg" alt="bpla" />
+                                    {isMobile ? (
+                                        <img
+                                            src="./img/bpak-cam-mob.jpg"
+                                            alt="bpla"
+                                        />
+                                    ) : (
+                                        <img
+                                            src="./img/bpak-cam.jpg"
+                                            alt="bpla"
+                                        />
+                                    )}
                                     <p className="descript-mini-text">
                                         Тепловізійна камера
                                     </p>
                                 </div>
                                 <div className="third-descript-img">
                                     <div>
-                                        <img
-                                            src="./img/bpak_prop.jpg"
-                                            alt="bpla"
-                                        />
+                                        {isMobile ? (
+                                            <img
+                                                src="./img/bpak_prop_mob.jpg"
+                                                alt="bpla"
+                                            />
+                                        ) : (
+                                            <img
+                                                src="./img/bpak_prop.jpg"
+                                                alt="bpla"
+                                            />
+                                        )}
+
                                         <p>Пропеллери</p>
                                     </div>
                                 </div>
