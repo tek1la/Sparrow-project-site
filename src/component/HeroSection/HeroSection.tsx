@@ -15,8 +15,8 @@ const HeroSection = (props: Props) => {
             <div
                 className={`hero-wrapper ${isMobile ? 'mobile' : isTablet ? 'tablet' : ''}`}
             >
-                <video className="hero-video" autoPlay muted loop>
-                    <source src="/video/full.webm" type="video/mp4" />
+                <video className="hero-video" autoPlay muted loop playsInline>
+                    <source src="/video/full.webm" type="video/webm" />
                     Ваш браузер не підтримує відео тег.
                 </video>
                 <div>
