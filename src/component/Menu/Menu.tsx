@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import MenuItem from './MenuItem'
 import ProductionSubMenu from './ProductionSubMenu'
+import { useMediaQuery } from '@mui/material'
 
 type Props = {}
 
@@ -11,6 +12,7 @@ const Menu = (props: Props) => {
     const [isMouseOverMenu, setIsMouseOverMenu] = useState(false)
     const [isMouseOverSubMenu, setIsMouseOverSubMenu] = useState(false)
     const navigate = useNavigate()
+    const isMobile = useMediaQuery('(max-width:768px)')
 
     useEffect(() => {
         let timer: NodeJS.Timeout | null = null
@@ -73,13 +75,19 @@ const Menu = (props: Props) => {
                 className={`menu-item menu-arrow ${activeItem === 'production' ? 'active' : ''}`}
             >
                 ВИРОБНИЦТВО
-                {isSubMenuOpen && (
+                {!isMobile && isSubMenuOpen && (
                     <ProductionSubMenu
                         onMouseEnter={handleMouseOverSubMenu}
                         onMouseLeave={handleMouseLeave}
                     />
                 )}
             </MenuItem>
+            {isMobile && isSubMenuOpen && (
+                <ProductionSubMenu
+                    onMouseEnter={handleMouseOverSubMenu}
+                    onMouseLeave={handleMouseLeave}
+                />
+            )}
             <MenuItem
                 onClick={() => handleClick('contacts')}
                 className={`menu-item ${activeItem === 'contacts' ? 'active' : ''}`}

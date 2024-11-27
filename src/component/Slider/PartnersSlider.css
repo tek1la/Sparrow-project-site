@@ -14,7 +14,7 @@
     background-color: #141A29; 
 }
 
-.partners-slider .slide:hover .slide-img {
+.partners-slider .slide:hover .slide-img, .partners-mobile .slide:hover .slide-img {
     opacity: 0; 
 }
 
@@ -27,40 +27,39 @@
 
 .partners-slider .slide-title {
     position: absolute;
-    bottom: -40px; /* Відстань між слайдом і підсказкою */
+    bottom: -40px; 
     left: 50%;
     transform: translateX(-50%);
-    background-color: #141A29; /* Фон назви */
+    background-color: #141A29; 
     color: #fff;
     padding: 5px 15px;
     border-radius: 5px;
     opacity: 0;
     white-space: nowrap;
     transition: opacity 0.3s ease, bottom 0.3s ease;
-    pointer-events: none; /* Щоб текст не перекривав собою клікабельні елементи */
+    pointer-events: none; 
     font-size: 14px;
 }
 
 .partners-slider .slide-title::after {
     content: '';
     position: absolute;
-    top: -7px; /* Розташування стрілки відносно назви */
+    top: -7px;
     left: 50%;
     transform: translateX(-50%);
     border-width: 7px;
     border-style: solid;
     border-color: transparent transparent #141A29 transparent;
-    /* Створюємо трикутник, який вказує на слайд */
 }
 
 .partners-slider .slide:hover .slide-title {
     opacity: 1;
-    bottom: -60px; /* Підсказка піднімається ближче до слайда */
+    bottom: -60px;
 }
 
 .partners-slider .slide:hover .slide-title {
     opacity: 1;
-    bottom: -40px; /* Підсказка піднімається ближче до слайда */
+    bottom: -40px;
 }
 
 .partners-slider .slide-1:hover {
@@ -114,4 +113,43 @@
     align-items: center;
     cursor: pointer;
     gap: 30px;
+}
+
+@media (max-width: 545px) {
+    .partners-mobile .slide {
+        padding: 30px 0;
+        border-bottom: 1px solid #141A29;
+        width: 100%;
+        text-align: center;
+        background-attachment: unset;
+        background-position-y: 30px;
+    }
+    .partners-mobile .slide:hover {
+        background-color: #141A29; 
+    }
+    .partners-mobile .slide-6 {
+        border-bottom: none;
+    }
+    .partners-mobile .slide-1:hover {
+        background-image: url('../../../public/img/partner-true-ukr-hover.svg'); 
+    }
+    .partners-mobile .slide-2:hover {
+        background-image: url('../../../public/img/partner-vexilum-hover.svg'); 
+    }
+    .partners-mobile .slide-3:hover {
+        background-image: url('../../../public/img/partner-atn-hover.svg'); 
+    }
+    .partners-mobile .slide-4:hover {
+        background-image: url('../../../public/img/partner-taf-hover.svg'); 
+    }
+    .partners-mobile .slide-5:hover {
+        background-image: url('../../../public/img/partner-ts-fly-hover.svg'); 
+    }
+    .partners-mobile .slide-6:hover {
+        background-image: url('../../../public/img/partner-optivita-hover.svg'); 
+    }
+}
+
+@media (max-width: 375px) {
+    
 }

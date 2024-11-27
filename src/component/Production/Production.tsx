@@ -1,5 +1,6 @@
 import { Container, Grid, useMediaQuery } from '@mui/material'
 import ProductionSlider from 'component/Slider/ProductionSlider'
+import ProductionCol from './ProductionCol'
 import './Production.css'
 
 type Props = {}
@@ -27,7 +28,13 @@ const Production = (props: Props) => {
                     </Grid>
                 </Grid>
                 <Grid container>
-                    <ProductionSlider />
+                    {isMobile ? (
+                        <ProductionCol />
+                    ) : isTablet ? (
+                        <ProductionSlider />
+                    ) : (
+                        <ProductionSlider />
+                    )}
                 </Grid>
             </Container>
         </>

@@ -1,5 +1,6 @@
 import { Container, Grid, useMediaQuery } from '@mui/material'
 import PartnersSlider from 'component/Slider/PartnersSlider'
+import PartnersCol from './PartnersCol'
 import './Partners.css'
 
 type Props = {}
@@ -26,7 +27,13 @@ const Partners = (props: Props) => {
                     </Grid>
                 </Grid>
                 <Grid container>
-                    <PartnersSlider />
+                    {isMobile ? (
+                        <PartnersCol />
+                    ) : isTablet ? (
+                        <PartnersSlider />
+                    ) : (
+                        <PartnersSlider />
+                    )}
                 </Grid>
             </Container>
         </>

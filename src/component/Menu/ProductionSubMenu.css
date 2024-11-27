@@ -16,7 +16,6 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     padding: 0 10px;
-    /* border-radius: 5px 5px 0 0; */
 }
 
 .sub-menu-wraper button:hover {
@@ -29,6 +28,17 @@
     line-height: 30px;
 }
 
-@media (max-width: 375px) {
-    
+@media (max-width: 545px) {
+    .sub-menu-wraper {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .sub-menu-wraper button {
+        font-size: 12px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        padding: 0 16px;
+    }
 }
