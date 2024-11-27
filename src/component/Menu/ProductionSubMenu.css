@@ -29,6 +29,9 @@
 }
 
 @media (max-width: 545px) {
+}
+
+@media (max-width: 768px) {
     .sub-menu-wraper {
         position: relative;
         left: 0;
