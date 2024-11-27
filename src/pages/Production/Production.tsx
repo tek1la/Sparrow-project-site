@@ -1,4 +1,4 @@
-import { Grid, useMediaQuery } from '@mui/material'
+import { Grid } from '@mui/material'
 import BaseEquipment from 'component/BaseEquipment/BaseEquipment'
 import BatteryDescription from 'component/Description/BatteryDescription'
 import BpakDescription from 'component/Description/BpakDescription'

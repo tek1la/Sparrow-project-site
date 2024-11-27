@@ -1,7 +1,6 @@
 import { Button, Container, Grid } from '@mui/material'
 import './ProductHeroSection.css'
 import AnimatedBtn from './AnimatedBtn'
-import { useMediaQuery } from '@mui/material'
 
 type Props = {
     id: number
@@ -25,8 +24,6 @@ const ProductHeroSection = ({
     video,
     path,
 }: Props) => {
-    const isTablet = useMediaQuery('(max-width:1024px)')
-    const isMobile = useMediaQuery('(max-width:545px)')
     return (
         <>
             <div className="hero-wrapper">
