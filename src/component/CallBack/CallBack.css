@@ -48,6 +48,12 @@
     height: 300px;
 }
 
+@media (max-width: 1160px) {
+    .call-back-wraper .cat-img {
+        height: 300px;
+    }
+}
+
 @media (max-width: 1024px) {
     .call-back-title h3 {
         font-size: 50px;
@@ -81,9 +87,9 @@
     }
 }
 
-@media (max-width: 545px) {
+@media (max-width: 900px) {
     .call-back-title h3 {
-        font-size: 30px;
+        font-size: 40px;
         letter-spacing: 2px;
         line-height: 40px;
         text-align: center;
@@ -125,6 +131,15 @@
     .call-back-text {
         font-size: 16px;
         text-align: start;
+    }
+}
+
+@media (max-width: 545px) {
+    .call-back-title h3 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        line-height: 40px;
+        text-align: center;
     }
 }
 

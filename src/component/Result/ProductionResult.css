@@ -65,10 +65,10 @@
     display: none;
 }
 
-@media (max-width: 545px) {
+@media (max-width: 900px) {
     .result-mision-title h3 {
-        font-size: 30px;
-        line-height: 35px;
+        font-size: 40px;
+        line-height: 45px;
     }
     .result-mision-title {
         border-left: none;
@@ -76,5 +76,18 @@
     .result-mision-mob {
         flex-direction: column;
         flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 545px) {
+    .result-mision-title h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+@media (max-width: 375px) {
+    .result-mision-title h3 {
+        font-size: 25px;
+        line-height: 30px;
     }
 }

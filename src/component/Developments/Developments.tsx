@@ -42,20 +42,47 @@ const Developments = (props: Props) => {
                 }}
             >
                 <Grid container className="developments-wraper">
-                    <Grid item sm={4}></Grid>
-                    <Grid item sm={8} className="developments-title">
+                    <Grid item lg={4} md={4} sm={0}></Grid>
+                    <Grid
+                        item
+                        lg={8}
+                        md={8}
+                        sm={12}
+                        className="developments-title"
+                    >
                         <h3>розробки та досягнення</h3>
                     </Grid>
                 </Grid>
                 <Grid className="developments-items-wraper">
                     <Grid container className="developments-item">
-                        <Grid className="developments-item-cell" item sm={4}>
+                        <Grid
+                            className="developments-item-cell"
+                            item
+                            lg={4}
+                            md={4}
+                            sm={1.5}
+                            xs={1.5}
+                        >
                             <p className="development-bold">Рік</p>
                         </Grid>
-                        <Grid className="developments-item-cell" item sm={4}>
+                        <Grid
+                            className="developments-item-cell"
+                            item
+                            lg={4}
+                            md={4}
+                            sm={4.5}
+                            xs={4.5}
+                        >
                             <p className="development-bold">Проект</p>
                         </Grid>
-                        <Grid className="developments-item-cell" item sm={4}>
+                        <Grid
+                            className="developments-item-cell"
+                            item
+                            lg={4}
+                            md={4}
+                            sm={6}
+                            xs={6}
+                        >
                             <p className="development-bold">Опис</p>
                         </Grid>
                     </Grid>
@@ -114,21 +141,30 @@ const Developments = (props: Props) => {
                             <Grid
                                 className="developments-item-cell"
                                 item
-                                sm={4}
+                                lg={4}
+                                md={4}
+                                sm={1.5}
+                                xs={1.5}
                             >
                                 <p>{item.year}</p>
                             </Grid>
                             <Grid
                                 className="developments-item-cell"
                                 item
-                                sm={4}
+                                lg={4}
+                                md={4}
+                                sm={4.5}
+                                xs={4.5}
                             >
                                 <p>{item.project}</p>
                             </Grid>
                             <Grid
                                 className="developments-item-cell"
                                 item
-                                sm={4}
+                                lg={4}
+                                md={4}
+                                sm={6}
+                                xs={6}
                             >
                                 <p>{item.description}</p>
                             </Grid>

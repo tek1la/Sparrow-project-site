@@ -16,4 +16,7 @@
     .hero-section-btn .hero-btn {
         font-size: 18px;
     }
+    .title-text {
+        line-height: 35px;
+    }
 }

@@ -172,12 +172,6 @@
 @media (max-width: 1024px) {
     .about {
         margin-bottom: 20px;
-        padding: 10px;
-    }
-
-    .about-title {
-        border-left: none;
-        text-align: center;
     }
 
     .about-title h3 {
@@ -196,6 +190,17 @@
 
     .about-wraper p {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-title h3 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .about-title {
+        border-left: none;
+        text-align: start;
     }
 }
 

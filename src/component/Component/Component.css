@@ -43,6 +43,22 @@
     font-weight: 500;
 }
 
+@media (max-width: 900px) {
+    .component-title h3 {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .component-img img{
+        width: 100%;
+    }
+    .component-title {
+        border-left: none;
+    }
+    .second-descript {
+        border: none;
+    }
+}
+
 @media (max-width: 545px) {
     .component-title h3 {
         font-size: 30px;
@@ -56,5 +72,11 @@
     }
     .second-descript {
         border: none;
+    }
+}
+@media (max-width: 375px) {
+    .component-title h3 {
+        font-size: 25px;
+        line-height: 30px;
     }
 }

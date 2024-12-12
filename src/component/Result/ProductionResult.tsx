@@ -86,15 +86,17 @@ const ProductionResult = (props: Props) => {
                 }}
             >
                 <Grid container className="result-mision-wraper">
-                    <Grid item sm={4}></Grid>
-                    <Grid item sm={8} className="result-mision-title">
+                    <Grid item md={4} sm={0}></Grid>
+                    <Grid item md={8} sm={12} className="result-mision-title">
                         <h3>вже випробували</h3>
                     </Grid>
                 </Grid>
                 <Grid container className="result-mision-mob">
                     <Grid
                         item
-                        sm={4}
+                        md={4}
+                        sm={12}
+                        xs={12}
                         className="result-mision-description result-mision-description-1"
                         onMouseEnter={(e) =>
                             handleMouseEnter(e, '1-ша ОБрСпП ім. Івана Богуна')
@@ -107,7 +109,9 @@ const ProductionResult = (props: Props) => {
                     </Grid>
                     <Grid
                         item
-                        sm={4}
+                        md={4}
+                        sm={12}
+                        xs={12}
                         className="result-mision-description second-descript result-mision-description-2"
                         onMouseEnter={(e) =>
                             handleMouseEnter(e, '43 ОМБР “Небесна мара”')
@@ -120,7 +124,9 @@ const ProductionResult = (props: Props) => {
                     </Grid>
                     <Grid
                         item
-                        sm={4}
+                        md={4}
+                        sm={12}
+                        xs={12}
                         className="result-mision-description result-mision-description-3"
                         onMouseEnter={(e) =>
                             handleMouseEnter(e, 'Окремий центр СО «Захід»')
@@ -133,7 +139,9 @@ const ProductionResult = (props: Props) => {
                     </Grid>
                     <Grid
                         item
-                        sm={4}
+                        md={4}
+                        sm={12}
+                        xs={12}
                         className="result-mision-description result-mision-description-4"
                         onMouseEnter={(e) =>
                             handleMouseEnter(e, 'Окремий центр СО «Схід»')
@@ -146,7 +154,9 @@ const ProductionResult = (props: Props) => {
                     </Grid>
                     <Grid
                         item
-                        sm={4}
+                        md={4}
+                        sm={12}
+                        xs={12}
                         className="result-mision-description second-descript result-mision-description-5"
                         onMouseEnter={(e) => handleMouseEnter(e, '60-та ОМБр')}
                         onMouseLeave={handleMouseLeave}
@@ -157,7 +167,9 @@ const ProductionResult = (props: Props) => {
                     </Grid>
                     <Grid
                         item
-                        sm={4}
+                        md={4}
+                        sm={12}
+                        xs={12}
                         className="result-mision-description result-mision-description-6"
                         onMouseEnter={(e) => handleMouseEnter(e, '14-та ОТБр')}
                         onMouseLeave={handleMouseLeave}

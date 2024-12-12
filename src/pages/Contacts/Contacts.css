@@ -73,3 +73,28 @@
 .email-page-contact, .contact-page-mail-icon {
     border-bottom: 1px solid #141A29;
 }
+
+@media (max-width: 545px) {
+    .contacts-page-title h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .contacts-page-title {
+        border-left: none;
+    }
+    .contact-page-item {
+        flex-direction: column;
+        border-left: none;
+        margin-top: 0;
+    }
+    .contact-page-item:nth-child(2) {
+        border: none;
+    }
+    .contact-page-info {
+        border-left: none;
+        border-top: 1px solid #141A29;
+    }
+    .contacts-page-content-wraper {
+        margin-top: 0;
+    }
+}

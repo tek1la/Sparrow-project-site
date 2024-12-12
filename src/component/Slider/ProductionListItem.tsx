@@ -19,7 +19,13 @@ const ProductionListItem = ({
     path,
 }: Props) => {
     return (
-        <Grid className="production-list-item">
+        <Grid
+            className="production-list-item"
+            sx={{
+                display: 'flex',
+                justifyContent: 'center',
+            }}
+        >
             <div className="production-wraper">
                 <div className="production-img-wraper">
                     <div className="production-img">

@@ -8,7 +8,8 @@ import { useMediaQuery } from '@mui/material'
 type Props = {}
 const HeroSection = (props: Props) => {
     const isTablet = useMediaQuery('(max-width:1024px)')
-    const isMobile = useMediaQuery('(max-width:545px)')
+    const isMediumTablet = useMediaQuery('(max-width:800px)')
+    const isMobile = useMediaQuery('(max-width:600px)')
     const { t } = useTranslation()
     return (
         <>
@@ -35,11 +36,21 @@ const HeroSection = (props: Props) => {
                             container
                             sx={isMobile ? { flexDirection: 'column' } : {}}
                         >
-                            <Grid item sm={1.8}></Grid>
+                            {isTablet ? (
+                                <Grid item sm={1}></Grid>
+                            ) : isMediumTablet ? (
+                                <Grid item sm={1.5}></Grid>
+                            ) : isMobile ? (
+                                ''
+                            ) : (
+                                <Grid item sm={1.8}></Grid>
+                            )}
+
                             <Grid
                                 item
                                 className="title-text-wraper"
                                 sm={4}
+                                xs={6}
                                 sx={{
                                     display: 'flex',
                                     justifyContent: 'flex-start',
@@ -68,6 +79,7 @@ const HeroSection = (props: Props) => {
                                 item
                                 className="title-text-wraper main-title"
                                 sm={4}
+                                xs={4}
                                 sx={{
                                     '@media (max-width: 1024px)': {
                                         textAlign: 'center',
@@ -92,7 +104,15 @@ const HeroSection = (props: Props) => {
                             </Grid>
                         </Grid>
                         <Grid container>
-                            <Grid item sm={1.8}></Grid>
+                            {isTablet ? (
+                                <Grid item sm={1}></Grid>
+                            ) : isMediumTablet ? (
+                                <Grid item sm={1.5}></Grid>
+                            ) : isMobile ? (
+                                ''
+                            ) : (
+                                <Grid item sm={1.8}></Grid>
+                            )}
                             <Grid
                                 className="title-text-wraper"
                                 item
@@ -111,7 +131,15 @@ const HeroSection = (props: Props) => {
                             </Grid>
                         </Grid>
                         <Grid container>
-                            <Grid item sm={2.7}></Grid>
+                            {isTablet ? (
+                                <Grid item sm={2.5}></Grid>
+                            ) : isMediumTablet ? (
+                                <Grid item sm={2}></Grid>
+                            ) : isMobile ? (
+                                ''
+                            ) : (
+                                <Grid item sm={3.1}></Grid>
+                            )}
                             <Grid item sm={8} className="title-text-wraper">
                                 <p className="title-text">
                                     {t('hero_section_title3')}

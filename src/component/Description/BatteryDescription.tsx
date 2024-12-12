@@ -1,9 +1,11 @@
 import { useRef, useState } from 'react'
-import { Button, Container, Grid } from '@mui/material'
+import { Button, Container, Grid, useMediaQuery } from '@mui/material'
 import './Description.css'
 
 type Props = {}
 const BatteryDescription = (props: Props) => {
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:900px)')
     const videoRef = useRef<HTMLVideoElement>(null)
     const [isPopupOpen, setIsPopupOpen] = useState(false)
 
@@ -30,42 +32,74 @@ const BatteryDescription = (props: Props) => {
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0 80px',
+                    padding: isMobile
+                        ? '80px 15px 60px'
+                        : isTablet
+                          ? '100px 30px 70px'
+                          : '120px 0 80px',
                     position: 'relative',
                 }}
             >
                 <Grid container className="descript-wraper">
-                    <Grid item sm={4}></Grid>
-                    <Grid item sm={8} className="descript-title">
+                    <Grid item md={4} sm={0}></Grid>
+                    <Grid item md={8} sm={12} className="descript-title">
                         <h3>АКБ на molicel</h3>
                     </Grid>
                 </Grid>
                 <Grid container className="descript-item-wraper">
-                    <Grid xs={3.8} item className="descript-item">
+                    <Grid
+                        md={3.8}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <Grid className="descript-list-item">
-                            <div className="descript-text-page">
-                                <div>
-                                    <img
-                                        src="./img/batary_4s2p.jpg"
-                                        alt="batary"
-                                    />
+                            <Grid className="descript-text-page fpv_img_wraper">
+                                <Grid>
+                                    {isMobile ? (
+                                        <img
+                                            src="./img/batary_4s2p_mob.jpg"
+                                            alt="batary"
+                                        />
+                                    ) : (
+                                        <img
+                                            className="fpv_img"
+                                            src="./img/batary_4s2p.jpg"
+                                            alt="batary"
+                                        />
+                                    )}
+
                                     <p>4s2p</p>
-                                </div>
-                                <div>
-                                    <img
-                                        src="./img/batary_6s1p.jpg"
-                                        alt="batary"
-                                    />
+                                </Grid>
+                                <Grid>
+                                    {isMobile ? (
+                                        <img
+                                            src="./img/batary_6s1p_mob.jpg"
+                                            alt="batary"
+                                        />
+                                    ) : (
+                                        <img
+                                            className="fpv_img"
+                                            src="./img/batary_6s1p.jpg"
+                                            alt="batary"
+                                        />
+                                    )}
                                     <p>6s1p</p>
-                                </div>
-                            </div>
+                                </Grid>
+                            </Grid>
                         </Grid>
                         <Grid className="descript-list-item">
                             <div
                                 className="descript-video-wraper"
                                 onClick={handlePlayClick}
                             >
-                                <video className="descript-video" muted loop>
+                                <video
+                                    className="descript-video"
+                                    muted
+                                    loop
+                                    playsInline
+                                >
                                     <source
                                         src="video/Bat.webm"
                                         type="video/webm"
@@ -80,7 +114,13 @@ const BatteryDescription = (props: Props) => {
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid xs={3.8} item className="descript-item">
+                    <Grid
+                        md={3.8}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <Grid className="descript-list-item">
                             <div className="descript-text">
                                 <p>
@@ -100,25 +140,49 @@ const BatteryDescription = (props: Props) => {
                             </div>
                         </Grid>
                         <Grid className="descript-list-item">
-                            <div className="descript-text-page">
-                                <div>
-                                    <img
-                                        src="./img/batary_6s2p.jpg"
-                                        alt="batary"
-                                    />
+                            <div className="descript-text-page fpv_img_wraper">
+                                <Grid>
+                                    {isMobile ? (
+                                        <img
+                                            src="./img/batary_6s2p_mob.jpg"
+                                            alt="batary"
+                                        />
+                                    ) : (
+                                        <img
+                                            className="fpv_img"
+                                            src="./img/batary_6s2p.jpg"
+                                            alt="batary"
+                                        />
+                                    )}
+
                                     <p>6s2p</p>
-                                </div>
-                                <div>
-                                    <img
-                                        src="./img/batary_6s3p.jpg"
-                                        alt="batary"
-                                    />
+                                </Grid>
+                                <Grid>
+                                    {isMobile ? (
+                                        <img
+                                            src="./img/batary_6s3p_mob.jpg"
+                                            alt="batary"
+                                        />
+                                    ) : (
+                                        <img
+                                            className="fpv_img"
+                                            src="./img/batary_6s3p.jpg"
+                                            alt="batary"
+                                        />
+                                    )}
+
                                     <p>6s3p</p>
-                                </div>
+                                </Grid>
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid xs={3.8} item className="descript-item">
+                    <Grid
+                        md={3.8}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <Grid className="descript-text">
                             <div>
                                 <p>Тривалий час польоту БпЛА</p>

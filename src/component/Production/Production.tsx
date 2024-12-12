@@ -7,6 +7,7 @@ type Props = {}
 
 const Production = (props: Props) => {
     const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMediumTablet = useMediaQuery('(max-width:800px)')
     const isMobile = useMediaQuery('(max-width:545px)')
     return (
         <>
@@ -22,13 +23,15 @@ const Production = (props: Props) => {
                 }}
             >
                 <Grid container className="production">
-                    <Grid item sm={4}></Grid>
+                    <Grid item lg={4} md={0} sm={0}></Grid>
                     <Grid item sm={8} className="production-title">
                         <h3>виробництво</h3>
                     </Grid>
                 </Grid>
                 <Grid container>
                     {isMobile ? (
+                        <ProductionCol />
+                    ) : isMediumTablet ? (
                         <ProductionCol />
                     ) : isTablet ? (
                         <ProductionSlider />

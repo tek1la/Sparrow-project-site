@@ -70,6 +70,24 @@
     border-right: none;
 }
 
+@media (max-width: 1200px) {
+    .tech-char-title h3 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 900px) {
+    .tech-char-title h3 {
+        font-size: 40px;
+        line-height: 45px;
+        word-break: break-word;
+    }
+    .table-row, .tech-char-title {
+        border-left: none;
+    }
+}
+
 @media (max-width: 545px) {
     .tech-char-title h3 {
         font-size: 28px;
@@ -77,5 +95,12 @@
     }
     .table-row, .tech-char-title {
         border-left: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .tech-char-title h3 {
+        font-size: 25px;
+        line-height: 30px;
     }
 }

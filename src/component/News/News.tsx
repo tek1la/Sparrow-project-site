@@ -28,7 +28,7 @@ const News = (props: Props) => {
     }
 
     const isTablet = useMediaQuery('(max-width:1024px)')
-    const isMobile = useMediaQuery('(max-width:545px)')
+    const isMobile = useMediaQuery('(max-width:600px)')
     return (
         <>
             <Container
@@ -43,8 +43,8 @@ const News = (props: Props) => {
                 }}
             >
                 <Grid container className="news">
-                    <Grid item sm={4}></Grid>
-                    <Grid item sm={8} className="news-title">
+                    <Grid item lg={4} md={4} sm={0}></Grid>
+                    <Grid item lg={8} md={8} sm={12} className="news-title">
                         <h3>Блог</h3>
                     </Grid>
                 </Grid>
@@ -53,7 +53,9 @@ const News = (props: Props) => {
                         ({ id, title, description, date, source, newsImg }) => (
                             <Grid
                                 item
-                                sm={4}
+                                md={4}
+                                sm={12}
+                                xs={12}
                                 key={id}
                                 className="news-array-wraper"
                             >

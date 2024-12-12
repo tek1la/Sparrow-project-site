@@ -118,7 +118,13 @@ const ContactForm = (props: Props) => {
                     onSubmit={handleFormSubmit}
                 >
                     <Grid container gap={1.2}>
-                        <Grid className="contact-form-input" item sm={3.9}>
+                        <Grid
+                            className="contact-form-input"
+                            item
+                            lg={3.9}
+                            md={12}
+                            sm={12}
+                        >
                             <TextField
                                 id="outlined-multiline-flexible"
                                 label="Ваше ім’я"
@@ -128,7 +134,13 @@ const ContactForm = (props: Props) => {
                                 inputProps={{ type: 'name' }}
                             />
                         </Grid>
-                        <Grid className="contact-form-input" item sm={3.9}>
+                        <Grid
+                            className="contact-form-input"
+                            item
+                            lg={3.9}
+                            md={12}
+                            sm={12}
+                        >
                             <TextField
                                 id="outlined-multiline-flexible"
                                 label="Номер телефону"
@@ -138,7 +150,13 @@ const ContactForm = (props: Props) => {
                                 inputProps={{ type: 'tel' }}
                             />
                         </Grid>
-                        <Grid className="contact-form-btn-wraper" item sm={3.9}>
+                        <Grid
+                            className="contact-form-btn-wraper"
+                            item
+                            lg={3.9}
+                            md={12}
+                            sm={12}
+                        >
                             <Button type="submit" className="contact-form-btn">
                                 замовити дзвінок
                             </Button>

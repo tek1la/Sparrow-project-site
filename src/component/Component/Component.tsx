@@ -19,13 +19,19 @@ const Component = (props: Props) => {
                 }}
             >
                 <Grid container className="component-wraper">
-                    <Grid item sm={4}></Grid>
+                    <Grid item md={4} sm={0}></Grid>
                     <Grid item sm={8} className="component-title">
                         <h3>компоненти</h3>
                     </Grid>
                 </Grid>
                 <Grid container>
-                    <Grid item sm={4} className="component-description">
+                    <Grid
+                        item
+                        lg={4}
+                        md={6}
+                        sm={12}
+                        className="component-description"
+                    >
                         <div className="component-img">
                             <img src="img/component-img-1.jpg" alt="" />
                         </div>
@@ -49,7 +55,9 @@ const Component = (props: Props) => {
                     </Grid>
                     <Grid
                         item
-                        sm={4}
+                        lg={4}
+                        md={6}
+                        sm={12}
                         className="component-description second-descript"
                     >
                         <div className="component-img">
@@ -74,7 +82,13 @@ const Component = (props: Props) => {
                             </div>
                         </div>
                     </Grid>
-                    <Grid item sm={4} className="component-description">
+                    <Grid
+                        item
+                        lg={4}
+                        md={6}
+                        sm={12}
+                        className="component-description"
+                    >
                         <div className="component-img">
                             <img src="img/component-img-3.jpg" alt="" />
                         </div>

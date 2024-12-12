@@ -1,9 +1,11 @@
-import { Container, Grid } from '@mui/material'
+import { Container, Grid, useMediaQuery } from '@mui/material'
 import CallBack from 'component/CallBack/CallBack'
 import './Contacts.css'
 
 type Props = {}
 const Contacts = (props: Props) => {
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:545px)')
     return (
         <>
             <div className="contact-page-bg-wraper">
@@ -11,19 +13,28 @@ const Contacts = (props: Props) => {
                     id="КОНТАКТИ"
                     className="container"
                     sx={{
-                        padding: '238px 0 80px',
+                        padding: isMobile
+                            ? '228px 15px 60px'
+                            : isTablet
+                              ? '228px 30px 70px'
+                              : '238px 0 80px',
                         position: 'relative',
                     }}
                 >
                     <Grid container className="contacts-page-title-wraper">
                         <Grid item sm={4}></Grid>
-                        <Grid item sm={8} className="contacts-page-title">
+                        <Grid
+                            item
+                            sm={8}
+                            xs={12}
+                            className="contacts-page-title"
+                        >
                             <h3>контакти</h3>
                         </Grid>
                     </Grid>
                     <Grid container className="contacts-page-content-wraper">
                         <Grid item sm={4}></Grid>
-                        <Grid item sm={8} gap={2}>
+                        <Grid item sm={8} xs={12} gap={2}>
                             <Grid item sm={12} className="contact-page-item">
                                 <div className="contact-page-icon">
                                     <a

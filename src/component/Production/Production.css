@@ -22,9 +22,9 @@
 }
 
 @media (max-width: 1024px) {
-    .production {
+    /* .production {
         padding: 15px;
-    }
+    } */
 
     .prodaction-array-wraper {
         border: 1px solid #141A29;
@@ -41,7 +41,7 @@
     }
 }
 
-@media (max-width: 545px) {
+@media (max-width: 800px) {
     .production {
         padding: 10px;
     }
@@ -55,6 +55,12 @@
         border-left: none;
         text-align: center; 
     }
+    .production-title h3 {
+        font-size: 40px; 
+    }
+}
+
+@media (max-width: 545px) {
 
     .production-title h3 {
         font-size: 30px; 

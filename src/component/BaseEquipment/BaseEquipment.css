@@ -35,6 +35,17 @@
     width: 25%;
 }
 
+@media (max-width: 900px) {
+    .base-equip-title h3 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .base-equip-description .table-cell {
+        line-height: 1.38;
+        width: auto;
+    }
+}
+
 @media (max-width: 545px) {
     .base-equip-title h3 {
         font-size: 30px;
@@ -43,5 +54,12 @@
     .base-equip-description .table-cell {
         line-height: 1.38;
         width: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .base-equip-title h3 {
+        font-size: 25px;
+        line-height: 30px;
     }
 }

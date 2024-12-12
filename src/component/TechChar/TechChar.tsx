@@ -30,8 +30,8 @@ const TechChar = ({ path, tableSize, size }: Props) => {
                 }}
             >
                 <Grid container className="tech-char-wraper">
-                    <Grid item sm={4}></Grid>
-                    <Grid item sm={8} className="tech-char-title">
+                    <Grid item md={4} sm={0}></Grid>
+                    <Grid item md={8} sm={12} className="tech-char-title">
                         <h3>технічні характеристики</h3>
                     </Grid>
                 </Grid>

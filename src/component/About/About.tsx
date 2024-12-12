@@ -43,8 +43,8 @@ const About = (props: Props) => {
                 }}
             >
                 <Grid container className="about">
-                    <Grid item sm={4}></Grid>
-                    <Grid item sm={8} className="about-title">
+                    <Grid item lg={4} md={4} sm={0}></Grid>
+                    <Grid item lg={8} md={8} sm={12} className="about-title">
                         <h3>sparrow avia.</h3>
                         <h3>хто ми?</h3>
                     </Grid>

@@ -4,15 +4,17 @@ import MenuItem from './MenuItem'
 import ProductionSubMenu from './ProductionSubMenu'
 import { useMediaQuery } from '@mui/material'
 
-type Props = {}
+type Props = {
+    onMenuItemClick?: () => void
+}
 
-const Menu = (props: Props) => {
+const Menu = ({ onMenuItemClick }: Props) => {
     const [isSubMenuOpen, setIsSubMenuOpen] = useState(false)
     const [activeItem, setActiveItem] = useState<string | null>(null)
     const [isMouseOverMenu, setIsMouseOverMenu] = useState(false)
     const [isMouseOverSubMenu, setIsMouseOverSubMenu] = useState(false)
     const navigate = useNavigate()
-    const isMobile = useMediaQuery('(max-width:768px)')
+    const isMobile = useMediaQuery('(max-width:1024px)')
 
     useEffect(() => {
         let timer: NodeJS.Timeout | null = null
@@ -84,26 +86,36 @@ const Menu = (props: Props) => {
             </MenuItem>
             {isMobile && isSubMenuOpen && (
                 <ProductionSubMenu
+                    onMenuItemClick={onMenuItemClick}
                     onMouseEnter={handleMouseOverSubMenu}
                     onMouseLeave={handleMouseLeave}
                 />
             )}
             <MenuItem
-                onClick={() => handleClick('contacts')}
+                onClick={() => {
+                    handleClick('contacts')
+                    onMenuItemClick && onMenuItemClick()
+                }}
                 className={`menu-item ${activeItem === 'contacts' ? 'active' : ''}`}
                 to={'contacts'}
             >
                 КОНТАКТИ
             </MenuItem>
             <MenuItem
-                onClick={() => handleClick('blog')}
+                onClick={() => {
+                    handleClick('blog')
+                    onMenuItemClick && onMenuItemClick()
+                }}
                 className={`menu-item ${activeItem === 'blog' ? 'active' : ''}`}
                 to={'all-news'}
             >
                 БЛОГ
             </MenuItem>
             <MenuItem
-                onClick={() => handleAboutClick()}
+                onClick={() => {
+                    handleAboutClick()
+                    onMenuItemClick && onMenuItemClick()
+                }}
                 className={`menu-item ${activeItem === 'about' ? 'active' : ''}`}
             >
                 ПРО НАС

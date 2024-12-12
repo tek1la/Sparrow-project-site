@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import { Grid, Box } from '@mui/material'
 
 type Props = {}
 const PartnersCol = (props: Props) => {
@@ -13,52 +13,76 @@ const PartnersCol = (props: Props) => {
                 }}
             >
                 <Grid className="slide slide-1">
-                    <img
-                        src="img/partner-true-ukr.svg"
-                        height="120px"
-                        alt="true-ukr"
-                        className="slide-img"
-                    />
+                    <Box className="tooltip-container">
+                        <img
+                            src="img/partner-true-ukr.svg"
+                            height="120px"
+                            alt="true-ukr"
+                            className="slide-img"
+                        />
+                        <span className="tooltip-text">
+                            БФ “Справжні українці”
+                        </span>
+                    </Box>
                 </Grid>
                 <Grid className="slide slide-2">
-                    <img
-                        src="img/partner-vexilum.svg"
-                        height="120px"
-                        alt="vexilum"
-                        className="slide-img"
-                    />
+                    <Box className="tooltip-container">
+                        <img
+                            src="img/partner-vexilum.svg"
+                            height="120px"
+                            alt="vexilum"
+                            className="slide-img"
+                        />
+                        <span className="tooltip-text">Вексилум</span>
+                    </Box>
                 </Grid>
                 <Grid className="slide slide-4">
-                    <img
-                        src="img/partner-taf.svg"
-                        height="120px"
-                        alt="taf"
-                        className="slide-img"
-                    />
+                    <Box className="tooltip-container">
+                        <img
+                            src="img/partner-taf.svg"
+                            height="120px"
+                            alt="taf"
+                            className="slide-img"
+                        />
+                        <span className="tooltip-text">TAF Drones</span>
+                    </Box>
                 </Grid>
                 <Grid className="slide slide-3">
-                    <img
-                        src="img/partner-atn.svg"
-                        height="120px"
-                        alt="atn"
-                        className="slide-img"
-                    />
+                    <Box className="tooltip-container">
+                        <img
+                            src="img/partner-atn.svg"
+                            height="120px"
+                            alt="atn"
+                            className="slide-img"
+                        />
+                        <span className="tooltip-text">
+                            Виробники оптики ATN
+                        </span>
+                    </Box>
                 </Grid>
                 <Grid className="slide slide-5">
-                    <img
-                        src="img/partner-ts-fly.svg"
-                        height="120px"
-                        alt="tsfly"
-                        className="slide-img"
-                    />
+                    <Box className="tooltip-container">
+                        <img
+                            src="img/partner-ts-fly.svg"
+                            height="120px"
+                            alt="atn"
+                            className="slide-img"
+                        />
+                        <span className="tooltip-text">TC Fly</span>
+                    </Box>
                 </Grid>
                 <Grid className="slide slide-6">
-                    <img
-                        src="img/partner-optivita.svg"
-                        height="120px"
-                        alt="optivita"
-                        className="slide-img"
-                    />
+                    <Box className="tooltip-container">
+                        <img
+                            src="img/partner-optivita.svg"
+                            height="120px"
+                            alt="atn"
+                            className="slide-img"
+                        />
+                        <span className="tooltip-text">
+                            БФ “OPTIVITA UKRAINE”
+                        </span>
+                    </Box>
                 </Grid>
             </Grid>
         </>

@@ -121,7 +121,18 @@
     color: #1818ED;
 }
 
-@media (max-width: 545px) {
+@media (max-width: 900px) {
+    .footer-menu-item {
+        font-size: 18px;
+        text-align: start;
+    }
+    .footer-menu-item-submenu button a {
+        color: #141A29;
+        height: auto;
+    }
+}
+
+@media (max-width: 900px) {
     .footer-wraper {
         padding-top: 80px;
     }

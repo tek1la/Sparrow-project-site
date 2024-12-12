@@ -28,10 +28,7 @@
     line-height: 30px;
 }
 
-@media (max-width: 545px) {
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .sub-menu-wraper {
         position: relative;
         left: 0;
@@ -43,5 +40,11 @@
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         padding: 0 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sub-menu-text {
+        height: auto;
     }
 }

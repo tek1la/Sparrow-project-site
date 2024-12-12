@@ -6,7 +6,7 @@ import { useMediaQuery } from '@mui/material'
 type Props = {}
 const BpakDescription = (props: Props) => {
     const isTablet = useMediaQuery('(max-width:1024px)')
-    const isMobile = useMediaQuery('(max-width:545px)')
+    const isMobile = useMediaQuery('(max-width:900px)')
     const videoRef = useRef<HTMLVideoElement>(null)
     const [isPopupOpen, setIsPopupOpen] = useState(false)
 
@@ -42,8 +42,8 @@ const BpakDescription = (props: Props) => {
                 }}
             >
                 <Grid container className="descript-wraper">
-                    <Grid item sm={4}></Grid>
-                    <Grid item sm={8} className="descript-title">
+                    <Grid item md={4} sm={0}></Grid>
+                    <Grid item md={8} sm={12} className="descript-title">
                         {isMobile ? (
                             <h3>
                                 Бпак <br /> “1В Бомбер”
@@ -54,7 +54,14 @@ const BpakDescription = (props: Props) => {
                     </Grid>
                 </Grid>
                 <Grid container className="descript-item-wraper">
-                    <Grid sm={3.8} xs={12} item className="descript-item">
+                    <Grid
+                        lg={3.8}
+                        md={6}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <Grid className="descript-list-item">
                             <div className="descript-text">
                                 <p className="descript-bold">
@@ -66,7 +73,12 @@ const BpakDescription = (props: Props) => {
                                 className="descript-video-wraper"
                                 onClick={handlePlayClick}
                             >
-                                <video className="descript-video" muted loop>
+                                <video
+                                    className="descript-video"
+                                    muted
+                                    loop
+                                    playsInline
+                                >
                                     <source
                                         src="video/BoomBeeR.webm"
                                         type="video/webm"
@@ -114,7 +126,14 @@ const BpakDescription = (props: Props) => {
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid sm={3.8} xs={12} item className="descript-item">
+                    <Grid
+                        lg={3.8}
+                        md={6}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <Grid className="descript-list-item">
                             <div className="descript-text">
                                 <p>
@@ -147,7 +166,14 @@ const BpakDescription = (props: Props) => {
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid sm={3.8} xs={12} item className="descript-item">
+                    <Grid
+                        lg={3.8}
+                        md={12}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <Grid className="descript-list-item">
                             <div className="descript-text-page">
                                 <div className="second-descript-img">

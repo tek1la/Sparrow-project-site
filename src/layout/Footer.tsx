@@ -12,23 +12,34 @@ const Footer = (props: Props) => {
             <div className="footer-wraper">
                 <Container className="container">
                     <Grid container className="footer-item-wraper">
-                        <Grid item sm={4} className="footer-item">
+                        <Grid item md={4} sm={12} className="footer-item">
                             <Grid
                                 container
                                 sx={{
                                     height: '100%',
                                 }}
                             >
-                                <Grid item sm={5} className="footer-first-menu">
+                                <Grid
+                                    item
+                                    lg={5}
+                                    md={7}
+                                    sm={7}
+                                    className="footer-first-menu"
+                                >
                                     <FooterMenu />
                                     <div className="footer-lang-menu">
                                         <LanguageMenu />
                                     </div>
                                 </Grid>
-                                <Grid item sm={4}></Grid>
-                                <Grid item sm={3} className="footer-info">
+                                <Grid item lg={4} md={0} sm={0}></Grid>
+                                <Grid
+                                    item
+                                    lg={3}
+                                    md={5}
+                                    className="footer-info"
+                                >
                                     <Grid container>
-                                        <Grid item sm={6}>
+                                        <Grid item md={6}>
                                             <Link
                                                 href="https://www.instagram.com/sparrow_avia"
                                                 className="social-link"
@@ -39,7 +50,7 @@ const Footer = (props: Props) => {
                                                 />
                                             </Link>
                                         </Grid>
-                                        <Grid item sm={6}>
+                                        <Grid item md={6}>
                                             <Link
                                                 href="https://www.facebook.com/sparrowavia"
                                                 className="social-link"
@@ -52,7 +63,7 @@ const Footer = (props: Props) => {
                                         </Grid>
                                     </Grid>
                                     <Grid container>
-                                        <Grid item sm={6}>
+                                        <Grid item md={6}>
                                             <Link
                                                 href="https://www.youtube.com/channel/UC5gx0EUmtjz66XpfCAfr5aA"
                                                 className="social-link"
@@ -63,7 +74,7 @@ const Footer = (props: Props) => {
                                                 />
                                             </Link>
                                         </Grid>
-                                        <Grid item sm={6}>
+                                        <Grid item md={6}>
                                             <Link
                                                 href="https://twitter.com/Sparrow_Avia"
                                                 className="social-link"
@@ -76,7 +87,7 @@ const Footer = (props: Props) => {
                                         </Grid>
                                     </Grid>
                                     <Grid container>
-                                        <Grid item sm={6}>
+                                        <Grid item md={6}>
                                             <Link
                                                 href="https://www.linkedin.com/company/sparrow-avia/"
                                                 className="social-link"
@@ -87,7 +98,7 @@ const Footer = (props: Props) => {
                                                 />
                                             </Link>
                                         </Grid>
-                                        <Grid item sm={6}>
+                                        <Grid item md={6}>
                                             <Link
                                                 href="https://www.tiktok.com/@sparrow.avia"
                                                 className="social-link"
@@ -102,7 +113,7 @@ const Footer = (props: Props) => {
                                 </Grid>
                             </Grid>
                         </Grid>
-                        <Grid item sm={4} className="footer-item">
+                        <Grid item md={4} sm={12} className="footer-item">
                             <div className="footer-item-menu">
                                 <p className="footer-title">Виробництво:</p>
                                 <div className="footer-menu-item-submenu">
@@ -121,7 +132,8 @@ const Footer = (props: Props) => {
                         </Grid>
                         <Grid
                             item
-                            sm={4}
+                            md={4}
+                            sm={12}
                             className="footer-item footer-item-contact"
                         >
                             <p className="footer-title">Контакти:</p>

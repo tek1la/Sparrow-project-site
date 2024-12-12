@@ -67,9 +67,6 @@
 }
 
 @media (max-width: 1024px) {
-    .developments-title {
-        text-align: center;
-    }
 
     .developments-title h3 {
         font-size: 50px; 
@@ -87,26 +84,14 @@
     }
 }
 
-@media (max-width: 600px) {
-    .developments-title h3 {
-        font-size: 30px;
-        line-height: normal;
-        letter-spacing: 2px;
-    }
-
-    .developments-item-cell {
-        width: 33%;
-    }
-}
-
-@media (max-width: 545px) {
+@media (max-width: 900px) {
     .developments-title {
-        text-align: center;
         border-left: none;
     }
 
     .developments-title h3 {
-        font-size: 30px;
+        font-size: 40px;
+        line-height: 45px;
         letter-spacing: 2px;
     }
 
@@ -129,16 +114,19 @@
         line-height: 16px;
     }
 }
+@media (max-width: 575px) {
+
+    .developments-title h3 {
+        font-size: 30px;
+    }
+}
 
 @media (max-width: 375px) {
-    .developments-title {
-        text-align: center;
-        border-left: none;
-    }
 
     .developments-title h3 {
         font-size: 30px;
         letter-spacing: 2px;
+        line-height: 35px;
     }
 
     .developments-wraper {

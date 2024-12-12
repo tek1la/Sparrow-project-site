@@ -7,7 +7,7 @@ type Props = {
 }
 const PriceList = ({ video }: Props) => {
     const isTablet = useMediaQuery('(max-width:1024px)')
-    const isMobile = useMediaQuery('(max-width:545px)')
+    const isMobile = useMediaQuery('(max-width:900px)')
     return (
         <div className="call-back-bg-wraper">
             <Container
@@ -21,7 +21,7 @@ const PriceList = ({ video }: Props) => {
                 }}
             >
                 <Grid container className="rev-dir-for-mob">
-                    <Grid item sm={4}>
+                    <Grid item lg={4} md={4} sm={12}>
                         {video ? (
                             // <video
                             //     className="contact-video"
@@ -37,7 +37,13 @@ const PriceList = ({ video }: Props) => {
                             <div className="call-back-img"></div>
                         )}
                     </Grid>
-                    <Grid item className="call-back-form-wraper" sm={8}>
+                    <Grid
+                        item
+                        className="call-back-form-wraper"
+                        lg={8}
+                        md={8}
+                        sm={12}
+                    >
                         <div className="call-back-title">
                             <h3>
                                 Є питання<span>?</span>

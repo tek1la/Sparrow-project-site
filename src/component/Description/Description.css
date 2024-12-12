@@ -55,6 +55,7 @@
     overflow: hidden;
     height: 200px;
     margin-top: 30px;
+    width: 100%;
 }
 
 .descript-video-wraper-mt {
@@ -136,6 +137,58 @@
     margin-top: 30px;
 }
 
+.fpv_img {
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .descript-item {
+        padding: 10px;
+        align-items: center;
+        gap: 30px;
+    }
+    .fpv_img_wraper {
+        flex-direction: column;
+    }
+    .descript-video{
+        height: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .descript-title h3 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .descript-title {
+        border-left: none;
+    }
+    .second-descript-img img{
+        width: 100%;
+    }
+    .third-descript-img img, .third-descript-img div{
+        width: 100%;
+    }
+    .descript-text-page img{
+        width: 100%;
+    }
+    .fpv_img_wraper {
+        flex-direction: row;
+    }
+    .descript-video{
+        height: auto;
+    }
+    .descript-text-page {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .descript-text-page {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 545px) {
     .descript-item-wraper {
         flex-direction: column;
@@ -163,5 +216,12 @@
     }
     .descript-text-page img{
         width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .descript-title h3 {
+        font-size: 25px;
+        line-height: 30px;
     }
 }

@@ -5,8 +5,13 @@ import { productionArray } from 'utils/productionArray'
 type Props = {
     onMouseEnter?: () => void
     onMouseLeave?: () => void
+    onMenuItemClick?: () => void
 }
-const ProductionSubMenu = ({ onMouseEnter, onMouseLeave }: Props) => {
+const ProductionSubMenu = ({
+    onMouseEnter,
+    onMouseLeave,
+    onMenuItemClick,
+}: Props) => {
     return (
         <>
             <div
@@ -15,7 +20,11 @@ const ProductionSubMenu = ({ onMouseEnter, onMouseLeave }: Props) => {
                 onMouseLeave={onMouseLeave}
             >
                 {productionArray.map(({ id, subTitle, path }) => (
-                    <ProductionSubMenuItem key={id} path={path}>
+                    <ProductionSubMenuItem
+                        key={id}
+                        path={path}
+                        onMenuItemClick={onMenuItemClick}
+                    >
                         {subTitle}
                     </ProductionSubMenuItem>
                 ))}

@@ -35,17 +35,14 @@ const PartnersSlider = (props: Props) => {
 
         const currentTarget = event.currentTarget
 
-        // Перевіряємо, чи currentTarget не є null
         if (!currentTarget) {
             return
         }
 
-        // Отримуємо батьківський контейнер слайдера
         const parentElement = event.currentTarget.closest(
             '.container'
         ) as HTMLElement
 
-        // Визначаємо динамічну ширину блоку
         const parentWidth = parentElement
             ? parentElement.getBoundingClientRect().width
             : 1360
@@ -57,7 +54,7 @@ const PartnersSlider = (props: Props) => {
             visible: true,
             text: text,
             position: {
-                top: slideRect.height + 235, // Враховуємо висоту слайда і прокрутку
+                top: slideRect.height + 235,
                 left:
                     slideRect.left +
                     slideRect.width / 2 -
@@ -83,7 +80,7 @@ const PartnersSlider = (props: Props) => {
                 text: '',
                 position: { top: 0, left: 0 },
             })
-        }, 300) // Затримка перед закриттям підказки
+        }, 300)
 
         setHideTimeout(timeout)
     }

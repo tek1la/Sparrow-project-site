@@ -1,9 +1,11 @@
-import { Button, Container, Grid } from '@mui/material'
+import { Button, Container, Grid, useMediaQuery } from '@mui/material'
 import './Description.css'
 import { useRef, useState } from 'react'
 
 type Props = {}
 const LinkDescription = (props: Props) => {
+    const isTablet = useMediaQuery('(max-width:1024px)')
+    const isMobile = useMediaQuery('(max-width:900px)')
     const videoRef = useRef<HTMLVideoElement>(null)
     const [isPopupOpen, setIsPopupOpen] = useState(false)
 
@@ -30,23 +32,38 @@ const LinkDescription = (props: Props) => {
             <Container
                 className="container"
                 sx={{
-                    padding: '120px 0 80px',
+                    padding: isMobile
+                        ? '80px 15px 60px'
+                        : isTablet
+                          ? '100px 30px 70px'
+                          : '120px 0 80px',
                     position: 'relative',
                 }}
             >
                 <Grid container className="descript-wraper">
-                    <Grid item sm={4}></Grid>
-                    <Grid item sm={8} className="descript-title">
+                    <Grid item md={4} sm={0}></Grid>
+                    <Grid item md={8} sm={12} className="descript-title">
                         <h3>fpv re-link</h3>
                     </Grid>
                 </Grid>
                 <Grid container className="descript-item-wraper">
-                    <Grid xs={3.8} item className="descript-item">
+                    <Grid
+                        md={3.8}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <div
                             className="descript-video-wraper"
                             onClick={handlePlayClick}
                         >
-                            <video className="descript-video" muted loop>
+                            <video
+                                className="descript-video"
+                                muted
+                                loop
+                                playsInline
+                            >
                                 <source
                                     src="video/ReLink.webm"
                                     type="video/webm"
@@ -63,7 +80,13 @@ const LinkDescription = (props: Props) => {
                             В МАГАЗИН
                         </Button>
                     </Grid>
-                    <Grid xs={3.8} item className="descript-item">
+                    <Grid
+                        md={3.8}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <Grid className="descript-list-item">
                             <div className="fpv-descript-text descript-text">
                                 <p>
@@ -87,27 +110,58 @@ const LinkDescription = (props: Props) => {
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid xs={3.8} item className="descript-item">
-                        <Grid className="descript-list-item">
-                            <div className="descript-text-page">
-                                <div className="second-descript-img">
-                                    <img
-                                        src="./img/link-relink.jpg"
-                                        alt="relink"
-                                    />
+                    <Grid
+                        md={3.8}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
+                        <Grid md={12} className="descript-list-item">
+                            <div className="descript-text-page fpv_img_wraper">
+                                <Grid
+                                    lg={6}
+                                    md={12}
+                                    className="second-descript-img"
+                                >
+                                    {isMobile ? (
+                                        <img
+                                            src="./img/link-relink-mob.jpg"
+                                            alt="relink"
+                                        />
+                                    ) : (
+                                        <img
+                                            className="fpv_img"
+                                            src="./img/link-relink.jpg"
+                                            alt="relink"
+                                        />
+                                    )}
+
                                     <p className="descript-mini-text">
                                         Станція ретрансляції
                                     </p>
-                                </div>
-                                <div className="third-descript-img">
+                                </Grid>
+                                <Grid
+                                    lg={6}
+                                    md={12}
+                                    className="third-descript-img"
+                                >
                                     <div>
-                                        <img
-                                            src="./img/link-d.jpg"
-                                            alt="relink"
-                                        />
+                                        {isMobile ? (
+                                            <img
+                                                src="./img/link-d-mob.jpg"
+                                                alt="relink"
+                                            />
+                                        ) : (
+                                            <img
+                                                className="fpv_img"
+                                                src="./img/link-d.jpg"
+                                                alt="relink"
+                                            />
+                                        )}
                                         <p>Редуктор</p>
                                     </div>
-                                </div>
+                                </Grid>
                             </div>
                         </Grid>
                     </Grid>

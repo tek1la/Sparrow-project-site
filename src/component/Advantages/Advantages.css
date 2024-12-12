@@ -48,6 +48,11 @@
     left: calc(50% - 18.5px);
 }
 
+@media (max-width: 800px) {
+    .advantages-items-wraper {
+        gap: 80px;
+    }
+}
 @media (max-width: 545px) {
     .advantages-items-wraper {
         gap: 80px;

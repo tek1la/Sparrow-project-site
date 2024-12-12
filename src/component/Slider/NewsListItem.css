@@ -80,3 +80,16 @@
 .news-img {
     position: relative;
 }
+
+@media (max-width: 900px) {
+    .news-list-item {
+        display: flex;
+        justify-content: center;
+    }
+    .news-wraper {
+        width: 66%;
+    }
+    .news-img-wraper {
+        height: auto;
+    }
+}

@@ -7,12 +7,14 @@ type Props = {
     path: string
     onMouseEnter?: () => void
     onMouseLeave?: () => void
+    onMenuItemClick?: () => void
 }
 const ProductionSubMenuItem = ({
     children,
     path,
     onMouseEnter,
     onMouseLeave,
+    onMenuItemClick,
 }: Props) => {
     const handleScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -29,7 +31,10 @@ const ProductionSubMenuItem = ({
                 className="menu-item"
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
-                onClick={handleScrollToTop}
+                onClick={() => {
+                    handleScrollToTop()
+                    onMenuItemClick && onMenuItemClick()
+                }}
             >
                 <NavLink
                     to={path}

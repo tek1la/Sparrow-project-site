@@ -31,7 +31,7 @@ function HideOnScroll(props: any) {
 }
 
 const Header = (props: Props) => {
-    const isTabletOrSmaller = useMediaQuery('(max-width:768px)')
+    const isTabletOrSmaller = useMediaQuery('(max-width:1024px)')
     const [isMenuOpen, setMenuOpen] = useState(false)
 
     const toggleMenu = () => {
@@ -189,7 +189,7 @@ const Header = (props: Props) => {
                                             alignItems: 'flex-start',
                                         }}
                                     >
-                                        <Menu />
+                                        <Menu onMenuItemClick={toggleMenu} />
                                     </Box>
 
                                     <Box

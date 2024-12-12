@@ -19,7 +19,7 @@ const Advantages = (props: Props) => {
                     }}
                 >
                     <Grid container className="advantages-items-wraper">
-                        <Grid item sm={4} className="advantage-item">
+                        <Grid item md={4} sm={12} className="advantage-item">
                             <div className="advantages-img">
                                 <img
                                     className="img"
@@ -30,7 +30,7 @@ const Advantages = (props: Props) => {
                             </div>
                             <p>виготовлено акумуляторів на елементах molicel</p>
                         </Grid>
-                        <Grid item sm={4} className="advantage-item">
+                        <Grid item md={4} sm={12} className="advantage-item">
                             <div className="advantages-img">
                                 <img
                                     className="img"
@@ -41,7 +41,7 @@ const Advantages = (props: Props) => {
                             </div>
                             <p>виготовлених станцій ретрансляції FPV RE—Link</p>
                         </Grid>
-                        <Grid item sm={4} className="advantage-item">
+                        <Grid item md={4} sm={12} className="advantage-item">
                             <div className="advantages-img">
                                 <img
                                     className="img"
