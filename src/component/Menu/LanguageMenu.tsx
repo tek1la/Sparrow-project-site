@@ -23,7 +23,7 @@ const LanguageMenu = (props: Props) => {
             >
                 UA
             </Button>
-            <Button
+            {/* <Button
                 sx={{
                     position: 'relative',
                     height: '100%',
@@ -33,7 +33,7 @@ const LanguageMenu = (props: Props) => {
                 onClick={() => changeLanguage('en')}
             >
                 EN
-            </Button>
+            </Button> */}
             {/* <LanguageMenuItem>UA</LanguageMenuItem>
             <LanguageMenuItem>EN</LanguageMenuItem> */}
         </>
