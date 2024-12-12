@@ -5,7 +5,7 @@ import './Description.css'
 type Props = {}
 const SdsDescription = (props: Props) => {
     const isTablet = useMediaQuery('(max-width:1024px)')
-    const isMobile = useMediaQuery('(max-width:545px)')
+    const isMobile = useMediaQuery('(max-width:900px)')
     const videoRef = useRef<HTMLVideoElement>(null)
     const [isPopupOpen, setIsPopupOpen] = useState(false)
 
@@ -40,13 +40,20 @@ const SdsDescription = (props: Props) => {
                 }}
             >
                 <Grid container className="descript-wraper">
-                    <Grid item sm={4}></Grid>
-                    <Grid item sm={8} className="descript-title">
+                    <Grid item md={4} sm={0}></Grid>
+                    <Grid item md={8} sm={12} className="descript-title">
                         <h3>скид “sds—mini”</h3>
                     </Grid>
                 </Grid>
                 <Grid container className="descript-item-wraper">
-                    <Grid sm={3.8} xs={12} item className="descript-item">
+                    <Grid
+                        lg={3.8}
+                        md={6}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <Grid className="descript-list-item">
                             <div
                                 className="descript-video-wraper descript-video-wraper-mt"
@@ -72,8 +79,8 @@ const SdsDescription = (props: Props) => {
                             </div>
                         </Grid>
                         <Grid className="descript-list-item">
-                            <div className="descript-text-page">
-                                <div>
+                            <div className="descript-text-page fpv_img_wraper">
+                                <Grid lg={6} md={12}>
                                     {isMobile ? (
                                         <img
                                             src="./img/sds_mini_1_mob.jpg"
@@ -81,14 +88,15 @@ const SdsDescription = (props: Props) => {
                                         />
                                     ) : (
                                         <img
+                                            className="fpv_img"
                                             src="./img/sds_mini_1.jpg"
                                             alt="batary"
                                         />
                                     )}
 
                                     <p>Встановлення скиду на дрон</p>
-                                </div>
-                                <div>
+                                </Grid>
+                                <Grid lg={6} md={12}>
                                     {isMobile ? (
                                         <img
                                             src="./img/sds_mini_2_mob.jpg"
@@ -96,17 +104,25 @@ const SdsDescription = (props: Props) => {
                                         />
                                     ) : (
                                         <img
+                                            className="fpv_img"
                                             src="./img/sds_mini_2.jpg"
                                             alt="batary"
                                         />
                                     )}
 
                                     <p>Повна комплектація FPV</p>
-                                </div>
+                                </Grid>
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid sm={3.8} xs={12} item className="descript-item">
+                    <Grid
+                        lg={3.8}
+                        md={6}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <Grid className="descript-list-item">
                             <div className="descript-text">
                                 <p>
@@ -124,8 +140,8 @@ const SdsDescription = (props: Props) => {
                             </div>
                         </Grid>
                         <Grid className="descript-list-item">
-                            <div className="descript-text-page">
-                                <div>
+                            <div className="descript-text-page fpv_img_wraper">
+                                <Grid lg={6} md={12}>
                                     {isMobile ? (
                                         <img
                                             src="./img/sds_mini_3_mob.jpg"
@@ -133,14 +149,15 @@ const SdsDescription = (props: Props) => {
                                         />
                                     ) : (
                                         <img
+                                            className="fpv_img"
                                             src="./img/sds_mini_3.jpg"
                                             alt="batary"
                                         />
                                     )}
 
                                     <p>Сторона кріплення до дрону</p>
-                                </div>
-                                <div>
+                                </Grid>
+                                <Grid lg={6} md={12}>
                                     {isMobile ? (
                                         <img
                                             src="./img/sds_mini_4_mob.jpg"
@@ -148,17 +165,25 @@ const SdsDescription = (props: Props) => {
                                         />
                                     ) : (
                                         <img
+                                            className="fpv_img"
                                             src="./img/sds_mini_4.jpg"
                                             alt="batary"
                                         />
                                     )}
 
                                     <p>Сторона кріплення боєприпасу</p>
-                                </div>
+                                </Grid>
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid sm={3.8} xs={12} item className="descript-item">
+                    <Grid
+                        lg={3.8}
+                        md={12}
+                        sm={12}
+                        xs={12}
+                        item
+                        className="descript-item"
+                    >
                         <Grid className="descript-text">
                             <div>
                                 <p>
